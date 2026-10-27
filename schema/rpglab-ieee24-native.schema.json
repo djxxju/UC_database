@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:uc-database:rpglab-ieee24-native:1.1.1",
+  "title": "Native IEEE24 package data envelope",
+  "type": "object",
+  "required": [
+    "provenance",
+    "generators",
+    "branches",
+    "issues"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "provenance": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "profile",
+        "shape",
+        "source",
+        "artifact_sha256",
+        "profile_files",
+        "profile_artifact_sha256",
+        "script_sha256",
+        "solve_status"
+      ],
+      "properties": {
+        "case_id": {
+          "const": "rpglab_ieee24_native_v1"
+        },
+        "profile": {
+          "const": "rpglab-ieee24-native/1.0.0"
+        },
+        "solve_status": {
+          "enum": [
+            "not_run",
+            "completed_all_requested_samples"
+          ]
+        },
+        "artifact_sha256": {
+          "type": "object",
+          "minProperties": 5,
+          "maxProperties": 5,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "profile_files": {
+          "const": {
+            "field_dictionary": "docs/profiles/rpglab-ieee24-native/field_dictionary.json",
+            "model_profile": "docs/profiles/rpglab-ieee24-native/model_profile.json"
+          }
+        },
+        "profile_artifact_sha256": {
+          "type": "object",
+          "minProperties": 2,
+          "maxProperties": 2,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "script_sha256": {
+          "type": "object",
+          "minProperties": 2,
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "shape": {
+          "const": {
+            "generators": 15,
+            "buses": 24,
+            "branches": 38,
+            "samples": 1800,
+            "periods_per_sample": 24,
+            "nodal_load_values": 1036800
+          }
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "source",
+            "commit",
+            "license",
+            "citation",
+            "files"
+          ]
+        }
+      }
+    },
+    "generators": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "$ref": "#/$defs/generator"
+      }
+    },
+    "branches": {
+      "type": "array",
+      "minItems": 38,
+      "maxItems": 38,
+      "items": {
+        "$ref": "#/$defs/branch"
+      }
+    },
+    "issues": {
+      "type": "object",
+      "required": [
+        "policy",
+        "issues"
+      ],
+      "properties": {
+        "policy": {
+          "type": "string"
+        },
+        "issues": {
+          "type": "array",
+          "minItems": 13,
+          "items": {
+            "type": "object",
+            "required": [
+              "issue_id",
+              "fields",
+              "status",
+              "description",
+              "impact",
+              "evidence_locations",
+              "evidence_urls",
+              "blocking_for",
+              "blocks_native_input_reorganization"
+            ],
+            "properties": {
+              "issue_id": {
+                "type": "string"
+              },
+              "fields": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "status": {
+                "enum": [
+                  "ambiguous",
+                  "not_documented_in_selected_sources",
+                  "partially_traced",
+                  "not_applicable_to_cyclic_profile",
+                  "not_collected",
+                  "not_defined_in_inspected_base_formulations",
+                  "not_run",
+                  "not_defined_for_selected_profile",
+                  "verified_for_selected_btheta_samples"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "impact": {
+                "type": "string"
+              },
+              "evidence_locations": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence_urls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "blocking_for": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "blocks_native_input_reorganization": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "generator": {
+      "type": "object",
+      "required": [
+        "genNo",
+        "genD_bus",
+        "genD_minUP",
+        "genD_minDN",
+        "genD_status",
+        "genD_Pmax",
+        "genD_Pmin",
+        "genC_Startup",
+        "genC_Cost",
+        "genC_NLoad",
+        "SPRamp",
+        "NSRamp",
+        "HRamp",
+        "StartRamp",
+        "gen_Style"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "genNo": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 15
+        },
+        "genD_bus": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "genD_minUP": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "genD_minDN": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "genD_status": {
+          "type": "number"
+        },
+        "genD_Pmax": {
+          "type": "number",
+          "minimum": 0
+        },
+        "genD_Pmin": {
+          "type": "number",
+          "minimum": 0
+        },
+        "genC_Startup": {
+          "type": "number",
+          "minimum": 0
+        },
+        "genC_Cost": {
+          "type": "number",
+          "minimum": 0
+        },
+        "genC_NLoad": {
+          "type": "number",
+          "minimum": 0
+        },
+        "SPRamp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "NSRamp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "HRamp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "StartRamp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "gen_Style": {
+          "type": "number"
+        }
+      }
+    },
+    "branch": {
+      "type": "object",
+      "required": [
+        "branchNo",
+        "branch_fbus",
+        "branch_tbus",
+        "branch_b",
+        "branch_rateA",
+        "branch_rateC"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "branchNo": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 38
+        },
+        "branch_fbus": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "branch_tbus": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "branch_b": {
+          "type": "number"
+        },
+        "branch_rateA": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "branch_rateC": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  }
+}

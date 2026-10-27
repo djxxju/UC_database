@@ -1,0 +1,156 @@
+[
+  {
+    "source_field": "genNo",
+    "chinese_name": "机组记录编号",
+    "unit_or_type": "identifier",
+    "mapping": "genNo",
+    "model_use_or_limit": "GEN集合；编号从1开始"
+  },
+  {
+    "source_field": "genD_bus",
+    "chinese_name": "接入节点",
+    "unit_or_type": "identifier",
+    "mapping": "genD_bus",
+    "model_use_or_limit": "节点外键；BUS=1..24"
+  },
+  {
+    "source_field": "genD_minUP",
+    "chinese_name": "最小连续开机时段",
+    "unit_or_type": "period",
+    "mapping": "genD_minUP",
+    "model_use_or_limit": "循环窗口；每时段按作者24 hour注释解释为1小时"
+  },
+  {
+    "source_field": "genD_minDN",
+    "chinese_name": "最小连续停机时段",
+    "unit_or_type": "period",
+    "mapping": "genD_minDN",
+    "model_use_or_limit": "循环窗口；不补固定初始历史"
+  },
+  {
+    "source_field": "genD_status",
+    "chinese_name": "原状态标记",
+    "unit_or_type": "unknown",
+    "mapping": "genD_status",
+    "model_use_or_limit": "所查两段基础模型未读取，不能当作初始启停条件"
+  },
+  {
+    "source_field": "genD_Pmax",
+    "chinese_name": "最大有功出力",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "genD_Pmax",
+    "model_use_or_limit": "p+r<=Pmax*u"
+  },
+  {
+    "source_field": "genD_Pmin",
+    "chinese_name": "最小有功出力",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "genD_Pmin",
+    "model_use_or_limit": "Pmin*u<=p"
+  },
+  {
+    "source_field": "genC_Startup",
+    "chinese_name": "启动费用系数",
+    "unit_or_type": "source currency/start",
+    "mapping": "genC_Startup",
+    "model_use_or_limit": "系数乘v；币种和价格年未确认"
+  },
+  {
+    "source_field": "genC_Cost",
+    "chinese_name": "线性出力费用系数",
+    "unit_or_type": "source currency/(MW*model period)",
+    "mapping": "genC_Cost",
+    "model_use_or_limit": "系数乘p；未换汇、未重拟合"
+  },
+  {
+    "source_field": "genC_NLoad",
+    "chinese_name": "空载费用系数",
+    "unit_or_type": "source currency/model period",
+    "mapping": "genC_NLoad",
+    "model_use_or_limit": "系数乘u；未另造二次费用"
+  },
+  {
+    "source_field": "SPRamp",
+    "chinese_name": "备用出力上限系数",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "SPRamp",
+    "model_use_or_limit": "r<=SPRamp*u；响应时长待查"
+  },
+  {
+    "source_field": "NSRamp",
+    "chinese_name": "未使用的爬坡相关字段",
+    "unit_or_type": "unknown",
+    "mapping": "NSRamp",
+    "model_use_or_limit": "基础模型声明但未用于约束；原值保留"
+  },
+  {
+    "source_field": "HRamp",
+    "chinese_name": "相邻时段出力变化系数",
+    "unit_or_type": "MW/model period",
+    "mapping": "HRamp",
+    "model_use_or_limit": "按作者原约束；t=1与t>1的上爬坡状态因子不同"
+  },
+  {
+    "source_field": "StartRamp",
+    "chinese_name": "启停过程出力变化系数",
+    "unit_or_type": "MW/model period",
+    "mapping": "StartRamp",
+    "model_use_or_limit": "按作者原上下爬坡公式保留"
+  },
+  {
+    "source_field": "gen_Style",
+    "chinese_name": "类别编码",
+    "unit_or_type": "unknown",
+    "mapping": "gen_Style",
+    "model_use_or_limit": "编码未确认，基础模型未读取"
+  },
+  {
+    "source_field": "branchNo",
+    "chinese_name": "线路记录编号",
+    "unit_or_type": "identifier",
+    "mapping": "branchNo",
+    "model_use_or_limit": "保留38条物理记录及并联线路"
+  },
+  {
+    "source_field": "branch_fbus",
+    "chinese_name": "线路正方向起点",
+    "unit_or_type": "identifier",
+    "mapping": "branch_fbus",
+    "model_use_or_limit": "节点外键"
+  },
+  {
+    "source_field": "branch_tbus",
+    "chinese_name": "线路正方向终点",
+    "unit_or_type": "identifier",
+    "mapping": "branch_tbus",
+    "model_use_or_limit": "节点外键"
+  },
+  {
+    "source_field": "branch_b",
+    "chinese_name": "潮流公式电纳系数",
+    "unit_or_type": "p.u. coefficient (formula evidence)",
+    "mapping": "branch_b",
+    "model_use_or_limit": "(theta_to-theta_from)*b=p/100；不把它当电抗；原始工程基准追溯待闭合"
+  },
+  {
+    "source_field": "branch_rateA",
+    "chinese_name": "基础模型正常线路限额",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "branch_rateA",
+    "model_use_or_limit": "-rateA<=flow<=rateA"
+  },
+  {
+    "source_field": "branch_rateC",
+    "chinese_name": "另一档线路限额",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "branch_rateC",
+    "model_use_or_limit": "基础模型未读取；工况定义待查"
+  },
+  {
+    "source_field": "demand24Bus.txt",
+    "chinese_name": "节点有功负荷",
+    "unit_or_type": "MW (model interpretation)",
+    "mapping": "demand_wide.csv.gz: sample_id,t01_bus01,...,t24_bus24",
+    "model_use_or_limit": "无表头；原行=sample_id，列=24*(t-1)+bus"
+  }
+]

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.tools/
+runs/
+reproduce_ieee24/
+sources/rpglab-ieee24/
+results/*/batch_*/

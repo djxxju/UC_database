@@ -1,0 +1,44 @@
+{
+  "profile": "rpglab-ieee24-native/1.0.0",
+  "source_cells_zero_based": {
+    "btheta": 30,
+    "ptdf": 45
+  },
+  "classification": "lossless_input_reorganization_with_explicit_native_semantics",
+  "model_family": "network_UC_with_author_per_generator_reserve_rule",
+  "source_name_contains_SCUC": true,
+  "network_N_minus_1_certified": false,
+  "time": {
+    "periods": 24,
+    "time_step_hours": 1,
+    "evidence": "Notebook #24 hour time set; nPrd=24",
+    "boundary": "cyclic_24_to_1"
+  },
+  "objective": "sum(g,t)[genC_Cost[g]*p[g,t]+genC_NLoad[g]*u[g,t]+genC_Startup[g]*v[g,t]]",
+  "capacity": "Pmin*u<=p; p+r<=Pmax*u; 0<=r<=SPRamp*u",
+  "reserve": "for every g,t: sum_h r[h,t]>=p[g,t]+r[g,t]",
+  "startup": {
+    "direct_constraint": "v_t>=u_t-u_prev",
+    "full_constraint_implication": "minUP>=1 gives v_t<=u_t; preceding minDN>=1 gives v_t<=1-u_prev; jointly v_t is exact 0->1 indicator",
+    "no_arbitrary_v_claim": true
+  },
+  "ramp_up": {
+    "t1": "p1-p24<=HRamp*u24+StartRamp*v1",
+    "t_gt_1": "pt-p_prev<=HRamp*u_t+StartRamp*v_t",
+    "note": "原文状态因子差异保留，未改为常见公式。"
+  },
+  "ramp_down": "p_prev-p_t<=HRamp*u_t+StartRamp*(v_t-u_t+u_prev); prev(1)=24",
+  "minimum_up_down": "作者循环启动窗口；保留原公式，不补初始历史。",
+  "dc_flow": "(theta_to-theta_from)*branch_b=flow/100; theta_bus1=0; -rateA<=flow<=rateA",
+  "nodal_balance": "local_generation+incoming_flow-outgoing_flow=load",
+  "preserved_unused_fields": [
+    "genD_status",
+    "gen_Style",
+    "NSRamp",
+    "branch_rateC"
+  ],
+  "physical_lines": 38,
+  "parallel_pairs_preserved": true,
+  "ML_graph_limit": "作者cell7按max合并并联为34条ML边；该图不作为物理线路等值。",
+  "execution": "Author cell30 B-theta semantics implemented using COPT; all 1800 samples independently checked. Source Notebook itself was not executed; PTDF/N-1/AI labels not certified."
+}

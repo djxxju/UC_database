@@ -1,0 +1,306 @@
+[
+  {
+    "branchNo": 1,
+    "branch_fbus": 1,
+    "branch_tbus": 2,
+    "branch_b": -71.4286,
+    "branch_rateA": 157.5,
+    "branch_rateC": 180
+  },
+  {
+    "branchNo": 2,
+    "branch_fbus": 1,
+    "branch_tbus": 3,
+    "branch_b": -4.7393,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 3,
+    "branch_fbus": 1,
+    "branch_tbus": 5,
+    "branch_b": -11.7647,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 4,
+    "branch_fbus": 2,
+    "branch_tbus": 4,
+    "branch_b": -7.874,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 5,
+    "branch_fbus": 2,
+    "branch_tbus": 6,
+    "branch_b": -5.2083,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 6,
+    "branch_fbus": 3,
+    "branch_tbus": 9,
+    "branch_b": -8.4034,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 7,
+    "branch_fbus": 3,
+    "branch_tbus": 24,
+    "branch_b": -11.9048,
+    "branch_rateA": 360,
+    "branch_rateC": 540
+  },
+  {
+    "branchNo": 8,
+    "branch_fbus": 4,
+    "branch_tbus": 9,
+    "branch_b": -9.6154,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 9,
+    "branch_fbus": 5,
+    "branch_tbus": 10,
+    "branch_b": -11.3636,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 10,
+    "branch_fbus": 6,
+    "branch_tbus": 10,
+    "branch_b": -16.3934,
+    "branch_rateA": 157.5,
+    "branch_rateC": 180
+  },
+  {
+    "branchNo": 11,
+    "branch_fbus": 7,
+    "branch_tbus": 8,
+    "branch_b": -16.3934,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 12,
+    "branch_fbus": 8,
+    "branch_tbus": 9,
+    "branch_b": -6.0606,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 13,
+    "branch_fbus": 8,
+    "branch_tbus": 10,
+    "branch_b": -6.0606,
+    "branch_rateA": 157.5,
+    "branch_rateC": 198
+  },
+  {
+    "branchNo": 14,
+    "branch_fbus": 9,
+    "branch_tbus": 11,
+    "branch_b": -11.9048,
+    "branch_rateA": 460,
+    "branch_rateC": 540
+  },
+  {
+    "branchNo": 15,
+    "branch_fbus": 9,
+    "branch_tbus": 12,
+    "branch_b": -11.9048,
+    "branch_rateA": 460,
+    "branch_rateC": 540
+  },
+  {
+    "branchNo": 16,
+    "branch_fbus": 10,
+    "branch_tbus": 11,
+    "branch_b": -11.9048,
+    "branch_rateA": 460,
+    "branch_rateC": 540
+  },
+  {
+    "branchNo": 17,
+    "branch_fbus": 10,
+    "branch_tbus": 12,
+    "branch_b": -11.9048,
+    "branch_rateA": 460,
+    "branch_rateC": 540
+  },
+  {
+    "branchNo": 18,
+    "branch_fbus": 11,
+    "branch_tbus": 13,
+    "branch_b": -20.7572,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 19,
+    "branch_fbus": 11,
+    "branch_tbus": 14,
+    "branch_b": -23.8095,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 20,
+    "branch_fbus": 12,
+    "branch_tbus": 13,
+    "branch_b": -20.8333,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 21,
+    "branch_fbus": 12,
+    "branch_tbus": 23,
+    "branch_b": -10.3093,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 22,
+    "branch_fbus": 13,
+    "branch_tbus": 23,
+    "branch_b": -11.4943,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 23,
+    "branch_fbus": 14,
+    "branch_tbus": 16,
+    "branch_b": -16.9492,
+    "branch_rateA": 315,
+    "branch_rateC": 393.75
+  },
+  {
+    "branchNo": 24,
+    "branch_fbus": 15,
+    "branch_tbus": 16,
+    "branch_b": -58.8235,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 25,
+    "branch_fbus": 15,
+    "branch_tbus": 21,
+    "branch_b": -20.4082,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 26,
+    "branch_fbus": 15,
+    "branch_tbus": 21,
+    "branch_b": -20.4082,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 27,
+    "branch_fbus": 15,
+    "branch_tbus": 24,
+    "branch_b": -19.2308,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 28,
+    "branch_fbus": 16,
+    "branch_tbus": 17,
+    "branch_b": -38.4615,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 29,
+    "branch_fbus": 16,
+    "branch_tbus": 19,
+    "branch_b": -43.4783,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 30,
+    "branch_fbus": 17,
+    "branch_tbus": 18,
+    "branch_b": -71.4286,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 31,
+    "branch_fbus": 17,
+    "branch_tbus": 22,
+    "branch_b": -9.5238,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 32,
+    "branch_fbus": 18,
+    "branch_tbus": 21,
+    "branch_b": -38.4615,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 33,
+    "branch_fbus": 18,
+    "branch_tbus": 21,
+    "branch_b": -38.4615,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 34,
+    "branch_fbus": 19,
+    "branch_tbus": 20,
+    "branch_b": -25,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 35,
+    "branch_fbus": 19,
+    "branch_tbus": 20,
+    "branch_b": -25,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 36,
+    "branch_fbus": 20,
+    "branch_tbus": 23,
+    "branch_b": -45.4545,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 37,
+    "branch_fbus": 20,
+    "branch_tbus": 23,
+    "branch_b": -45.4545,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  },
+  {
+    "branchNo": 38,
+    "branch_fbus": 21,
+    "branch_tbus": 22,
+    "branch_b": -14.7059,
+    "branch_rateA": 450,
+    "branch_rateC": 562.5
+  }
+]

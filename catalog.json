@@ -1,0 +1,42 @@
+{
+  "case_count": 1,
+  "system_count": 1,
+  "cases": [
+    {
+      "case_id": "rpglab_ieee24_native_v1",
+      "path": "cases/rpglab_ieee24_native_v1",
+      "n_generator_records": 15,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "sample_count": 1800,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_input_reorganization",
+      "data_quality": "source_inputs_preserved_with_open_metadata_and_model_issues",
+      "validation_report": "reports/rpglab_ieee24_native_v1/data_validation.json",
+      "model_execution": "verified_for_all_1800_samples",
+      "solve_status": "completed_all_requested_samples",
+      "independent_solution_check": "passed_for_all_1800_candidates",
+      "verified_sample_count": 1800,
+      "pending_sample_count": 0,
+      "solver_status_counts": {
+        "optimal_within_declared_solver_tolerances": 1800
+      },
+      "results": {
+        "directory": "results/rpglab_ieee24_native_v1",
+        "summary": "results/rpglab_ieee24_native_v1/reference_results.csv",
+        "verification": "results/rpglab_ieee24_native_v1/verification.json",
+        "readme": "results/rpglab_ieee24_native_v1/README.md",
+        "target_relative_gap": 0.0001,
+        "max_relative_gap": 9.9635698976145e-05,
+        "full_candidates_distributed": false
+      },
+      "schema_version": "1.1.1",
+      "distribution_version": "1.0.0",
+      "profile": "rpglab-ieee24-native/1.0.0",
+      "family": "network_uc",
+      "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256"
+    }
+  ],
+  "catalog_version": "1.0.0"
+}

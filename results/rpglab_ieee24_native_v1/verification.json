@@ -1,0 +1,83 @@
+{
+  "case_id": "rpglab_ieee24_native_v1",
+  "batch_id": "batch_20261026T085537.220133Z",
+  "statistics": {
+    "requested_samples": 1800,
+    "attempted_samples": 1800,
+    "verified_candidates": 1800,
+    "without_verified_candidate_ids": [],
+    "status_counts": {
+      "optimal_within_declared_solver_tolerances": 1800
+    },
+    "variables_per_candidate": 2928,
+    "compressed_candidate_values_checked": 5270400,
+    "independent_constraint_and_objective_evaluations": 13782600,
+    "target_relative_gap": 0.0001,
+    "gap_target_met_candidates": 1800,
+    "batch_wall_seconds": 1545.0168545000015,
+    "sum_solver_seconds_including_reused": 2296.6640148162837,
+    "max_MW_violation": 1.8531579368137794e-09,
+    "max_binary_distance": 3.958300354156563e-11,
+    "objective_min": 275622.28379691,
+    "objective_max": 549028.43476751,
+    "max_relative_gap": 9.9635698976145e-05
+  },
+  "input_comparison": {
+    "all_original_and_normalized_numeric_values_preserved": true,
+    "original_source_sha256": {
+      "GenData_1GPerBus.dat": "9123f4b61b33b7b730844115c62d91aefa1848eaa35ccc24bf4108d3a274f063",
+      "dataFileTxInfo24Bus.dat": "43c8db81a95474a5a51feff486f8d2b142c16744d5657dace70fe0b8657c2a88",
+      "demand24Bus.txt": "d027fbaf96798035bbcea50b47ccf65f0f04d2b9489067c510e60bac415f7b25",
+      "Spatio_Temporal_UC_Acceleration_Process.ipynb": "8d4085b17d6ad647b41eeb926376690ac9adb4aab3d043013ed222909da01cb5",
+      "upstream_README.md": "9102d2db5c4bca0a9af25e1fadc935d5e11941cc27f837baa0a235fc06bbf4f1"
+    },
+    "normalized_input_sha256": {
+      "generators.json": "4cd20e107dfbaefbb62ca75662f175f901542e3a306814760b9563f4868dd7dc",
+      "branches.json": "9a6ecda9824c69bfdad3ba3bce9bfafd14d799b9a9accd01f0b007f7da318614",
+      "demand_wide.csv.gz": "7c7b9132cd93a7131a7efe382540d7d0fa7a47d7194872419e0c10197bb385f6",
+      "provenance.json": "0d117287f7bdc12c4c6a827259126f81566bf3e87600a8f1ece8ece760277a18"
+    },
+    "generator_numeric_values_compared": 225,
+    "branch_numeric_values_compared": 228,
+    "load_tokens_compared": 1036800,
+    "sample_ids_and_time_bus_order_preserved": true,
+    "changes": [
+      "Original numeric values and author model rules retained.",
+      "Tables encoded as JSON; loads gained header/sample_id and reversible gzip compression.",
+      "New optimization/verification outputs are separate from inputs."
+    ]
+  },
+  "parameters": {
+    "TimeLimit": 300.0,
+    "RelGap": 0.0001,
+    "Threads": 1,
+    "FeasTol": 1e-08,
+    "IntTol": 1e-08
+  },
+  "parallel_workers": 4,
+  "limitations": [
+    "Solver optimal status is relative to recorded tolerances and gap.",
+    "Currency/price-year and pre-existing source issues remain disclosed.",
+    "No line N-1/PTDF/AI-label reproduction is claimed."
+  ],
+  "report_version": "1.0.0",
+  "model": "author_cell30_btheta",
+  "solver": "COPT 8.0.7",
+  "independent_tolerances": {
+    "MW": 1e-05,
+    "binary": 1e-06,
+    "logic": 1e-06,
+    "angle_reference": 1e-07,
+    "objective_absolute": 0.0001,
+    "objective_relative": 1e-08
+  },
+  "checker_sha256": "14e43bb88d2f699a3fad886d56364b110e9470513526baa6af1fe6a289b77bb4",
+  "adapter_sha256": "0ddce06f24968c1527e77be9c8f4d9e1f0778f427cce90675f239cb73dba49c6",
+  "reference_results_sha256": "ebbff2bcf1f4c4e0aa28c77bebc390caf3ff6d16f191056272d2aacd41cdd0ba",
+  "original_results_provenance_sha256": "42dff38b211cd432fea063d369315c8fad5b15908627bca4eaa279b95ad51080",
+  "original_input_provenance_sha256": "0d117287f7bdc12c4c6a827259126f81566bf3e87600a8f1ece8ece760277a18",
+  "published_input_provenance_sha256": "17b73aa6a1698c09bd68737a1e2d41d5272fdc14fb9aed89b41123c9b17746f0",
+  "published_metadata_only_changes": true,
+  "full_candidates_distributed": false,
+  "raw_runs_distributed": false
+}

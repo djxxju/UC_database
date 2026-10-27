@@ -1,0 +1,112 @@
+{
+  "case_id": "rpglab_ieee24_native_v1",
+  "profile": "rpglab-ieee24-native/1.0.0",
+  "schema_version": "1.1.1",
+  "package_layout": "lean-case/1.0.0",
+  "built_on": "2026-10-26",
+  "classification": "lossless_input_reorganization",
+  "status": "validated_with_documented_issues",
+  "solve_status": "completed_all_requested_samples",
+  "independent_solution_check": "passed_for_all_1800_candidates",
+  "source": {
+    "source": "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC",
+    "commit": "d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e",
+    "license": "CC BY 4.0 (upstream README)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": "Arun Venkatesh Ramesh and Xingpeng Li, Spatio-Temporal Deep Learning-Assisted Reduced Security-Constrained Unit Commitment, DOI 10.1109/TPWRS.2023.3313430",
+    "files": [
+      {
+        "original_name": "GenData_1GPerBus.dat",
+        "url": "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat",
+        "original_sha256": "9123f4b61b33b7b730844115c62d91aefa1848eaa35ccc24bf4108d3a274f063",
+        "original_bytes": 1364,
+        "first_download_date": "2026-10-24",
+        "archive_path": "sources/rpglab-ieee24/GenData_1GPerBus.dat",
+        "archive_sha256": "9123f4b61b33b7b730844115c62d91aefa1848eaa35ccc24bf4108d3a274f063",
+        "encoding": "exact original bytes"
+      },
+      {
+        "original_name": "dataFileTxInfo24Bus.dat",
+        "url": "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/dataFileTxInfo24Bus.dat",
+        "original_sha256": "43c8db81a95474a5a51feff486f8d2b142c16744d5657dace70fe0b8657c2a88",
+        "original_bytes": 1271,
+        "first_download_date": "2026-10-24",
+        "archive_path": "sources/rpglab-ieee24/dataFileTxInfo24Bus.dat",
+        "archive_sha256": "43c8db81a95474a5a51feff486f8d2b142c16744d5657dace70fe0b8657c2a88",
+        "encoding": "exact original bytes"
+      },
+      {
+        "original_name": "demand24Bus.txt",
+        "url": "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/demand24Bus.txt",
+        "original_sha256": "d027fbaf96798035bbcea50b47ccf65f0f04d2b9489067c510e60bac415f7b25",
+        "original_bytes": 13998278,
+        "first_download_date": "2026-10-24",
+        "archive_path": "sources/rpglab-ieee24/demand24Bus.txt.gz",
+        "archive_sha256": "951d2b3aae55e031a05d6e1f53abe387b6d5458483f0964276e1b161035dfa0f",
+        "encoding": "gzip of exact original bytes"
+      },
+      {
+        "original_name": "Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "url": "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "original_sha256": "8d4085b17d6ad647b41eeb926376690ac9adb4aab3d043013ed222909da01cb5",
+        "original_bytes": 496284,
+        "first_download_date": "2026-10-24",
+        "archive_path": "sources/rpglab-ieee24/Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "archive_sha256": "8d4085b17d6ad647b41eeb926376690ac9adb4aab3d043013ed222909da01cb5",
+        "encoding": "exact original bytes"
+      },
+      {
+        "original_name": "upstream_README.md",
+        "url": "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/README.md",
+        "original_sha256": "9102d2db5c4bca0a9af25e1fadc935d5e11941cc27f837baa0a235fc06bbf4f1",
+        "original_bytes": 4361,
+        "first_download_date": "2026-10-24",
+        "archive_path": "sources/rpglab-ieee24/upstream_README.md",
+        "archive_sha256": "9102d2db5c4bca0a9af25e1fadc935d5e11941cc27f837baa0a235fc06bbf4f1",
+        "encoding": "exact original bytes"
+      }
+    ],
+    "archive_distribution": "Local source caches are excluded; restore pinned files from the recorded URLs and verify their original SHA-256 values before source-based checks."
+  },
+  "shape": {
+    "generators": 15,
+    "buses": 24,
+    "branches": 38,
+    "samples": 1800,
+    "periods_per_sample": 24,
+    "nodal_load_values": 1036800
+  },
+  "load_order": "sample_id=original row, 1-based; columns after sample_id ordered period then bus; 1-based",
+  "changes": [
+    "原件内容不变；demand原件仅作可逆gzip压缩。",
+    "机组/线路转为保留全部原字段的JSON；负荷去除周围空白、增加显式sample_id及列名，无舍入。",
+    "字段/模型说明放共享profile目录；问题标注保留，不补造参数或修改原模型。",
+    "单样本查看表不作为正式交付，全部样本仍完整保存在负荷文件中。",
+    "发布视图仅更新状态/说明/索引，三份核心数据文件逐字节保持；原运行引用的本地输入快照不回写。"
+  ],
+  "script_sha256": {
+    "scripts/build_ieee24.py": "1460dd08cad4bd2727667e2278e851417160f1efff4484458e317948a818514a",
+    "scripts/validate_ieee24.py": "873ab79057e0a4df738af685cd739c89dafa1eccfb4a72bd559295c7a4ff1b23"
+  },
+  "artifact_sha256": {
+    "cases/rpglab_ieee24_native_v1/generators.json": "4cd20e107dfbaefbb62ca75662f175f901542e3a306814760b9563f4868dd7dc",
+    "cases/rpglab_ieee24_native_v1/branches.json": "9a6ecda9824c69bfdad3ba3bce9bfafd14d799b9a9accd01f0b007f7da318614",
+    "cases/rpglab_ieee24_native_v1/demand_wide.csv.gz": "7c7b9132cd93a7131a7efe382540d7d0fa7a47d7194872419e0c10197bb385f6",
+    "cases/rpglab_ieee24_native_v1/issues.json": "8f382ec835c602093dd8fe6e0e8835038bef934bae8053bf761969fe0e9d2cdd",
+    "cases/rpglab_ieee24_native_v1/README.md": "47785b2f643169335ea4b03910bf0411e1361c550ad8da9e8313a00b0804c4fb"
+  },
+  "profile_files": {
+    "field_dictionary": "docs/profiles/rpglab-ieee24-native/field_dictionary.json",
+    "model_profile": "docs/profiles/rpglab-ieee24-native/model_profile.json"
+  },
+  "profile_artifact_sha256": {
+    "docs/profiles/rpglab-ieee24-native/field_dictionary.json": "06c5d93667600e53428329b8281e9d3dca0fdea45860755e79f4d5112ee08d67",
+    "docs/profiles/rpglab-ieee24-native/model_profile.json": "c61b8ff6fbc61f7585b156ebf826ed210534fabb50fb26ef0eaed7fc624a281b"
+  },
+  "publication_view_prepared_on": "2026-10-26",
+  "execution_evidence": {
+    "verification": "results/rpglab_ieee24_native_v1/verification.json",
+    "reference_results": "results/rpglab_ieee24_native_v1/reference_results.csv",
+    "original_run_provenance_sha256": "0d117287f7bdc12c4c6a827259126f81566bf3e87600a8f1ece8ece760277a18"
+  }
+}

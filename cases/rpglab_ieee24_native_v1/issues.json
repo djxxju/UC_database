@@ -1,0 +1,288 @@
+{
+  "policy": "No unknown value was filled with zero. not_collected does not imply missing upstream.",
+  "issues": [
+    {
+      "issue_id": "I01",
+      "fields": [
+        "genD_status",
+        "gen_Style",
+        "NSRamp"
+      ],
+      "status": "ambiguous",
+      "description": "原值保留；类别/状态/未使用字段定义尚未确认。",
+      "impact": "不阻塞所查循环基础模型的数据读取；阻塞跨模型语义映射。",
+      "evidence_locations": [
+        "Notebook cells 30/45: source field reads and Param declarations; GenData header"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat"
+      ],
+      "blocking_for": [
+        "cross_model_field_mapping"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I02",
+      "fields": [
+        "currency",
+        "price_year"
+      ],
+      "status": "not_documented_in_selected_sources",
+      "description": "费用币种与价格年份尚未确认，禁止换汇或跨币种比较。",
+      "impact": "费用数值保留，不能声称跨来源经济可比。",
+      "evidence_locations": [
+        "Selected original README and GenData cost column headers do not settle ISO currency/price year"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/README.md",
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat"
+      ],
+      "blocking_for": [
+        "cross_source_economic_comparison"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I03",
+      "fields": [
+        "SPRamp_response_duration"
+      ],
+      "status": "ambiguous",
+      "description": "公式上限明确，备用响应时间口径尚未确认。",
+      "impact": "不能改作统一10分钟/15分钟备用而不生成派生版本。",
+      "evidence_locations": [
+        "Notebook cells 30/45 reserve_rr1_f: r<=SPRamp*u"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "reserve_response_profile_conversion"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I04",
+      "fields": [
+        "branch_b_engineering_base",
+        "branch_rateC_operating_condition"
+      ],
+      "status": "ambiguous",
+      "description": "p/100为原公式的显式功率标度；原始工程基准与rateC工况追溯未闭合。",
+      "impact": "保留原公式和原系数，不作交流网络或跨库等值认证。",
+      "evidence_locations": [
+        "Notebook cell30 pf_theta_f: (theta_to-theta_from)*b=p/100; branch_rateC not read in cells30/45"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/dataFileTxInfo24Bus.dat"
+      ],
+      "blocking_for": [
+        "engineering_unit_certification",
+        "AC_network_adaptation"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I05",
+      "fields": [
+        "G7_source_mapping",
+        "G7_zero_cost_rationale"
+      ],
+      "status": "partially_traced",
+      "description": "节点14零有功记录与上游同步调相机对应为有据推断；作者保留目的和逐条变换未闭合。",
+      "impact": "不删G7、不固定u；p=r=0仍保留启停标签等价性。",
+      "evidence_locations": [
+        "GenData record genNo=7, bus=14, Pmax=Pmin=0",
+        "UW RTS96 Table7 node114 Sync Cond; mapping to this transformed RPG record remains an inference",
+        "MATPOWER6.0 case24_ieee_rts source line0079 has node14 SynCond, Pmin=Pmax=0"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat",
+        "https://labs.ece.uw.edu/pstca/rts/rts96/Table-07.txt",
+        "https://matpower.org/docs/ref/matpower6.0/case24_ieee_rts.html"
+      ],
+      "blocking_for": [
+        "source_transformation_reproduction",
+        "AI_label_interpretation"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I06",
+      "fields": [
+        "G13_source_mapping",
+        "G13_startup_no_load_cost_rationale"
+      ],
+      "status": "partially_traced",
+      "description": "上游六台50MW水电聚合有证据支持；当前零启动/空载费与完整变换规则未闭合。",
+      "impact": "不补造水库/水文约束，不擅改费用。",
+      "evidence_locations": [
+        "GenData record genNo=13, bus=22, Pmax=300, cost coefficients all zero",
+        "Notebook cell2 says multiple units at one bus were combined; RTS96 Table6/7 six50MW hydro records support aggregation, not complete transformation equivalence",
+        "Author2022 dissertation printedp27 Table2.1 supports an older six50MW zero-output-cost group, not current startup/no-load costs"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat",
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb",
+        "https://labs.ece.uw.edu/pstca/rts/rts96/Table-06.txt",
+        "https://labs.ece.uw.edu/pstca/rts/rts96/Table-07.txt",
+        "https://rpglab.github.io/pdfs/team/2022-12-01_Arun_Dissertation.pdf#page=51"
+      ],
+      "blocking_for": [
+        "source_transformation_reproduction",
+        "hydro_model_extension"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I07",
+      "fields": [
+        "fixed_initial_commitment",
+        "initial_power",
+        "initial_on_off_history"
+      ],
+      "status": "not_applicable_to_cyclic_profile",
+      "description": "作者以24→1循环闭合启停、最小开停和爬坡，不使用固定时域前历史。",
+      "impact": "切换到固定初始条件模型时必须另行定义并发布派生版本。",
+      "evidence_locations": [
+        "Notebook cells30/45 var_v_f/Min_up_f/Min_dn_f/gen_HrRampUp_f/gen_HrRampDn_f wrap time 24 to1; commented initial-status block"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "conversion_to_fixed_initial_history_profile"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I08",
+      "fields": [
+        "commitment24Bus.txt",
+        "flows24Bus.txt",
+        "reference_dispatch_and_reserve"
+      ],
+      "status": "not_collected",
+      "description": "启停和潮流读取文件不在当前五份原件中；未取得可供独立验解的调度/备用记录，不表示作者未公开。未核对真实标签或样本打乱配对。",
+      "impact": "不能复现AI标签或独立验解作者结果。",
+      "evidence_locations": [
+        "Notebook data-reading cells reference commitment24Bus.txt and flows24Bus.txt; current five-file scope excludes them",
+        "No author candidate schedule has been independently checked"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "ML_label_pairing",
+        "independent_check_of_author_candidates"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I09",
+      "fields": [
+        "PTDF_Matrix.csv"
+      ],
+      "status": "not_collected",
+      "description": "Notebook cell44读取的作者PTDF矩阵未在当前五份原件中。",
+      "impact": "作者PTDF执行路径未复现；B-theta公式可静态审查。",
+      "evidence_locations": [
+        "Notebook cell44 reads PTDF_Matrix.csv"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "author_PTDF_execution_reproduction"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I10",
+      "fields": [
+        "line_contingency_set"
+      ],
+      "status": "not_defined_in_inspected_base_formulations",
+      "description": "所查B-theta/PTDF两段未显式枚举线路N-1约束。",
+      "impact": "保留来源SCUC名称；本profile仅称带网络UC及作者每机组备用规则，不认证N-1网络安全。",
+      "evidence_locations": [
+        "Inspected formulation definitions in cells30/45 use normal rateA and per-generator reserve; no explicit line-contingency index/set there"
+      ],
+      "evidence_urls": [
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "N_minus_1_network_security_claim"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I11",
+      "fields": [
+        "feasible_schedule",
+        "optimality_certificate",
+        "independent_solution_check"
+      ],
+      "status": "verified_for_selected_btheta_samples",
+      "description": "本项目已完成1800个原B-θ UC样本的求解及独立约束/目标验算，均达到所设相对gap0.01%。",
+      "impact": "已补证声明容差内的候选可行性和所设gap；不扩大为零gap精确最优、N-1或作者结果复现。",
+      "evidence_locations": [
+        "results/rpglab_ieee24_native_v1/reference_results.csv",
+        "results/rpglab_ieee24_native_v1/verification.json"
+      ],
+      "evidence_urls": [],
+      "blocking_for": [
+        "exact_optimality_claim",
+        "author_reference_result_reproduction"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I12",
+      "fields": [
+        "sample_probability",
+        "calendar_date",
+        "time_zone"
+      ],
+      "status": "not_defined_for_selected_profile",
+      "description": "1800行作为独立24时段样本，未赋予随机场景概率或日历时区。",
+      "impact": "不把独立样本拼成连续1800天或概率情景树。",
+      "evidence_locations": [
+        "demand24Bus.txt has1800 independent rows; source reading gives row/sample order, no row-level probability/date/timezone mapping selected"
+      ],
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/demand24Bus.txt",
+        "https://github.com/rpglab/GNN-LSTM_C-V-R-SCUC/blob/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Spatio_Temporal_UC_Acceleration_Process.ipynb"
+      ],
+      "blocking_for": [
+        "stochastic_probability_model",
+        "calendar_time_series_reconstruction"
+      ],
+      "blocks_native_input_reorganization": false
+    },
+    {
+      "issue_id": "I13",
+      "fields": [
+        "paper_version_system_size"
+      ],
+      "status": "ambiguous",
+      "description": "作者arXiv预印本v1 TableI列IEEE24为17机组/3393MW，而本固定GitHub输入是15条机组记录/3405MW；差异原因待查，不推广到最终期刊版。",
+      "impact": "不能仅凭系统名称或总成本将当前版本认作论文表格完全复现。",
+      "evidence_locations": [
+        "arXiv2306.01570v1 TableI, PDFp7: IEEE24 listed17 generators/3393MW",
+        "Current pinned GenData:15 records, sum Pmax3405MW; final journal version was not inferred from preprint"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/pdf/2306.01570v1#page=7",
+        "https://raw.githubusercontent.com/rpglab/GNN-LSTM_C-V-R-SCUC/d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e/Data/IEEE24Bus/DataCollectionOptimization%28BaseSCUC%29/GenData_1GPerBus.dat"
+      ],
+      "blocking_for": [
+        "paper_version_equivalence_claim"
+      ],
+      "blocks_native_input_reorganization": false
+    }
+  ]
+}

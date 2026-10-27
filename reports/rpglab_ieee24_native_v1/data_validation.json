@@ -1,0 +1,2703 @@
+{
+  "case_id": "rpglab_ieee24_native_v1",
+  "profile": "rpglab-ieee24-native/1.0.0",
+  "date": "2026-10-26",
+  "scope": "Input structure/parameters/lossless source mapping and specified necessary conditions only",
+  "model_execution": "verified_for_all_1800_samples",
+  "solve_status": "completed_all_requested_samples",
+  "independent_solution_check": "passed_for_all_1800_candidates",
+  "checks": [
+    {
+      "check_id": "profile_identity",
+      "passed": true
+    },
+    {
+      "check_id": "manifest_matches_provenance",
+      "passed": true
+    },
+    {
+      "check_id": "exact_five_pinned_originals",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_path:GenData_1GPerBus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_hash:GenData_1GPerBus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "pinned_original_hash_and_size:GenData_1GPerBus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_path:dataFileTxInfo24Bus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_hash:dataFileTxInfo24Bus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "pinned_original_hash_and_size:dataFileTxInfo24Bus.dat",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_path:demand24Bus.txt",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_hash:demand24Bus.txt",
+      "passed": true
+    },
+    {
+      "check_id": "pinned_original_hash_and_size:demand24Bus.txt",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_path:Spatio_Temporal_UC_Acceleration_Process.ipynb",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_hash:Spatio_Temporal_UC_Acceleration_Process.ipynb",
+      "passed": true
+    },
+    {
+      "check_id": "pinned_original_hash_and_size:Spatio_Temporal_UC_Acceleration_Process.ipynb",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_path:upstream_README.md",
+      "passed": true
+    },
+    {
+      "check_id": "source_archive_hash:upstream_README.md",
+      "passed": true
+    },
+    {
+      "check_id": "pinned_original_hash_and_size:upstream_README.md",
+      "passed": true
+    },
+    {
+      "check_id": "complete_exact_artifact_hash_manifest",
+      "passed": true
+    },
+    {
+      "check_id": "exact_six_case_delivery_files",
+      "passed": true
+    },
+    {
+      "check_id": "complete_exact_profile_hash_manifest",
+      "passed": true
+    },
+    {
+      "check_id": "complete_exact_script_hash_manifest",
+      "passed": true
+    },
+    {
+      "check_id": "derived_artifact_hash:cases/rpglab_ieee24_native_v1/branches.json",
+      "passed": true
+    },
+    {
+      "check_id": "derived_artifact_hash:cases/rpglab_ieee24_native_v1/demand_wide.csv.gz",
+      "passed": true
+    },
+    {
+      "check_id": "derived_artifact_hash:cases/rpglab_ieee24_native_v1/generators.json",
+      "passed": true
+    },
+    {
+      "check_id": "derived_artifact_hash:cases/rpglab_ieee24_native_v1/issues.json",
+      "passed": true
+    },
+    {
+      "check_id": "derived_artifact_hash:cases/rpglab_ieee24_native_v1/README.md",
+      "passed": true
+    },
+    {
+      "check_id": "shared_profile_hash:docs/profiles/rpglab-ieee24-native/field_dictionary.json",
+      "passed": true
+    },
+    {
+      "check_id": "shared_profile_hash:docs/profiles/rpglab-ieee24-native/model_profile.json",
+      "passed": true
+    },
+    {
+      "check_id": "script_identity:scripts/build_ieee24.py",
+      "passed": true
+    },
+    {
+      "check_id": "script_identity:scripts/validate_ieee24.py",
+      "passed": true
+    },
+    {
+      "check_id": "json_schema_draft202012",
+      "passed": true,
+      "schema_sha256": "d4ec7d9ad271b58e4ee57e0a01e23d96bef664665839766200429a8f15818666"
+    },
+    {
+      "check_id": "all_source_table_values_preserved:GenData_1GPerBus.dat",
+      "passed": true,
+      "records": 15,
+      "fields": 15
+    },
+    {
+      "check_id": "all_source_table_values_preserved:dataFileTxInfo24Bus.dat",
+      "passed": true,
+      "records": 38,
+      "fields": 6
+    },
+    {
+      "check_id": "field_dictionary_complete_unique",
+      "passed": true
+    },
+    {
+      "check_id": "all_generator_branch_values_finite",
+      "passed": true
+    },
+    {
+      "check_id": "generator_ids_1_to_15",
+      "passed": true
+    },
+    {
+      "check_id": "branch_ids_1_to_38",
+      "passed": true
+    },
+    {
+      "check_id": "all_foreign_keys_exist",
+      "passed": true
+    },
+    {
+      "check_id": "pmin_pmax_order",
+      "passed": true
+    },
+    {
+      "check_id": "minimum_times_positive_integer_within_profile",
+      "passed": true
+    },
+    {
+      "check_id": "cost_ramp_fields_nonnegative",
+      "passed": true
+    },
+    {
+      "check_id": "line_endpoints_distinct",
+      "passed": true
+    },
+    {
+      "check_id": "line_ratings_positive_ordered",
+      "passed": true
+    },
+    {
+      "check_id": "line_b_nonzero_and_source_sign_preserved",
+      "passed": true,
+      "note": "Negative b is observed in this pinned source, not a universal network requirement"
+    },
+    {
+      "check_id": "network_connected",
+      "passed": true
+    },
+    {
+      "check_id": "parallel_circuits_preserved",
+      "passed": true,
+      "parallel_pairs": [
+        {
+          "buses": [
+            15,
+            21
+          ],
+          "branch_ids": [
+            25,
+            26
+          ]
+        },
+        {
+          "buses": [
+            18,
+            21
+          ],
+          "branch_ids": [
+            32,
+            33
+          ]
+        },
+        {
+          "buses": [
+            19,
+            20
+          ],
+          "branch_ids": [
+            34,
+            35
+          ]
+        },
+        {
+          "buses": [
+            20,
+            23
+          ],
+          "branch_ids": [
+            36,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "check_id": "zero_capacity_record_preserved",
+      "passed": true
+    },
+    {
+      "check_id": "g13_zero_cost_source_values_preserved",
+      "passed": true
+    },
+    {
+      "check_id": "demand_column_mapping",
+      "passed": true
+    },
+    {
+      "check_id": "demand_dimensions",
+      "passed": true
+    },
+    {
+      "check_id": "all_1036800_demand_lexemes_and_sample_ids_preserved",
+      "passed": true,
+      "numeric_values": 1036800,
+      "note": "Exact token equality after stripping source whitespace; no float rounding used for this check"
+    },
+    {
+      "check_id": "source_and_target_float_tensors_identical",
+      "passed": true
+    },
+    {
+      "check_id": "all_loads_finite_nonnegative",
+      "passed": true
+    },
+    {
+      "check_id": "issue_states_distinguished",
+      "passed": true
+    },
+    {
+      "check_id": "uncollected_labels_not_claimed_missing_upstream",
+      "passed": true
+    },
+    {
+      "check_id": "native_boundary_and_startup_semantics_recorded",
+      "passed": true
+    },
+    {
+      "check_id": "source_reserve_evidence_cell_30",
+      "passed": true
+    },
+    {
+      "check_id": "source_reserve_evidence_cell_45",
+      "passed": true
+    },
+    {
+      "check_id": "btheta_source_flow_scaling_and_boundary_evidence",
+      "passed": true
+    },
+    {
+      "check_id": "capacity_necessary_condition_43200_periods",
+      "passed": true,
+      "limit_MW": 3405.0,
+      "evaluated_periods": 43200,
+      "failing_periods": 0
+    },
+    {
+      "check_id": "reserve_necessary_condition_43200_periods",
+      "passed": true,
+      "limit_MW": 2814.0,
+      "evaluated_periods": 43200,
+      "failing_periods": 0,
+      "derivation": "sum r>=p_g+r_g -> D<=sum_{h!=g}(p_h+r_h)<=sum_{h!=g}Pmax_h, for every g; minimum is sum Pmax-max Pmax"
+    },
+    {
+      "check_id": "cut_set_enumeration",
+      "passed": true,
+      "subsets": 130
+    },
+    {
+      "check_id": "network_cut_necessary_conditions_5616000_inequalities",
+      "passed": true,
+      "evaluated_inequalities": 5616000,
+      "failing_inequalities": 0
+    },
+    {
+      "check_id": "decimal_control_peak_load",
+      "passed": true
+    }
+  ],
+  "tolerance_MW": 1e-08,
+  "dependencies": {
+    "python": "3.13.2",
+    "numpy": "2.2.4",
+    "jsonschema": "4.26.0"
+  },
+  "results": {
+    "capacity_limit_MW": 3405.0,
+    "reserve_necessary_limit_MW": 2814.0,
+    "peak": {
+      "sample_id": 196,
+      "period": 8,
+      "load_MW": 2169.56637863348,
+      "capacity_margin_MW": 1235.4336213665201,
+      "reserve_bound_margin_MW": 644.4336213665201
+    },
+    "minimum_load": {
+      "sample_id": 431,
+      "period": 23,
+      "load_MW": 943.6352406139433
+    },
+    "network_worst": {
+      "sample_id": 196,
+      "period": 8,
+      "cut": {
+        "cut_id": 4,
+        "buses": [
+          4
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 315.0,
+        "ceiling_MW": 315.0,
+        "boundary_branch_ids": [
+          4,
+          8
+        ]
+      },
+      "area_load_MW": 177.06053116563638,
+      "margin_MW": 137.93946883436362
+    },
+    "cuts": [
+      {
+        "cut_id": 1,
+        "buses": [
+          1
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 624.5,
+        "boundary_branch_ids": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "cut_id": 2,
+        "buses": [
+          2
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 624.5,
+        "boundary_branch_ids": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "cut_id": 3,
+        "buses": [
+          3
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 675.0,
+        "ceiling_MW": 675.0,
+        "boundary_branch_ids": [
+          2,
+          6,
+          7
+        ]
+      },
+      {
+        "cut_id": 4,
+        "buses": [
+          4
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 315.0,
+        "ceiling_MW": 315.0,
+        "boundary_branch_ids": [
+          4,
+          8
+        ]
+      },
+      {
+        "cut_id": 5,
+        "buses": [
+          5
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 315.0,
+        "ceiling_MW": 355.0,
+        "boundary_branch_ids": [
+          3,
+          9
+        ]
+      },
+      {
+        "cut_id": 6,
+        "buses": [
+          6
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 315.0,
+        "ceiling_MW": 355.0,
+        "boundary_branch_ids": [
+          5,
+          10
+        ]
+      },
+      {
+        "cut_id": 7,
+        "buses": [
+          7
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 157.5,
+        "ceiling_MW": 457.5,
+        "boundary_branch_ids": [
+          11
+        ]
+      },
+      {
+        "cut_id": 8,
+        "buses": [
+          8
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 472.5,
+        "boundary_branch_ids": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "cut_id": 9,
+        "buses": [
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1392.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 10,
+        "buses": [
+          10
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1392.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 11,
+        "buses": [
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1820,
+        "ceiling_MW": 1820,
+        "boundary_branch_ids": [
+          14,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 12,
+        "buses": [
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1820,
+        "ceiling_MW": 1820,
+        "boundary_branch_ids": [
+          15,
+          17,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 13,
+        "buses": [
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1941,
+        "boundary_branch_ids": [
+          18,
+          20,
+          22
+        ]
+      },
+      {
+        "cut_id": 14,
+        "buses": [
+          14
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 765,
+        "ceiling_MW": 765,
+        "boundary_branch_ids": [
+          19,
+          23
+        ]
+      },
+      {
+        "cut_id": 15,
+        "buses": [
+          15
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 1955,
+        "boundary_branch_ids": [
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "cut_id": 16,
+        "buses": [
+          16
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 1665,
+        "ceiling_MW": 1820,
+        "boundary_branch_ids": [
+          23,
+          24,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 17,
+        "buses": [
+          17
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1350,
+        "boundary_branch_ids": [
+          28,
+          30,
+          31
+        ]
+      },
+      {
+        "cut_id": 18,
+        "buses": [
+          18
+        ],
+        "local_Pmax_MW": 400,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1750,
+        "boundary_branch_ids": [
+          30,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 19,
+        "buses": [
+          19
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1350,
+        "boundary_branch_ids": [
+          29,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 20,
+        "buses": [
+          20
+        ],
+        "local_Pmax_MW": 350,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2150,
+        "boundary_branch_ids": [
+          34,
+          35,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 21,
+        "buses": [
+          21
+        ],
+        "local_Pmax_MW": 400,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 2650,
+        "boundary_branch_ids": [
+          25,
+          26,
+          32,
+          33,
+          38
+        ]
+      },
+      {
+        "cut_id": 22,
+        "buses": [
+          22
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 900,
+        "ceiling_MW": 1200,
+        "boundary_branch_ids": [
+          31,
+          38
+        ]
+      },
+      {
+        "cut_id": 23,
+        "buses": [
+          23
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2110,
+        "boundary_branch_ids": [
+          21,
+          22,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 24,
+        "buses": [
+          24
+        ],
+        "local_Pmax_MW": 60,
+        "boundary_rateA_sum_MW": 810,
+        "ceiling_MW": 870,
+        "boundary_branch_ids": [
+          7,
+          27
+        ]
+      },
+      {
+        "cut_id": 25,
+        "buses": [
+          1,
+          2
+        ],
+        "local_Pmax_MW": 304,
+        "boundary_rateA_sum_MW": 630.0,
+        "ceiling_MW": 934.0,
+        "boundary_branch_ids": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "cut_id": 26,
+        "buses": [
+          1,
+          3
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 832.5,
+        "ceiling_MW": 984.5,
+        "boundary_branch_ids": [
+          1,
+          3,
+          6,
+          7
+        ]
+      },
+      {
+        "cut_id": 27,
+        "buses": [
+          1,
+          5
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 664.5,
+        "boundary_branch_ids": [
+          1,
+          2,
+          9
+        ]
+      },
+      {
+        "cut_id": 28,
+        "buses": [
+          2,
+          4
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 624.5,
+        "boundary_branch_ids": [
+          1,
+          5,
+          8
+        ]
+      },
+      {
+        "cut_id": 29,
+        "buses": [
+          2,
+          6
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 664.5,
+        "boundary_branch_ids": [
+          1,
+          4,
+          10
+        ]
+      },
+      {
+        "cut_id": 30,
+        "buses": [
+          3,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1752.5,
+        "ceiling_MW": 1752.5,
+        "boundary_branch_ids": [
+          2,
+          7,
+          8,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 31,
+        "buses": [
+          3,
+          24
+        ],
+        "local_Pmax_MW": 60,
+        "boundary_rateA_sum_MW": 765.0,
+        "ceiling_MW": 825.0,
+        "boundary_branch_ids": [
+          2,
+          6,
+          27
+        ]
+      },
+      {
+        "cut_id": 32,
+        "buses": [
+          4,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1392.5,
+        "boundary_branch_ids": [
+          4,
+          6,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 33,
+        "buses": [
+          5,
+          10
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1432.5,
+        "boundary_branch_ids": [
+          3,
+          10,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 34,
+        "buses": [
+          6,
+          10
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1432.5,
+        "boundary_branch_ids": [
+          5,
+          9,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 35,
+        "buses": [
+          7,
+          8
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 315.0,
+        "ceiling_MW": 615.0,
+        "boundary_branch_ids": [
+          12,
+          13
+        ]
+      },
+      {
+        "cut_id": 36,
+        "buses": [
+          8,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1550.0,
+        "boundary_branch_ids": [
+          6,
+          8,
+          11,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 37,
+        "buses": [
+          8,
+          10
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1550.0,
+        "boundary_branch_ids": [
+          9,
+          10,
+          11,
+          12,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 38,
+        "buses": [
+          9,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 39,
+        "buses": [
+          9,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          14,
+          17,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 40,
+        "buses": [
+          10,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          14,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 41,
+        "buses": [
+          10,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          15,
+          16,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 42,
+        "buses": [
+          11,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2270,
+        "ceiling_MW": 2861,
+        "boundary_branch_ids": [
+          14,
+          16,
+          19,
+          20,
+          22
+        ]
+      },
+      {
+        "cut_id": 43,
+        "buses": [
+          11,
+          14
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1685,
+        "ceiling_MW": 1685,
+        "boundary_branch_ids": [
+          14,
+          16,
+          18,
+          23
+        ]
+      },
+      {
+        "cut_id": 44,
+        "buses": [
+          12,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2270,
+        "ceiling_MW": 2861,
+        "boundary_branch_ids": [
+          15,
+          17,
+          18,
+          21,
+          22
+        ]
+      },
+      {
+        "cut_id": 45,
+        "buses": [
+          12,
+          23
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 2720,
+        "ceiling_MW": 3030,
+        "boundary_branch_ids": [
+          15,
+          17,
+          20,
+          22,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 46,
+        "buses": [
+          13,
+          23
+        ],
+        "local_Pmax_MW": 901,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 3151,
+        "boundary_branch_ids": [
+          18,
+          20,
+          21,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 47,
+        "buses": [
+          14,
+          16
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 1955,
+        "boundary_branch_ids": [
+          19,
+          24,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 48,
+        "buses": [
+          15,
+          16
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 2565,
+        "ceiling_MW": 2875,
+        "boundary_branch_ids": [
+          23,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 49,
+        "buses": [
+          15,
+          21
+        ],
+        "local_Pmax_MW": 555,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 2805,
+        "boundary_branch_ids": [
+          24,
+          27,
+          32,
+          33,
+          38
+        ]
+      },
+      {
+        "cut_id": 50,
+        "buses": [
+          15,
+          24
+        ],
+        "local_Pmax_MW": 215,
+        "boundary_rateA_sum_MW": 1710,
+        "ceiling_MW": 1925,
+        "boundary_branch_ids": [
+          7,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "cut_id": 51,
+        "buses": [
+          16,
+          17
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2115,
+        "ceiling_MW": 2270,
+        "boundary_branch_ids": [
+          23,
+          24,
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "cut_id": 52,
+        "buses": [
+          16,
+          19
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2115,
+        "ceiling_MW": 2270,
+        "boundary_branch_ids": [
+          23,
+          24,
+          28,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 53,
+        "buses": [
+          17,
+          18
+        ],
+        "local_Pmax_MW": 400,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2200,
+        "boundary_branch_ids": [
+          28,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 54,
+        "buses": [
+          17,
+          22
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1650,
+        "boundary_branch_ids": [
+          28,
+          30,
+          38
+        ]
+      },
+      {
+        "cut_id": 55,
+        "buses": [
+          18,
+          21
+        ],
+        "local_Pmax_MW": 800,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2600,
+        "boundary_branch_ids": [
+          25,
+          26,
+          30,
+          38
+        ]
+      },
+      {
+        "cut_id": 56,
+        "buses": [
+          19,
+          20
+        ],
+        "local_Pmax_MW": 350,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 1700,
+        "boundary_branch_ids": [
+          29,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 57,
+        "buses": [
+          20,
+          23
+        ],
+        "local_Pmax_MW": 660,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2460,
+        "boundary_branch_ids": [
+          21,
+          22,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 58,
+        "buses": [
+          21,
+          22
+        ],
+        "local_Pmax_MW": 700,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 2950,
+        "boundary_branch_ids": [
+          25,
+          26,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 59,
+        "buses": [
+          1,
+          2,
+          3
+        ],
+        "local_Pmax_MW": 304,
+        "boundary_rateA_sum_MW": 990.0,
+        "ceiling_MW": 1294.0,
+        "boundary_branch_ids": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "cut_id": 60,
+        "buses": [
+          1,
+          2,
+          4
+        ],
+        "local_Pmax_MW": 304,
+        "boundary_rateA_sum_MW": 630.0,
+        "ceiling_MW": 934.0,
+        "boundary_branch_ids": [
+          2,
+          3,
+          5,
+          8
+        ]
+      },
+      {
+        "cut_id": 61,
+        "buses": [
+          1,
+          2,
+          5
+        ],
+        "local_Pmax_MW": 344,
+        "boundary_rateA_sum_MW": 630.0,
+        "ceiling_MW": 974.0,
+        "boundary_branch_ids": [
+          2,
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "cut_id": 62,
+        "buses": [
+          1,
+          2,
+          6
+        ],
+        "local_Pmax_MW": 344,
+        "boundary_rateA_sum_MW": 630.0,
+        "ceiling_MW": 974.0,
+        "boundary_branch_ids": [
+          2,
+          3,
+          4,
+          10
+        ]
+      },
+      {
+        "cut_id": 63,
+        "buses": [
+          1,
+          3,
+          5
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 832.5,
+        "ceiling_MW": 1024.5,
+        "boundary_branch_ids": [
+          1,
+          6,
+          7,
+          9
+        ]
+      },
+      {
+        "cut_id": 64,
+        "buses": [
+          1,
+          3,
+          9
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 1910.0,
+        "ceiling_MW": 2062.0,
+        "boundary_branch_ids": [
+          1,
+          3,
+          7,
+          8,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 65,
+        "buses": [
+          1,
+          3,
+          24
+        ],
+        "local_Pmax_MW": 212,
+        "boundary_rateA_sum_MW": 922.5,
+        "ceiling_MW": 1134.5,
+        "boundary_branch_ids": [
+          1,
+          3,
+          6,
+          27
+        ]
+      },
+      {
+        "cut_id": 66,
+        "buses": [
+          1,
+          5,
+          10
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1742.0,
+        "boundary_branch_ids": [
+          1,
+          2,
+          10,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 67,
+        "buses": [
+          2,
+          4,
+          6
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 472.5,
+        "ceiling_MW": 664.5,
+        "boundary_branch_ids": [
+          1,
+          8,
+          10
+        ]
+      },
+      {
+        "cut_id": 68,
+        "buses": [
+          2,
+          4,
+          9
+        ],
+        "local_Pmax_MW": 152,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1702.0,
+        "boundary_branch_ids": [
+          1,
+          5,
+          6,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 69,
+        "buses": [
+          2,
+          6,
+          10
+        ],
+        "local_Pmax_MW": 192,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1742.0,
+        "boundary_branch_ids": [
+          1,
+          4,
+          9,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 70,
+        "buses": [
+          3,
+          4,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1752.5,
+        "ceiling_MW": 1752.5,
+        "boundary_branch_ids": [
+          2,
+          4,
+          7,
+          12,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 71,
+        "buses": [
+          3,
+          8,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1910.0,
+        "ceiling_MW": 1910.0,
+        "boundary_branch_ids": [
+          2,
+          7,
+          8,
+          11,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 72,
+        "buses": [
+          3,
+          9,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2652.5,
+        "ceiling_MW": 2652.5,
+        "boundary_branch_ids": [
+          2,
+          7,
+          8,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 73,
+        "buses": [
+          3,
+          9,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2652.5,
+        "ceiling_MW": 2652.5,
+        "boundary_branch_ids": [
+          2,
+          7,
+          8,
+          12,
+          14,
+          17,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 74,
+        "buses": [
+          3,
+          9,
+          24
+        ],
+        "local_Pmax_MW": 60,
+        "boundary_rateA_sum_MW": 1842.5,
+        "ceiling_MW": 1902.5,
+        "boundary_branch_ids": [
+          2,
+          8,
+          12,
+          14,
+          15,
+          27
+        ]
+      },
+      {
+        "cut_id": 75,
+        "buses": [
+          3,
+          15,
+          24
+        ],
+        "local_Pmax_MW": 215,
+        "boundary_rateA_sum_MW": 1665.0,
+        "ceiling_MW": 1880.0,
+        "boundary_branch_ids": [
+          2,
+          6,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "cut_id": 76,
+        "buses": [
+          4,
+          8,
+          9
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1550.0,
+        "boundary_branch_ids": [
+          4,
+          6,
+          11,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 77,
+        "buses": [
+          4,
+          9,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          4,
+          6,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 78,
+        "buses": [
+          4,
+          9,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2292.5,
+        "boundary_branch_ids": [
+          4,
+          6,
+          12,
+          14,
+          17,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 79,
+        "buses": [
+          5,
+          6,
+          10
+        ],
+        "local_Pmax_MW": 80,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1472.5,
+        "boundary_branch_ids": [
+          3,
+          5,
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 80,
+        "buses": [
+          5,
+          8,
+          10
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1590.0,
+        "boundary_branch_ids": [
+          3,
+          10,
+          11,
+          12,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 81,
+        "buses": [
+          5,
+          10,
+          11
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2332.5,
+        "boundary_branch_ids": [
+          3,
+          10,
+          13,
+          14,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 82,
+        "buses": [
+          5,
+          10,
+          12
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2332.5,
+        "boundary_branch_ids": [
+          3,
+          10,
+          13,
+          15,
+          16,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 83,
+        "buses": [
+          6,
+          8,
+          10
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 1550.0,
+        "ceiling_MW": 1590.0,
+        "boundary_branch_ids": [
+          5,
+          9,
+          11,
+          12,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 84,
+        "buses": [
+          6,
+          10,
+          11
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2332.5,
+        "boundary_branch_ids": [
+          5,
+          9,
+          13,
+          14,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 85,
+        "buses": [
+          6,
+          10,
+          12
+        ],
+        "local_Pmax_MW": 40,
+        "boundary_rateA_sum_MW": 2292.5,
+        "ceiling_MW": 2332.5,
+        "boundary_branch_ids": [
+          5,
+          9,
+          13,
+          15,
+          16,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 86,
+        "buses": [
+          7,
+          8,
+          9
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1692.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "cut_id": 87,
+        "buses": [
+          7,
+          8,
+          10
+        ],
+        "local_Pmax_MW": 300,
+        "boundary_rateA_sum_MW": 1392.5,
+        "ceiling_MW": 1692.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          12,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 88,
+        "buses": [
+          8,
+          9,
+          10
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2627.5,
+        "ceiling_MW": 2627.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "cut_id": 89,
+        "buses": [
+          8,
+          9,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2450.0,
+        "ceiling_MW": 2450.0,
+        "boundary_branch_ids": [
+          6,
+          8,
+          11,
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 90,
+        "buses": [
+          8,
+          9,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2450.0,
+        "ceiling_MW": 2450.0,
+        "boundary_branch_ids": [
+          6,
+          8,
+          11,
+          13,
+          14,
+          17,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 91,
+        "buses": [
+          8,
+          10,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2450.0,
+        "ceiling_MW": 2450.0,
+        "boundary_branch_ids": [
+          9,
+          10,
+          11,
+          12,
+          14,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 92,
+        "buses": [
+          8,
+          10,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2450.0,
+        "ceiling_MW": 2450.0,
+        "boundary_branch_ids": [
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 93,
+        "buses": [
+          9,
+          10,
+          11
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2765.0,
+        "ceiling_MW": 2765.0,
+        "boundary_branch_ids": [
+          6,
+          8,
+          9,
+          10,
+          12,
+          13,
+          15,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "cut_id": 94,
+        "buses": [
+          9,
+          10,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2765.0,
+        "ceiling_MW": 2765.0,
+        "boundary_branch_ids": [
+          6,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          16,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 95,
+        "buses": [
+          9,
+          11,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 3192.5,
+        "ceiling_MW": 3192.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 96,
+        "buses": [
+          9,
+          11,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2742.5,
+        "ceiling_MW": 3333.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          15,
+          16,
+          19,
+          20,
+          22
+        ]
+      },
+      {
+        "cut_id": 97,
+        "buses": [
+          9,
+          11,
+          14
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2157.5,
+        "ceiling_MW": 2157.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          15,
+          16,
+          18,
+          23
+        ]
+      },
+      {
+        "cut_id": 98,
+        "buses": [
+          9,
+          12,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2742.5,
+        "ceiling_MW": 3333.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          14,
+          17,
+          18,
+          21,
+          22
+        ]
+      },
+      {
+        "cut_id": 99,
+        "buses": [
+          9,
+          12,
+          23
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 3192.5,
+        "ceiling_MW": 3502.5,
+        "boundary_branch_ids": [
+          6,
+          8,
+          12,
+          14,
+          17,
+          20,
+          22,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 100,
+        "buses": [
+          10,
+          11,
+          12
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 3192.5,
+        "ceiling_MW": 3192.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "cut_id": 101,
+        "buses": [
+          10,
+          11,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2742.5,
+        "ceiling_MW": 3333.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          14,
+          17,
+          19,
+          20,
+          22
+        ]
+      },
+      {
+        "cut_id": 102,
+        "buses": [
+          10,
+          11,
+          14
+        ],
+        "local_Pmax_MW": 0,
+        "boundary_rateA_sum_MW": 2157.5,
+        "ceiling_MW": 2157.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          14,
+          17,
+          18,
+          23
+        ]
+      },
+      {
+        "cut_id": 103,
+        "buses": [
+          10,
+          12,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2742.5,
+        "ceiling_MW": 3333.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          15,
+          16,
+          18,
+          21,
+          22
+        ]
+      },
+      {
+        "cut_id": 104,
+        "buses": [
+          10,
+          12,
+          23
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 3192.5,
+        "ceiling_MW": 3502.5,
+        "boundary_branch_ids": [
+          9,
+          10,
+          13,
+          15,
+          16,
+          20,
+          22,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 105,
+        "buses": [
+          11,
+          12,
+          13
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 3190,
+        "ceiling_MW": 3781,
+        "boundary_branch_ids": [
+          14,
+          15,
+          16,
+          17,
+          19,
+          21,
+          22
+        ]
+      },
+      {
+        "cut_id": 106,
+        "buses": [
+          11,
+          13,
+          14
+        ],
+        "local_Pmax_MW": 591,
+        "boundary_rateA_sum_MW": 2135,
+        "ceiling_MW": 2726,
+        "boundary_branch_ids": [
+          14,
+          16,
+          20,
+          22,
+          23
+        ]
+      },
+      {
+        "cut_id": 107,
+        "buses": [
+          11,
+          13,
+          23
+        ],
+        "local_Pmax_MW": 901,
+        "boundary_rateA_sum_MW": 3170,
+        "ceiling_MW": 4071,
+        "boundary_branch_ids": [
+          14,
+          16,
+          19,
+          20,
+          21,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 108,
+        "buses": [
+          11,
+          14,
+          16
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2720,
+        "ceiling_MW": 2875,
+        "boundary_branch_ids": [
+          14,
+          16,
+          18,
+          24,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 109,
+        "buses": [
+          12,
+          13,
+          23
+        ],
+        "local_Pmax_MW": 901,
+        "boundary_rateA_sum_MW": 2270,
+        "ceiling_MW": 3171,
+        "boundary_branch_ids": [
+          15,
+          17,
+          18,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 110,
+        "buses": [
+          12,
+          20,
+          23
+        ],
+        "local_Pmax_MW": 660,
+        "boundary_rateA_sum_MW": 2720,
+        "ceiling_MW": 3380,
+        "boundary_branch_ids": [
+          15,
+          17,
+          20,
+          22,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 111,
+        "buses": [
+          13,
+          20,
+          23
+        ],
+        "local_Pmax_MW": 1251,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 3501,
+        "boundary_branch_ids": [
+          18,
+          20,
+          21,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 112,
+        "buses": [
+          14,
+          15,
+          16
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 2700,
+        "ceiling_MW": 3010,
+        "boundary_branch_ids": [
+          19,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 113,
+        "buses": [
+          14,
+          16,
+          17
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 2405,
+        "boundary_branch_ids": [
+          19,
+          24,
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "cut_id": 114,
+        "buses": [
+          14,
+          16,
+          19
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 2405,
+        "boundary_branch_ids": [
+          19,
+          24,
+          28,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 115,
+        "buses": [
+          15,
+          16,
+          17
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 3015,
+        "ceiling_MW": 3325,
+        "boundary_branch_ids": [
+          23,
+          25,
+          26,
+          27,
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "cut_id": 116,
+        "buses": [
+          15,
+          16,
+          19
+        ],
+        "local_Pmax_MW": 310,
+        "boundary_rateA_sum_MW": 3015,
+        "ceiling_MW": 3325,
+        "boundary_branch_ids": [
+          23,
+          25,
+          26,
+          27,
+          28,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 117,
+        "buses": [
+          15,
+          16,
+          21
+        ],
+        "local_Pmax_MW": 710,
+        "boundary_rateA_sum_MW": 3015,
+        "ceiling_MW": 3725,
+        "boundary_branch_ids": [
+          23,
+          27,
+          28,
+          29,
+          32,
+          33,
+          38
+        ]
+      },
+      {
+        "cut_id": 118,
+        "buses": [
+          15,
+          16,
+          24
+        ],
+        "local_Pmax_MW": 370,
+        "boundary_rateA_sum_MW": 2475,
+        "ceiling_MW": 2845,
+        "boundary_branch_ids": [
+          7,
+          23,
+          25,
+          26,
+          28,
+          29
+        ]
+      },
+      {
+        "cut_id": 119,
+        "buses": [
+          15,
+          18,
+          21
+        ],
+        "local_Pmax_MW": 955,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2755,
+        "boundary_branch_ids": [
+          24,
+          27,
+          30,
+          38
+        ]
+      },
+      {
+        "cut_id": 120,
+        "buses": [
+          15,
+          21,
+          22
+        ],
+        "local_Pmax_MW": 855,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 3105,
+        "boundary_branch_ids": [
+          24,
+          27,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 121,
+        "buses": [
+          15,
+          21,
+          24
+        ],
+        "local_Pmax_MW": 615,
+        "boundary_rateA_sum_MW": 2160,
+        "ceiling_MW": 2775,
+        "boundary_branch_ids": [
+          7,
+          24,
+          32,
+          33,
+          38
+        ]
+      },
+      {
+        "cut_id": 122,
+        "buses": [
+          16,
+          17,
+          18
+        ],
+        "local_Pmax_MW": 555,
+        "boundary_rateA_sum_MW": 2565,
+        "ceiling_MW": 3120,
+        "boundary_branch_ids": [
+          23,
+          24,
+          29,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 123,
+        "buses": [
+          16,
+          17,
+          19
+        ],
+        "local_Pmax_MW": 155,
+        "boundary_rateA_sum_MW": 2565,
+        "ceiling_MW": 2720,
+        "boundary_branch_ids": [
+          23,
+          24,
+          30,
+          31,
+          34,
+          35
+        ]
+      },
+      {
+        "cut_id": 124,
+        "buses": [
+          16,
+          17,
+          22
+        ],
+        "local_Pmax_MW": 455,
+        "boundary_rateA_sum_MW": 2115,
+        "ceiling_MW": 2570,
+        "boundary_branch_ids": [
+          23,
+          24,
+          29,
+          30,
+          38
+        ]
+      },
+      {
+        "cut_id": 125,
+        "buses": [
+          16,
+          19,
+          20
+        ],
+        "local_Pmax_MW": 505,
+        "boundary_rateA_sum_MW": 2115,
+        "ceiling_MW": 2620,
+        "boundary_branch_ids": [
+          23,
+          24,
+          28,
+          36,
+          37
+        ]
+      },
+      {
+        "cut_id": 126,
+        "buses": [
+          17,
+          18,
+          21
+        ],
+        "local_Pmax_MW": 800,
+        "boundary_rateA_sum_MW": 2250,
+        "ceiling_MW": 3050,
+        "boundary_branch_ids": [
+          25,
+          26,
+          28,
+          31,
+          38
+        ]
+      },
+      {
+        "cut_id": 127,
+        "buses": [
+          17,
+          18,
+          22
+        ],
+        "local_Pmax_MW": 700,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2500,
+        "boundary_branch_ids": [
+          28,
+          32,
+          33,
+          38
+        ]
+      },
+      {
+        "cut_id": 128,
+        "buses": [
+          17,
+          21,
+          22
+        ],
+        "local_Pmax_MW": 700,
+        "boundary_rateA_sum_MW": 2700,
+        "ceiling_MW": 3400,
+        "boundary_branch_ids": [
+          25,
+          26,
+          28,
+          30,
+          32,
+          33
+        ]
+      },
+      {
+        "cut_id": 129,
+        "buses": [
+          18,
+          21,
+          22
+        ],
+        "local_Pmax_MW": 1100,
+        "boundary_rateA_sum_MW": 1800,
+        "ceiling_MW": 2900,
+        "boundary_branch_ids": [
+          25,
+          26,
+          30,
+          31
+        ]
+      },
+      {
+        "cut_id": 130,
+        "buses": [
+          19,
+          20,
+          23
+        ],
+        "local_Pmax_MW": 660,
+        "boundary_rateA_sum_MW": 1350,
+        "ceiling_MW": 2010,
+        "boundary_branch_ids": [
+          21,
+          22,
+          29
+        ]
+      }
+    ]
+  },
+  "source_cell_sha256": {
+    "30": "e2031870da4369af4095bedd80b524114893616b887e631f3d38412510b0ce07",
+    "45": "4636f68e327257ff4a37ef1ac48fa2779dd1f182f6eb46ed42e750efa385e51e"
+  },
+  "per_sample_report_sha256": "2f28a0e2a6297015ab9b4a1e48dceea41b8cf61208c88d77d13da739add9b4bf",
+  "data_shape": [
+    1800,
+    24,
+    24
+  ],
+  "status": "passed_data_checks_only",
+  "source_commit": "d9fb2a1c92c86b9d16c8fa30372b74cd3c86d89e",
+  "issues_status_counts": {
+    "ambiguous": 4,
+    "not_documented_in_selected_sources": 1,
+    "partially_traced": 2,
+    "not_applicable_to_cyclic_profile": 1,
+    "not_collected": 2,
+    "not_defined_in_inspected_base_formulations": 1,
+    "verified_for_selected_btheta_samples": 1,
+    "not_defined_for_selected_profile": 1
+  },
+  "limitations": [
+    "This data-check report contains 65 input checks, not independent proof of optimality.",
+    "Selected B-theta execution and candidate checks are recorded separately in results/rpglab_ieee24_native_v1/verification.json.",
+    "N-1, author PTDF, author AI labels and exact zero-gap optimality are not certified."
+  ],
+  "passed_check_count": 65,
+  "original_check_report_sha256": "3571e6ec3e49a4ce83ed3c313ed10a924c71a0d5ddd159035b680450179b5442",
+  "per_sample_report_distribution": "Detailed necessary-condition rows are local work records; the recorded hash identifies that original report, which is not distributed here.",
+  "checked_input_snapshot_sha256": "0d117287f7bdc12c4c6a827259126f81566bf3e87600a8f1ece8ece760277a18",
+  "publication_view_note": "Original 65 source checks refer to the identified immutable input snapshot. Publication metadata, schema and link consistency were checked separately; numeric data payloads are byte-identical."
+}
