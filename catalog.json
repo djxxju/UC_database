@@ -1,5 +1,5 @@
 {
-  "case_count": 1,
+  "case_count": 2,
   "system_count": 1,
   "cases": [
     {
@@ -36,6 +36,27 @@
       "profile": "rpglab-ieee24-native/1.0.0",
       "family": "network_uc",
       "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256"
+    },
+    {
+      "case_id": "rpglab_ieee24_legacy33_inputs_v1",
+      "path": "cases/rpglab_ieee24_legacy33_inputs_v1",
+      "n_generator_records": 33,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "sample_count": 1500,
+      "source_columns_per_sample": 576,
+      "time_mapping_status": "UNVERIFIED_candidate",
+      "classification": "lossless_selected_input_reorganization",
+      "family": "network_uc_inputs",
+      "profile": "rpglab-ieee24-legacy33-inputs/1.0.0",
+      "schema_version": null,
+      "distribution_version": "1.0.0",
+      "data_quality": "selected_input_tokens_independently_preserved_with_open_semantic_issues",
+      "validation_report": "reports/rpglab_ieee24_legacy33_inputs_v1/data_validation.json",
+      "independent_input_review": "reports/rpglab_ieee24_legacy33_inputs_v1/independent_review.json",
+      "solve_status": "not_run",
+      "model_execution": "not_run",
+      "checksum_manifest": "reports/rpglab_ieee24_legacy33_inputs_v1/checksums.sha256"
     }
   ],
   "catalog_version": "1.0.0"

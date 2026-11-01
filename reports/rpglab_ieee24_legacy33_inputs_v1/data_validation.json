@@ -1,0 +1,129 @@
+{
+  "case_id": "rpglab_ieee24_legacy33_inputs_v1",
+  "status": "passed_selected_input_checks_only",
+  "date": "2026-11-01",
+  "checks": [
+    {
+      "id": "original_identity_dataFile24BusAll.dat",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "original_identity_demand24Bus_Old.txt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_identity_buses.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_copy_buses.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_count_buses.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_identity_generators.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_copy_generators.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_count_generators.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_identity_branches.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_copy_branches.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_count_branches.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "demand_shape",
+      "passed": true,
+      "details": {
+        "rows": 1500,
+        "source_columns": 576
+      }
+    },
+    {
+      "id": "demand_finite",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "demand_nonnegative_observation",
+      "passed": true,
+      "details": {
+        "negative_values": 0,
+        "zero_values": 252000
+      }
+    },
+    {
+      "id": "demand_exact_token_roundtrip",
+      "passed": true,
+      "details": {
+        "numeric_tokens": 864000,
+        "sample_ids": 1500,
+        "source_lines": 1500
+      }
+    },
+    {
+      "id": "static_dictionary_identity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "originals_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "static_inputs_unchanged",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "counts": {
+    "buses": 24,
+    "generators": 33,
+    "branches": 38,
+    "load_samples": 1500,
+    "load_values": 864000
+  },
+  "not_checked": [
+    "旧模型/单位/成本/边界/爬坡",
+    "作者结果合格性",
+    "完整UC可行性与最优性",
+    "来源许可与版本沿革"
+  ],
+  "candidate_mapping_evidence": {
+    "scope": "diagnostic, not source-definition verification",
+    "zero_base_bus_positions_checked": 252000,
+    "period_first_nonzero_count": 0,
+    "alternative_nonzero_count": 178500,
+    "nodal_balance_positions_checked": 864000,
+    "max_absolute_balance_residual_raw_scale": 3.070086762591018e-08,
+    "note": "Referenced local diagnostic results; no solver executed. Candidate mapping remains UNVERIFIED."
+  }
+}

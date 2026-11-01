@@ -1,0 +1,20 @@
+{
+  "case_id": "rpglab_ieee24_legacy33_inputs_v1",
+  "issues": [
+    {
+      "id": "source_file_origin",
+      "status": "VERIFIED",
+      "description": "Only the two selected local source files were matched by exact SHA256 to members of Figshare V2 archive file 42307935 on 2026-11-01; not whole archive or model verification."
+    },
+    {
+      "id": "semantics",
+      "status": "UNVERIFIED",
+      "description": "Units, cost formulas, ramp/reserve semantics, initial/final boundaries and version lineage are not certified."
+    },
+    {
+      "id": "mapping",
+      "status": "UNVERIFIED",
+      "description": "Column order has numerical consistency evidence; original generator code has not confirmed its definition."
+    }
+  ]
+}
