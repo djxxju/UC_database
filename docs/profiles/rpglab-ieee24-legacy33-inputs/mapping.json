@@ -1,0 +1,24 @@
+{
+  "data_columns": {
+    "prefix": "source_col_",
+    "range": [
+      1,
+      576
+    ],
+    "meaning": "原文件每非空行中逗号分隔数值的原位置，不是已确证的时段/节点标签"
+  },
+  "sample_id": "原非空行1起始顺序；未打乱",
+  "source_line": "原件物理行号",
+  "blank_physical_lines": [],
+  "candidate_interpretation": {
+    "status": "UNVERIFIED",
+    "periods": 24,
+    "buses": 24,
+    "candidate_period_for_source_col_j": "floor((j-1)/24)+1",
+    "candidate_bus_for_source_col_j": "((j-1)%24)+1",
+    "evidence": [
+      "../../../reports/rpglab_ieee24_legacy33_inputs_v1/data_validation.json"
+    ],
+    "limitation": "空间零模式和功率平衡支持该解释，不等于生成代码或作者定义确证"
+  }
+}
