@@ -1,0 +1,82 @@
+{
+  "case_id": "ucjl_orlib_10_0_1_w_native_v1",
+  "checked_date": "2026-11-05",
+  "input_sha256": "3cfa5d6f0135e732edd7cb08f887cda0c7e56b0b8e766185d05b52e0ee1f3308",
+  "scope": "source identity, JSON structural and selected static input consistency; not complete model validation",
+  "executor": "Lead; local deterministic Python checks",
+  "python_version": "3.13.2",
+  "jsonschema_version": "4.26.0",
+  "profile": "ucjl-orlib-native/1.0.0",
+  "checks": [
+    {
+      "rule": "source_gzip_sha256_matches_record",
+      "status": "passed"
+    },
+    {
+      "rule": "input_bytes_equal_gzip_decompression",
+      "status": "passed"
+    },
+    {
+      "rule": "json_parse_and_embedded_license_source",
+      "status": "passed"
+    },
+    {
+      "rule": "profile_structural_schema",
+      "status": "passed"
+    },
+    {
+      "rule": "10_generators_1_bus_24_periods",
+      "status": "passed"
+    },
+    {
+      "rule": "time_series_lengths",
+      "status": "passed"
+    },
+    {
+      "rule": "generator_bus_and_reserve_foreign_keys",
+      "status": "passed"
+    },
+    {
+      "rule": "cost_point_pairing_and_strict_power_order",
+      "status": "passed"
+    },
+    {
+      "rule": "piecewise_cost_convexity_tolerance_1e-9",
+      "status": "passed"
+    },
+    {
+      "rule": "startup_cost_threshold_pairing_and_first_threshold",
+      "status": "passed"
+    },
+    {
+      "rule": "initial_on_off_power_consistency",
+      "status": "passed"
+    },
+    {
+      "rule": "finite_generator_numeric_values",
+      "status": "passed"
+    },
+    {
+      "rule": "aggregate_capacity_necessary_condition_only",
+      "status": "passed"
+    }
+  ],
+  "record_counts": {
+    "generators": 10,
+    "buses": 1,
+    "cost_points": 50,
+    "hourly_load_values": 24,
+    "hourly_reserve_values": 24
+  },
+  "aggregate_capacity": {
+    "total_maximum_power_MW": 1771.0,
+    "peak_demand_MW": 1453.913382,
+    "interpretation": "necessary condition only, not feasibility"
+  },
+  "model_semantics": "partially_documented_with_UNVERIFIED_issues",
+  "solver_import_test": "not_run",
+  "solve_status": "not_run",
+  "independent_solution_check": "not_run",
+  "historical_report_note": "结构检查保持2026-11-05原检查范围；not_run字段仅指当时，2026-11-06求解与验解状态见catalog和results，不冒充本轮重验。",
+  "latest_execution_report": "results/ucjl_orlib_10_0_1_w_native_v1/comparison.json"
+}

@@ -20,6 +20,7 @@ UC_database/
 | 算例编号 | 模型与规模 | 当前结果 |
 |---|---|---|
 | [rpglab_ieee24_native_v1](cases/rpglab_ieee24_native_v1/README.md) | 原B-θ网络UC，15机组记录/24节点/38物理线路，1800个24小时样本 | 数据检查通过，全部样本求解与独立验解通过 |
+| [ucjl_orlib_10_0_1_w_native_v1](cases/ucjl_orlib_10_0_1_w_native_v1/README.md) | OR-LIB单节点UC：10机组，24小时 | Gurobi/COPT求解及独立验解通过；含0.243366 MWh削负荷 |
 
 每新增一个算例，在cases/reports中使用同一个case_id；有实际求解结果时再增加对应results目录，并更新catalog及本表。模型类别用于索引筛选，具体输入与约束由每例profile定义。模板不会作为正式算例计数。
 
@@ -47,3 +48,9 @@ python scripts/solve_ieee24.py --case-dir reproduce_ieee24/cases/rpglab_ieee24_n
 恢复工具按记录的固定版本URL和哈希取得五份源文件。重建写到独立reproduce_ieee24目录，不覆盖本次正式输入/结果；重新运行产生新记录，不改写已公布的参考结论。第三条命令只做数据检查，第四条才启动求解。
 
 本例原数据许可为CC BY 4.0（上游README），论文引用与原件SHA-256在provenance中。按原许可署名，来源未明处继续披露；不授予原作者未授予的权利。
+
+## OR-LIB 10机组最新进展（2026-11-06）
+
+10机组24小时输入已保留，Gurobi13.0.0与COPT8.0.7在同一项目模型下均达到指定容差内最优，总目标1929392.436364，开机状态一致，独立验解通过。**结果含0.243366 MWh削负荷，不能称全部需求满足。**
+
+[结果说明](results/ucjl_orlib_10_0_1_w_native_v1/README.md) · [结果对照](results/ucjl_orlib_10_0_1_w_native_v1/comparison.csv) · [运行代码](scripts/orlib10/README.md)。严格零削减诊断未做；此计算不是作者基准结果复现。

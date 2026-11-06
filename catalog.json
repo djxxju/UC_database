@@ -1,6 +1,6 @@
 {
-  "case_count": 1,
-  "system_count": 1,
+  "case_count": 2,
+  "system_count": 2,
   "cases": [
     {
       "case_id": "rpglab_ieee24_native_v1",
@@ -36,7 +36,42 @@
       "profile": "rpglab-ieee24-native/1.0.0",
       "family": "network_uc",
       "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256"
+    },
+    {
+      "case_id": "ucjl_orlib_10_0_1_w_native_v1",
+      "path": "cases/ucjl_orlib_10_0_1_w_native_v1",
+      "n_generator_records": 10,
+      "n_buses": 1,
+      "n_physical_branches": 0,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_native_input_preservation",
+      "data_quality": "source_bytes_preserved_selected_static_checks_passed_model_profile_documented",
+      "validation_report": "reports/ucjl_orlib_10_0_1_w_native_v1/data_validation.json",
+      "model_execution": "gurobi_and_copt_executed_for_documented_project_profile",
+      "solve_status": "optimal_within_declared_tolerances_with_load_shedding",
+      "independent_solution_check": "passed_for_both_solver_candidates",
+      "verified_sample_count": 1,
+      "pending_sample_count": 0,
+      "profile": "ucjl-orlib-native/1.0.0",
+      "family": "single_bus_thermal_uc",
+      "schema_version": "1.0.0",
+      "distribution_version": "1.0.0",
+      "checksum_manifest": "reports/ucjl_orlib_10_0_1_w_native_v1/checksums.sha256",
+      "execution_profile": "orlib10_audited_defaults_uc_v1",
+      "total_load_shedding_MWh": 0.243366,
+      "full_demand_satisfaction": false,
+      "results": {
+        "directory": "results/ucjl_orlib_10_0_1_w_native_v1",
+        "summary": "results/ucjl_orlib_10_0_1_w_native_v1/comparison.csv",
+        "comparison": "results/ucjl_orlib_10_0_1_w_native_v1/comparison.json",
+        "readme": "results/ucjl_orlib_10_0_1_w_native_v1/README.md",
+        "full_candidates_distributed": false
+      },
+      "solver_code": "scripts/orlib10/solve_compare.py"
     }
   ],
-  "catalog_version": "1.0.0"
+  "catalog_version": "1.0.0",
+  "system_count_note": "RPG IEEE24与OR-LIB 10机组单节点输入家族分别登记；不按24小时或日样本数增加系统数，OR-LIB实例不声称对应真实物理电网。"
 }
