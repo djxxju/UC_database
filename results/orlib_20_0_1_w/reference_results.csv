@@ -1,0 +1,2 @@
+case_id,solver,solver_version,termination,objective,best_bound,relative_gap,solver_seconds,load_shed_MWh_raw,load_shed_MWh_within_tolerance,independent_verification_passed
+orlib_20_0_1_w,COPT,8.0.7,time_limit_with_verified_feasible_solution,2952707.69439072,2950140.6962999403,0.0008693708813969019,120.00300025939941,-9.094947017729282e-13,0,True

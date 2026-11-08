@@ -1,0 +1,26 @@
+{
+  "solver_version": "8.0.7",
+  "status_code": 8,
+  "status": "other_see_solver_log",
+  "has_solution": true,
+  "objective": 2952707.69439072,
+  "best_bound": 2950140.6962999403,
+  "relative_gap": 0.0008693708813969019,
+  "solver_seconds": 120.00300025939941,
+  "wall_solve_seconds": 120.03460519999499,
+  "nodes": 9603,
+  "parameters": {
+    "TimeLimit": 120.0,
+    "RelGap": 1e-05,
+    "AbsGap": 1e-07,
+    "Threads": 1,
+    "RandSeed": 0,
+    "FeasTol": 1e-07,
+    "IntTol": 1e-07,
+    "DualTol": 1e-07,
+    "LogToConsole": 0
+  },
+  "model_sha256": "246e38750d69ed86498ec7a882f7571028608f9f396ff20cd5878ff15b787cf3",
+  "independent_check": true,
+  "recomputed_objective": 2952707.69439072
+}
