@@ -1,0 +1,33 @@
+{
+  "case_id": "opentepes_rts24_full_inputs_v1",
+  "input_audit": "passed_in_declared_scope",
+  "model_build": "not_run",
+  "copt_compatibility": "not_run",
+  "solve_status": "not_run",
+  "independent_solution_check": "not_run",
+  "issues": [
+    {
+      "id": "coal_conversion_coefficients",
+      "status": "UNVERIFIED",
+      "scope": [
+        "Gas_C31",
+        "Gas_C32",
+        "Gas_C33"
+      ],
+      "finding": "三条原始 Coal 记录同时有正的水电、制氢、产热转换系数。固定源码筛选推导三条均在 eh 之外。作者填写意图与实际生成的约束待核。",
+      "evidence": "../../reports/opentepes_rts24_full_inputs_v1/README.md"
+    },
+    {
+      "id": "source_empty_fields",
+      "status": "observed",
+      "finding": "原始机组爬坡及最小开停时间列为空。38 条支路的反向容量为空，固定版按正向容量回退。3 条支路电压为空。审计保留空值并区分原表显式零。",
+      "evidence": "../../reports/opentepes_rts24_full_inputs_v1/README.md"
+    },
+    {
+      "id": "generated_constraints_and_initial_state",
+      "status": "UNVERIFIED",
+      "finding": "固定源码可识别时间换算、阶段初始状态构造及适用的既有储能阶段末库存限制。实际生成的约束、集合及边界值待构建核对。",
+      "evidence": "../../docs/profiles/opentepes-rts24-source-input-audit/1.0.0/README.md"
+    }
+  ]
+}

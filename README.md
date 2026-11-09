@@ -20,6 +20,7 @@ UC_database/
 | 算例编号 | 模型与规模 | 当前结果 |
 |---|---|---|
 | [rpglab_ieee24_native_v1](cases/rpglab_ieee24_native_v1/README.md) | 原B-θ网络UC，15机组记录/24节点/38物理线路，1800个24小时样本 | 数据检查通过，全部样本求解与独立验解通过 |
+| [opentepes_rts24_full_inputs_v1](cases/opentepes_rts24_full_inputs_v1/README.md) | openTEPES RTS24 固定版，24 节点、33 条机组记录、38 条支路，8,736 原始小时 | 全时域输入校验完成，模型构建和求解未运行 |
 
 每新增一个算例，在cases/reports中使用同一个case_id；有实际求解结果时再增加对应results目录，并更新catalog及本表。模型类别用于索引筛选，具体输入与约束由每例profile定义。模板不会作为正式算例计数。
 

@@ -1,5 +1,5 @@
 {
-  "case_count": 1,
+  "case_count": 2,
   "system_count": 1,
   "cases": [
     {
@@ -36,6 +36,35 @@
       "profile": "rpglab-ieee24-native/1.0.0",
       "family": "network_uc",
       "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256"
+    },
+    {
+      "case_id": "opentepes_rts24_full_inputs_v1",
+      "path": "cases/opentepes_rts24_full_inputs_v1",
+      "n_generator_records": 33,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "scenario_count": 1,
+      "stage_count": 1,
+      "source_hour_count": 8736,
+      "source_time_step_hours": 1,
+      "effective_period_count_from_source_rules": 4368,
+      "model_time_step_hours_from_source_rules": 2,
+      "classification": "fixed_source_reference_and_full_horizon_input_audit",
+      "data_quality": "input_checks_passed_with_open_source_intent_and_model_issues",
+      "source_provenance": "cases/opentepes_rts24_full_inputs_v1/provenance.json",
+      "validation_report": "reports/opentepes_rts24_full_inputs_v1/data_validation.json",
+      "model_execution": "not_run",
+      "copt_compatibility": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "distribution_version": "1.0.0",
+      "profile": "opentepes-rts24-source-input-audit/1.0.0",
+      "family": "network_uc",
+      "checksum_manifest": "reports/opentepes_rts24_full_inputs_v1/checksums.sha256",
+      "base_system_relationship": {
+        "shares_network_topology_with": "rpglab_ieee24_native_v1",
+        "basis": "Undirected endpoint multiset matches all 38 branches after node-number offset 100; retains a separate case/profile."
+      }
     }
   ],
   "catalog_version": "1.0.0"
