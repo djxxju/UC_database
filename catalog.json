@@ -1,6 +1,6 @@
 {
-  "case_count": 1,
-  "system_count": 1,
+  "case_count": 2,
+  "system_count": 2,
   "cases": [
     {
       "case_id": "rpglab_ieee24_native_v1",
@@ -36,6 +36,37 @@
       "profile": "rpglab-ieee24-native/1.0.0",
       "family": "network_uc",
       "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256"
+    },
+    {
+      "case_id": "orlib_50_0_1_w",
+      "path": "cases/orlib_50_0_1_w",
+      "n_generator_records": 50,
+      "n_buses": 1,
+      "n_physical_branches": 0,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_input_reorganization",
+      "data_quality": "source_values_preserved_with_profile_boundaries",
+      "validation_report": "reports/orlib_50_0_1_w/data_validation.json",
+      "model_execution": "copt_8.0.7_project_profile",
+      "solve_status": "optimal_within_declared_solver_tolerances",
+      "independent_solution_check": "passed",
+      "verified_sample_count": 1,
+      "pending_sample_count": 0,
+      "results": {
+        "directory": "results/orlib_50_0_1_w",
+        "summary": "results/orlib_50_0_1_w/reference_results.csv",
+        "verification": "results/orlib_50_0_1_w/verification.json",
+        "readme": "results/orlib_50_0_1_w/README.md",
+        "target_relative_gap": 0.0001,
+        "achieved_relative_gap": 9.96002385679896e-05,
+        "full_candidates_distributed": false
+      },
+      "distribution_version": "1.0.0",
+      "profile": "orlib_flat_audited_defaults_uc_v1",
+      "family": "single_bus_uc",
+      "checksum_manifest": "reports/orlib_50_0_1_w/checksums.sha256"
     }
   ],
   "catalog_version": "1.0.0"

@@ -1,0 +1,25 @@
+table,column,source_json_path,unit,rule
+generators,generator_id,/Generators/<generator_id>,identifier,对象键并保留源顺序
+generators,bus_id,/Generators/<generator_id>/Bus,identifier,指向 Buses 的键
+generators,initial_status_h,/Generators/<generator_id>/Initial status (h),h,正为在线小时数且负为离线小时数
+generators,initial_power_mw,/Generators/<generator_id>/Initial power (MW),MW,首时段以前的初始出力
+generators,minimum_uptime_h,/Generators/<generator_id>/Minimum uptime (h),h,最小开机时长
+generators,minimum_downtime_h,/Generators/<generator_id>/Minimum downtime (h),h,最小停机时长
+generators,ramp_up_limit_mw,/Generators/<generator_id>/Ramp up limit (MW),MW,每个一小时时段的源向上爬坡限值
+generators,ramp_down_limit_mw,/Generators/<generator_id>/Ramp down limit (MW),MW,每个一小时时段的源向下爬坡限值
+generators,pmin_mw,/Generators/<generator_id>/Production cost curve (MW)/0,MW,取第一折点的出力
+generators,pmax_mw,/Generators/<generator_id>/Production cost curve (MW)/<last>,MW,取最后折点的出力
+generators,reserve_ids,/Generators/<generator_id>/Reserve eligibility,identifier,保留资格数组顺序并用竖线分隔
+cost_points,generator_id,/Generators/<generator_id>,identifier,折点所属机组对象键
+cost_points,point_index,/Generators/<generator_id>/Production cost curve (MW)/<index>,index,源数组索引加一
+cost_points,output_mw,/Generators/<generator_id>/Production cost curve (MW)/<index>,MW,保留数组值与顺序
+cost_points,production_cost_dollars,/Generators/<generator_id>/Production cost curve ($)/<index>,$,同位置总生产费用折点
+startup_tiers,generator_id,/Generators/<generator_id>,identifier,启动档所属机组对象键
+startup_tiers,tier_index,/Generators/<generator_id>/Startup delays (h)/<index>,index,源数组索引加一
+startup_tiers,prior_offline_delay_h,/Generators/<generator_id>/Startup delays (h)/<index>,h,相应档的先前停机时长阈值
+startup_tiers,startup_cost_dollars,/Generators/<generator_id>/Startup costs ($)/<index>,$,同位置启动费用
+hourly,hour,/Buses/b1/Load (MW)/<index>,index,源数组索引加一
+hourly,bus_id,/Buses/b1,identifier,源节点对象键 b1
+hourly,load_mw,/Buses/b1/Load (MW)/<index>,MW,对应小时负荷
+hourly,reserve_id,/Reserves/r1,identifier,源备用产品对象键 r1
+hourly,reserve_requirement_mw,/Reserves/r1/Amount (MW)/<index>,MW,对应小时的显式旋转备用需求

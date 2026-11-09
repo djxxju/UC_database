@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UC.jl OR-LIB flat-array native input structural subset v1.0.0",
+  "type": "object",
+  "required": [
+    "LICENSE",
+    "SOURCE",
+    "Parameters",
+    "Generators",
+    "Buses",
+    "Reserves"
+  ],
+  "properties": {
+    "LICENSE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "SOURCE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Parameters": {
+      "type": "object",
+      "required": [
+        "Time (h)",
+        "Version"
+      ],
+      "properties": {
+        "Time (h)": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "Version": {
+          "const": "0.3"
+        }
+      }
+    },
+    "Generators": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "Bus",
+          "Production cost curve (MW)",
+          "Production cost curve ($)",
+          "Initial status (h)",
+          "Initial power (MW)",
+          "Minimum uptime (h)",
+          "Minimum downtime (h)",
+          "Reserve eligibility",
+          "Startup costs ($)",
+          "Startup delays (h)",
+          "Ramp up limit (MW)",
+          "Ramp down limit (MW)"
+        ],
+        "properties": {
+          "Bus": {
+            "type": "string"
+          },
+          "Production cost curve (MW)": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "Production cost curve ($)": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "Initial status (h)": {
+            "type": "integer",
+            "not": {
+              "const": 0
+            }
+          },
+          "Initial power (MW)": {
+            "type": "number",
+            "minimum": 0
+          },
+          "Minimum uptime (h)": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "Minimum downtime (h)": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "Reserve eligibility": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "Startup costs ($)": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "Startup delays (h)": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "Ramp up limit (MW)": {
+            "type": "number",
+            "minimum": 0
+          },
+          "Ramp down limit (MW)": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "Buses": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "Load (MW)"
+        ],
+        "properties": {
+          "Load (MW)": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "Reserves": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "Type",
+          "Amount (MW)"
+        ],
+        "properties": {
+          "Type": {
+            "type": "string"
+          },
+          "Amount (MW)": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -20,6 +20,7 @@ UC_database/
 | 算例编号 | 模型与规模 | 当前结果 |
 |---|---|---|
 | [rpglab_ieee24_native_v1](cases/rpglab_ieee24_native_v1/README.md) | 原B-θ网络UC，15机组记录/24节点/38物理线路，1800个24小时样本 | 数据检查通过，全部样本求解与独立验解通过 |
+| [orlib_50_0_1_w](cases/orlib_50_0_1_w/README.md) | OR-LIB 转换版，单节点、50 台机组、完整 24 小时 | COPT gap 0.00996002%，独立验解通过 |
 
 每新增一个算例，在cases/reports中使用同一个case_id；有实际求解结果时再增加对应results目录，并更新catalog及本表。模型类别用于索引筛选，具体输入与约束由每例profile定义。模板不会作为正式算例计数。
 
