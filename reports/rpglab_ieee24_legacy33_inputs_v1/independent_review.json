@@ -1,0 +1,21 @@
+{
+  "case_id": "rpglab_ieee24_legacy33_inputs_v1",
+  "reviewed_at": "2026-11-01T09:21:50.515350+00:00",
+  "status": "passed_selected_input_independent_review",
+  "scope": "selected input token/sequence preservation only; independent review directly read original files",
+  "checks_passed": 3138,
+  "checks_failed": 0,
+  "static_tokens": 833,
+  "static_source_lines": 95,
+  "load_tokens": 864000,
+  "load_source_lines": 1500,
+  "review_record_sha256": "b1a1c36740a46ec6b70af6a8a0767bfe98d5403ab78f0e3cc0fe9ad663a94a93",
+  "reviewed_load_csv_sha256": "5fab3594e40de7996e35c9f3df493d16937223d00402fc068ae0595d9122dc71",
+  "publication_transform": "Three static CSV copies unchanged; demand.csv compressed reversibly; publication metadata revised. This historical input review is not a fresh publication-overlay audit.",
+  "not_checked": [
+    "complete UC model",
+    "author solution validity",
+    "feasibility/optimality",
+    "complete archive/model authenticity"
+  ]
+}

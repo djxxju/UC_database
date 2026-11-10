@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-11-09T10:59:17.281469+00:00",
+  "input_name": "50_0_1_w.json.gz",
+  "input_raw_sha256": "043528d3b13c3c976c0115e3aeede2b94e9fc5ef147581603ff437610710d7a0",
+  "decompressed_sha256": "4414fd2f23a4a4b16b0f11bf60c6f68be7c71d1c29c8df34f061b41cd0dc0bd6",
+  "model_sha256": "17e56488b7def907de51615624c3acc20d7f5d4733bed779e39065306f634634",
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "code_sha256": {
+    "check_solution.py": "4f74a3aa2d5bdf985660ed0884b15f8b7c34045ede7f3a48d9f00a62fcdd3a37",
+    "solve_compare.py": "37cdd0c0d9cb710fe2ecaff335ae9f159d9b022996efa8245c86718f99648625",
+    "test_check_solution.py": "1130be462f198ead910cb800ff1a603666552c147fea6f596627fb24b8d0ae0e",
+    "uc_model.py": "c54214a20f63a09a0eab07a73e6c93dd52ffd5937e84f7599939b5996e7fdf71"
+  },
+  "profile": "orlib_flat_audited_defaults_uc_v1",
+  "model_variables": 9624,
+  "binary_variables": 3600,
+  "rows": 12098,
+  "parent_run": "copt01",
+  "mip_start_sha256": "351367fb9346d8f20e44c819c0c1c2ec81ab54f49a799ec7e1c75b6169c248a3",
+  "mip_start_objective": 8445318.409433397,
+  "parameters": {
+    "TimeLimit": 1800.0,
+    "RelGap": 0.0001,
+    "AbsGap": 1e-07,
+    "Threads": 5,
+    "RandSeed": 0,
+    "MipStartMode": 1,
+    "FeasTol": 1e-07,
+    "IntTol": 1e-07,
+    "DualTol": 1e-07,
+    "LogToConsole": 0
+  },
+  "runner_sha256": "7376a557c9900b0631ccd49cb2bd45c76a379db03f693709c4befa63a8fd5b4a",
+  "base_model_sha256": "64f768f3d844df897adb9174e1054bac98d168515f1154a6978b27c31528fd1b",
+  "ramp_cut_count": 3720,
+  "ramp_cut_module_sha256": "a0c1fa2677bd0f6b814f06671a0988512ca7803806a8a60d06f610a4a0809d3e"
+}

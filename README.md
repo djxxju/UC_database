@@ -17,11 +17,24 @@ UC_database/
 
 [新增算例入库规则](docs/contributing.md) · [说明模板](templates/case/README.md)
 
-| 算例编号 | 模型与规模 | 当前结果 |
-|---|---|---|
-| [rpglab_ieee24_native_v1](cases/rpglab_ieee24_native_v1/README.md) | 原B-θ网络UC，15机组记录/24节点/38物理线路，1800个24小时样本 | 数据检查通过，全部样本求解与独立验解通过 |
+## 算例索引
 
-每新增一个算例，在cases/reports中使用同一个case_id；有实际求解结果时再增加对应results目录，并更新catalog及本表。模型类别用于索引筛选，具体输入与约束由每例profile定义。模板不会作为正式算例计数。
+当前共 6 个算例，涵盖 1 个可识别的 24 节点基础电网和 1 个 OR-LIB 单节点基准系列。IEEE24 原版、旧 33 记录版和 RTS24 分别保留自己的数据版本与模型状态。
+
+| 算例 | 分类与规模 | 校验与结果 | 输入入口 |
+|---|---|---|---|
+| RPG Lab IEEE24 原版 | 网络 UC，24 节点，15 条机组记录，1,800 个 24 小时样本 | 全部样本完成求解与独立验解 | [算例目录](cases/rpglab_ieee24_native_v1/) |
+| RPG Lab IEEE24 旧 33 记录版 | 网络 UC 输入版，24 节点，1,500 行负荷 | 已整理及逐值核对，旧时段映射待核，未求解 | [算例目录](cases/rpglab_ieee24_legacy33_inputs_v1/) |
+| OR-LIB 10 台 | 单节点 UC，24 小时 | Gurobi 与 COPT 结果通过独立验解，含 0.243366 MWh 削负荷 | [算例目录](cases/ucjl_orlib_10_0_1_w_native_v1/) · [JSON](cases/ucjl_orlib_10_0_1_w_native_v1/input.json) |
+| OR-LIB 20 台 | 单节点 UC，24 小时 | COPT 限时获得候选解，独立验解通过 | [算例目录](cases/orlib_20_0_1_w/) · [JSON](cases/orlib_20_0_1_w/input.json) |
+| OR-LIB 50 台 | 单节点 UC，24 小时 | COPT 达到 0.01% 相对 gap 门槛，独立验解通过 | [算例目录](cases/orlib_50_0_1_w/) · [JSON](cases/orlib_50_0_1_w/input.json) |
+| openTEPES RTS24 | 网络 UC，24 节点，8,736 原始小时 | 已做全时域输入校验，模型、求解与验解待执行 | [来源与恢复说明](cases/opentepes_rts24_full_inputs_v1/) |
+
+[机器可读索引](catalog.json)为每例登记分类、版本、规模和执行状态。已发布的算例 ID 与文件路径继续保留，OR-LIB 20、50 台的发行版本见索引中的 `distribution_version`。
+
+## 下载原始输入或按需生成 MATLAB 文件
+
+OR-LIB 各行的 **JSON** 链接打开正式输入，可在 GitHub 文件页下载。需要 MATLAB 文件时，运行 [转换工具](docs/matlab-export.md)，选中已下载的 JSON，再选择另存位置。工具从同一份输入生成本地 `.mat`，仓库只维护正式输入。当前转换入口支持上表三份 OR-LIB 单节点 24 小时 JSON。
 
 ## RPG Lab IEEE24 原模型算例 v1
 

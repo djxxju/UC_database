@@ -1,0 +1,35 @@
+{
+  "case_id": "orlib_20_0_1_w",
+  "scope": "UC.jl v0.3 flat input and documented calculation profile",
+  "items": [
+    {
+      "id": "omitted_calculation_fields",
+      "status": "DEFAULTED_BY_READER",
+      "source_observation": "JSON未显式给出开机和停机爬坡限值及削负荷罚价。",
+      "handling": "按已核对的读取器默认规则执行计算，在模型文档中记录，原件和CSV不补写。"
+    },
+    {
+      "id": "network_constraints",
+      "status": "NOT_APPLICABLE",
+      "reason": "当前发布实例仅含单节点 b1，适用系统功率平衡。"
+    },
+    {
+      "id": "terminal_and_dates",
+      "status": "UNVERIFIED",
+      "source_observation": "JSON有24个时段、机组初始状态与出力，没有可关联的自然日日期或显式终端开停状态。",
+      "handling": "索引保留为1到24，终端处理按计算profile记载。"
+    },
+    {
+      "id": "cost_currency_base_year",
+      "status": "UNVERIFIED",
+      "source_observation": "源成本字段用$标注，JSON没有标出币值基年。",
+      "handling": "保留源费用尺度与符号。"
+    },
+    {
+      "id": "author_solution_identity",
+      "status": "UNVERIFIED",
+      "source_observation": "本次未取得与该转换输入及计算口径精确对应的作者调度和目标值。",
+      "handling": "项目计算结果独立登记。"
+    }
+  ]
+}

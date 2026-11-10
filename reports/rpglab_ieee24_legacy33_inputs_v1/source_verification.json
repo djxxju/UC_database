@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-01T17:39:57",
+  "archive_url": "https://ndownloader.figshare.com/files/42307935",
+  "article_doi": "10.6084/m9.figshare.24116394.v2",
+  "upstream_archive_size": 1152197046,
+  "archive_whole_hash_computed": false,
+  "members": [
+    {
+      "name": "dataFile24BusAll.dat",
+      "member_path": "Spatio-TemporalUCAcceleration_GNNLSTM/Data/IEEE24Bus/DataCollectionOptimization(BaseSCUC)/Unused/dataFile24BusAll.dat",
+      "uncompressed_size": 295889,
+      "compressed_size": 41952,
+      "crc32": "3ea4c1e0",
+      "sha256": "f8d707476e2c8b82001422c5293ba2a996821a65ea30bd05b34e5ec4cd686bdb",
+      "expected_sha256": "f8d707476e2c8b82001422c5293ba2a996821a65ea30bd05b34e5ec4cd686bdb",
+      "exact_match": true
+    },
+    {
+      "name": "demand24Bus_Old.txt",
+      "member_path": "Spatio-TemporalUCAcceleration_GNNLSTM/Data/IEEE24Bus/DataCollectionOptimization(BaseSCUC)/Unused/demand24Bus_Old.txt",
+      "uncompressed_size": 11688562,
+      "compressed_size": 3975017,
+      "crc32": "340f54ba",
+      "sha256": "7fa099533e57ea9e8306beeb1136273484821f860b44b0f84e580f16833ae1f0",
+      "expected_sha256": "7fa099533e57ea9e8306beeb1136273484821f860b44b0f84e580f16833ae1f0",
+      "exact_match": true
+    }
+  ],
+  "status": "passed_exact_member_identity",
+  "bytes_downloaded": 8200630
+}

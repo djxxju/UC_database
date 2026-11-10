@@ -1,0 +1,43 @@
+{
+  "case_id": "orlib_20_0_1_w",
+  "instance": "OR-Library 20_0_1_w",
+  "source_identity": "UnitCommitment.jl published conversion of OR-Library data",
+  "instance_server_version": "0.4",
+  "native_json_version": "0.3",
+  "official_url": "https://axavier.org/UnitCommitment.jl/0.4/instances/or-lib/20_0_1_w.json.gz",
+  "upstream_instance_catalog": "https://axavier.org/UnitCommitment.jl/0.4/instances/",
+  "original_archive_url": "https://github.com/djxxju/UC_datas_codex/releases/download/official-data-2026-10-18-batch10/UCjl-v0.4-ORLIB-42-instances.zip",
+  "original_archive_member": "20_0_1_w.json.gz",
+  "original_local_path": "UC_dataset/raw/unitcommitment_jl_0.4/or-lib/20_0_1_w.json.gz",
+  "historical_local_record_utc": "2026-10-15T10:57:46.612140+00:00",
+  "historical_local_record_status": "already_present",
+  "historical_cloud_collection_utc": "2026-10-18T09:23:10.381994+00:00",
+  "audit_date": "2026-11-08",
+  "source_gzip_sha256": "6a567e0c8ebe5b2420d940f7526f343850fd45c6400e09ef1247cb450a6551be",
+  "source_gzip_bytes": 3350,
+  "input_sha256": "37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327",
+  "input_bytes": 11416,
+  "input_derivation": "gzip decompression only; no JSON serialization, cropping, conversion, or repair",
+  "embedded_source_text": "J.E.Beasley. \"OR-Library: distributing test problems by electronic mail\", Journal of the Operational Research Society 41(11) (1990). DOI: 10.2307/2582903\nA. Frangioni, C. Gentile. \"Solving nonlinear single-unit commitment problems with ramping constraints\" Operations Research 54(4), p. 767 - 775, 2006. DOI: 10.1287/opre.1060.0309\n",
+  "embedded_license": "MIT notice embedded in source, copied verbatim to LICENSE.txt",
+  "embedded_license_sha256": "9281d1929b8b3ae9545151b505db99128a2d633eab18744911eccc24bec2616d",
+  "history_evidence": [
+    {
+      "workspace_path": "UC_dataset/sources/ucjl_available_instances.json",
+      "sha256": "2359284b872f13df55ed85e8520f2b56bb49c917d5a6cddfd885b06f0a17f7f0"
+    },
+    {
+      "workspace_path": "UC_dataset/reports/ucjl_collection_20261015T105825566710Z.json",
+      "sha256": "3ccad6307e3b7dc2f23105ea4043532ff736bb8dfe22936ce00051b1d68b70f9"
+    },
+    {
+      "workspace_path": "UC_dataset/reports/ucjl_license_audit_batch10.json",
+      "sha256": "e0616081a9b607aee80b8b6dc13b872d467390a98bce17ff3c9a75d47af725e0"
+    },
+    {
+      "workspace_path": "UC_dataset/reports/cloud_collection_receipt_batch10.json",
+      "sha256": "267c5da6eb48b72fa97034e64530fa47b685f7dbbb83538e8c6841aecfba4036"
+    }
+  ],
+  "source_identity_boundary": "The source gzip bytes match the previous local, index, license, and cloud receipt. No new remote download was needed for this input audit."
+}
