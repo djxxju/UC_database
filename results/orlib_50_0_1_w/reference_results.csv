@@ -1,0 +1,2 @@
+sample_id,run_id,solver,solver_version,solver_status_code,objective,best_bound,relative_gap,target_relative_gap,solver_seconds,load_shedding_mwh_within_tolerance,independent_solution_check
+1,copt03,COPT,8.0.7,1,8436950.534297295,8436110.212011293,9.96002385679896e-05,0.0001,411.8779983520508,0,passed

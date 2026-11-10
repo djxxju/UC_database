@@ -1,0 +1,350 @@
+{
+  "commit": "5c0187063874cca4bc7af8ff97b19c6c316dd7a5",
+  "retrieved_at": "2026-11-05T10:54:41.417431+00:00",
+  "scope": "44 RTS24 files plus LICENSE",
+  "identity": "all 44 Git blobs matched",
+  "license_url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/LICENSE",
+  "license_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+  "files": [
+    {
+      "path": "oT_Data_Demand_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Demand_RTS24.csv",
+      "bytes": 1816249,
+      "sha256": "af9f11046ea55411d8d15e0e37f0bb973af16e3379a114a34e4b49efab62cc96",
+      "git_blob": "84050c8d9dcd3145de7dcb21ef37b285d60d94a1"
+    },
+    {
+      "path": "oT_Data_Duration_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Duration_RTS24.csv",
+      "bytes": 323273,
+      "sha256": "c2520996f18c87e5fb2403d6546d392303427f55df30e4bd7c234dd7a151fb1e",
+      "git_blob": "9182e4184be989c82efe9fdf53a3aed9f6ad2e37"
+    },
+    {
+      "path": "oT_Data_Emission_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Emission_RTS24.csv",
+      "bytes": 55,
+      "sha256": "0824482c1b098f444b9058d2436a4d96890b829eda0013192f2b60fb43a9b62c",
+      "git_blob": "3a4f74f8c6dea103a0be0be4f9085efa55989966"
+    },
+    {
+      "path": "oT_Data_EnergyInflows_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_EnergyInflows_RTS24.csv",
+      "bytes": 1049898,
+      "sha256": "27b25ae7ec0384d469ed813ba0e4aa24de14fbca245ffdd26bf638466001872c",
+      "git_blob": "8d02eca2f09e536a6854f49626e5688ba8506861"
+    },
+    {
+      "path": "oT_Data_EnergyOutflows_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_EnergyOutflows_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_Generation_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Generation_RTS24.csv",
+      "bytes": 4698,
+      "sha256": "d0864009eab85b41190acef0dcc76912f75372f6c302a69e13c92a3c2c0aaac9",
+      "git_blob": "c5ea1735bc7ac05cd63edf69243666dbfa7724de"
+    },
+    {
+      "path": "oT_Data_Inertia_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Inertia_RTS24.csv",
+      "bytes": 288330,
+      "sha256": "2fd744e012dcf5da9dc867952255515a82ce44b3ce9f6345ff38a32df7f48bbf",
+      "git_blob": "f90deaa1fb8e3c03a2235138f5d047caff455a5c"
+    },
+    {
+      "path": "oT_Data_Network_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Network_RTS24.csv",
+      "bytes": 4012,
+      "sha256": "8e25021b31395e2cf6c1448b94ccf99b05154177143ea018da6076bbf8156f63",
+      "git_blob": "a9fdcc8869ee4da9944703bb0278dc4fa66cb567"
+    },
+    {
+      "path": "oT_Data_NodeLocation_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_NodeLocation_RTS24.csv",
+      "bytes": 340,
+      "sha256": "c398c7765def9cc2c1c7656ae1d7c473acb66edfb7aa1b8e3f50090b4572514f",
+      "git_blob": "e1ff7a483b428fd38d3802f5b74c29f19c2a912f"
+    },
+    {
+      "path": "oT_Data_OperatingReserveDown_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_OperatingReserveDown_RTS24.csv",
+      "bytes": 305802,
+      "sha256": "e4e0355cf42993efe814e3145b2058c390ff56dc7751f17376a446488063bd56",
+      "git_blob": "dc98c2023c2210dab56abc5ffa3ed6636a3cf5fd"
+    },
+    {
+      "path": "oT_Data_OperatingReserveUp_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_OperatingReserveUp_RTS24.csv",
+      "bytes": 305802,
+      "sha256": "e4e0355cf42993efe814e3145b2058c390ff56dc7751f17376a446488063bd56",
+      "git_blob": "dc98c2023c2210dab56abc5ffa3ed6636a3cf5fd"
+    },
+    {
+      "path": "oT_Data_Option_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Option_RTS24.csv",
+      "bytes": 228,
+      "sha256": "eca20e708af4d70e85fec5cb3b1ca74e0175aca0d21cd96338d2964c5a8d1b86",
+      "git_blob": "9761eff19bb52d6e875df42a26083acaeee98b71"
+    },
+    {
+      "path": "oT_Data_Parameter_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Parameter_RTS24.csv",
+      "bytes": 224,
+      "sha256": "51a57f72adfe2154097c9f343b0f57ef010bd472a163624675dd95c7596c71fd",
+      "git_blob": "382eccdbe3b8038565f7bd0ea1c0e354d6008720"
+    },
+    {
+      "path": "oT_Data_Period_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Period_RTS24.csv",
+      "bytes": 24,
+      "sha256": "c723ab84f1ee9aad0d84f5e0e360512a01438a1e958b4077f50b7d817f8128f8",
+      "git_blob": "1ce76b519e20e8af5611e83e87776f49c362e697"
+    },
+    {
+      "path": "oT_Data_RESEnergy_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_RESEnergy_RTS24.csv",
+      "bytes": 53,
+      "sha256": "750a179f3bfbafd44d3a07a923b330a47dd4bb8f2dbab33a65a653529b8317c2",
+      "git_blob": "0828d9d7009bc5042c1ff3a0e48b32a7ada8801a"
+    },
+    {
+      "path": "oT_Data_ReserveMargin_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_ReserveMargin_RTS24.csv",
+      "bytes": 59,
+      "sha256": "fdce3a96563675372e0be71deb6b5dbd8b12664a24f63d8292716b8ad45867d2",
+      "git_blob": "1ec11ad2ad16b9f8a11dc770267af530f7ebe4fc"
+    },
+    {
+      "path": "oT_Data_Scenario_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Scenario_RTS24.csv",
+      "bytes": 43,
+      "sha256": "a82bdaa444d4d9637e92f7f1dccc2f3a3a4cacaf38dd0c421eec0b50426868ee",
+      "git_blob": "c21dbe3de1fe66ba4b6a685c15d8491a4c46457c"
+    },
+    {
+      "path": "oT_Data_Stage_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_Stage_RTS24.csv",
+      "bytes": 22,
+      "sha256": "53271433049c536fad9a2108c22b34cb2d9a1c479c45052f681a5e77c46af07b",
+      "git_blob": "a852976bd60d3b2a3cee3789e5977292441fdde1"
+    },
+    {
+      "path": "oT_Data_VariableEmissionCost_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableEmissionCost_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableFuelCost_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableFuelCost_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMaxConsumption_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMaxConsumption_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMaxEnergy_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMaxEnergy_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMaxGeneration_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMaxGeneration_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMaxStorage_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMaxStorage_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMinConsumption_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMinConsumption_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMinEnergy_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMinEnergy_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMinGeneration_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMinGeneration_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Data_VariableMinStorage_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Data_VariableMinStorage_RTS24.csv",
+      "bytes": 559386,
+      "sha256": "22757429c0c634769a58986d2b66d4060a771fcc99ad9620b9cf18ce80714641",
+      "git_blob": "f3830fc38c143729b28e42ee706a82c75540c711"
+    },
+    {
+      "path": "oT_Dict_AreaToRegion_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_AreaToRegion_RTS24.csv",
+      "bytes": 46,
+      "sha256": "ccda0fbabe5249fda93bda4f988bf1ff05590556852d5ff15ceed04b5409b663",
+      "git_blob": "11b9f11323290ce2021846c12300e3a837c5a1f3"
+    },
+    {
+      "path": "oT_Dict_Area_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Area_RTS24.csv",
+      "bytes": 21,
+      "sha256": "43a37d5aa9f2526496a6c2b880128324edc0080414fbe0f1f9c35c92bc76c0d1",
+      "git_blob": "20260d99fb944e2069fac7bfa3d474933d768319"
+    },
+    {
+      "path": "oT_Dict_Circuit_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Circuit_RTS24.csv",
+      "bytes": 28,
+      "sha256": "d121b2dfefe20995f7062f573091615d1bd9301ec37928ab0b2de46541c08402",
+      "git_blob": "ea63ba1499c3ab62dfe58ea6121c1577b6c00373"
+    },
+    {
+      "path": "oT_Dict_Generation_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Generation_RTS24.csv",
+      "bytes": 266,
+      "sha256": "cae0767ae9f482cfb92aae1a2398ea3a95e3c507b87522c8606e2df6060d80b1",
+      "git_blob": "0d16ccea4f06d2179a8278b079274631741e1280"
+    },
+    {
+      "path": "oT_Dict_Line_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Line_RTS24.csv",
+      "bytes": 15,
+      "sha256": "ace37d65b5ac8866ae8643888014b7083428b0008e90a909a0e4584ff7c21a87",
+      "git_blob": "1343d1eb879aa5580160f107877b2e878341396f"
+    },
+    {
+      "path": "oT_Dict_LoadLevel_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_LoadLevel_RTS24.csv",
+      "bytes": 183466,
+      "sha256": "050d8fdcfc3556031904b87553b7681e5b39cda6551510ef862eb794b1e12200",
+      "git_blob": "9e1f950d9dedf3afa329ebe58f927de88adb4480"
+    },
+    {
+      "path": "oT_Dict_NodeToZone_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_NodeToZone_RTS24.csv",
+      "bytes": 346,
+      "sha256": "0a09b1f4e7b088afd73d5cba6c70795c0382a9f216f2a0eab67e00d488da4a7d",
+      "git_blob": "5333cc060b8981847f2db808b99e07e9a388814d"
+    },
+    {
+      "path": "oT_Dict_Node_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Node_RTS24.csv",
+      "bytes": 149,
+      "sha256": "25b7bcb2be16cf9bc671e89c7fddcc35b4e286105d49e29f6968055cbecffb4d",
+      "git_blob": "015abdea28b268a28980d3bd3515722260709c0a"
+    },
+    {
+      "path": "oT_Dict_Period_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Period_RTS24.csv",
+      "bytes": 12,
+      "sha256": "722aec35774362665488410bdba1b88f00ff5336787cb6a92d75cbcd97ee66f9",
+      "git_blob": "1ea715abc6342860f13403137dc4befc4ace9208"
+    },
+    {
+      "path": "oT_Dict_Region_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Region_RTS24.csv",
+      "bytes": 16,
+      "sha256": "f6c52d5ff394493d043166e1406d9b87bab8fc2374ceb10b1fe226239382015e",
+      "git_blob": "0c87d1c85411e721aa8c43042f6cf3131833475c"
+    },
+    {
+      "path": "oT_Dict_Scenario_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Scenario_RTS24.csv",
+      "bytes": 17,
+      "sha256": "03a48effa3a25d3a4637b62ad7b8c3ef043623b6a6425576b4e3c095f8ad9921",
+      "git_blob": "7c8f89f9a1c0fc9e986b013b40177878ba48c7c7"
+    },
+    {
+      "path": "oT_Dict_Stage_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Stage_RTS24.csv",
+      "bytes": 10,
+      "sha256": "3c4351cf53bb66dc459a4e9c8ee1f17530083db861b37669f44a2888c3911623",
+      "git_blob": "c55d44c62358caff6fc85e1fbb8907b6ea7263d3"
+    },
+    {
+      "path": "oT_Dict_Storage_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Storage_RTS24.csv",
+      "bytes": 25,
+      "sha256": "d712bce644613ee566049523753e63c666baa5fb7f697dc043846c27253590bb",
+      "git_blob": "1d38ee4525fa8c877e6e4d2088e0ed27e944c925"
+    },
+    {
+      "path": "oT_Dict_Technology_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Technology_RTS24.csv",
+      "bytes": 128,
+      "sha256": "c438ff263d348d0f8f3381502e62e279ac5b32875ab5ee92c50616c312a244f3",
+      "git_blob": "b3bfdbf20c545341ad260d88666fd675c084ff75"
+    },
+    {
+      "path": "oT_Dict_ZoneToArea_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_ZoneToArea_RTS24.csv",
+      "bytes": 122,
+      "sha256": "79c5925fe5d62c50b6df31cf32df907fd3511145db613c9605ebc8e99f77e0c3",
+      "git_blob": "8f70ac157758b532c02422a8baaf64047683779c"
+    },
+    {
+      "path": "oT_Dict_Zone_RTS24.csv",
+      "url": "https://raw.githubusercontent.com/IIT-EnergySystemModels/openTEPES/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24/oT_Dict_Zone_RTS24.csv",
+      "bytes": 61,
+      "sha256": "2db97504bb291a86e30a14313b9b6e8b78c57107b1e3d97022a6b72f74532f41",
+      "git_blob": "e6d31a9c02cd7b0b0edd82a7048ece798a2f504c"
+    }
+  ],
+  "case_id": "opentepes_rts24_full_inputs_v1",
+  "source_repository": "https://github.com/IIT-EnergySystemModels/openTEPES",
+  "source_case_directory": "https://github.com/IIT-EnergySystemModels/openTEPES/tree/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/openTEPES/cases/RTS24",
+  "source_attribution": "openTEPES, Instituto de Investigación Tecnológica (IIT), Universidad Pontificia Comillas",
+  "source_project_readme": "https://github.com/IIT-EnergySystemModels/openTEPES/blob/5c0187063874cca4bc7af8ff97b19c6c316dd7a5/README.md",
+  "upstream_license_scope": "AGPL version 3 text at repository root; no separate license file in the fixed RTS24 directory",
+  "source_csv_count": 44,
+  "source_csv_total_bytes": 10437086,
+  "original_archive": {
+    "release_url": "https://github.com/djxxju/UC_datas_codex/releases/tag/official-data-2026-10-18-batch08",
+    "asset_url": "https://github.com/djxxju/UC_datas_codex/releases/download/official-data-2026-10-18-batch08/Comillas-openTEPES-5c018706.zip",
+    "bytes": 160837073,
+    "sha256": "54c4b64f225a2912d12f8a1e7ba4ea4921d0461db527f21f475b4ed030a72113",
+    "metadata_verified_on": "2026-11-09",
+    "verification_scope": "GitHub release metadata; full archive bytes were not downloaded for this release audit",
+    "case_path_under_extracted_repository": "openTEPES/cases/RTS24",
+    "license_path_under_extracted_repository": "LICENSE"
+  },
+  "fixed_upstream_listing_verified_on": "2026-11-09",
+  "formal_distribution": "source references, provenance, audit evidence and local audit tools",
+  "software_citation": {
+    "authors": [
+      "Andrés Ramos",
+      "Erik Quispe",
+      "Sara Lumbreras"
+    ],
+    "title": "openTEPES: Open-source Transmission and Generation Expansion Planning",
+    "publication": "SoftwareX 18, 101070 (2022)",
+    "doi": "10.1016/j.softx.2022.101070",
+    "reference_url": "https://doi.org/10.1016/j.softx.2022.101070",
+    "citation_scope": "Upstream project software citation"
+  }
+}

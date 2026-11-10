@@ -1,0 +1,128 @@
+{
+  "case_id": "orlib_50_0_1_w",
+  "input_sha256": "4414fd2f23a4a4b16b0f11bf60c6f68be7c71d1c29c8df34f061b41cd0dc0bd6",
+  "python_version": "3.13.2",
+  "jsonschema_version": "4.26.0",
+  "schema_sha256": "fcd3dd92bdbb4e1800d194b2aca4911ba67c48c958fbd97a9e7c89e4e6c19229",
+  "audit_script_sha256": "a28b075609f667c4f735094a55e27a5427ec7648fe72a875432c990437e92f4c",
+  "source_gzip_rechecked": true,
+  "checks": [
+    {
+      "rule": "gzip_hash_matches_collection_records",
+      "layer": "identity",
+      "status": "passed"
+    },
+    {
+      "rule": "input_matches_decompressed_gzip_byte_for_byte",
+      "layer": "identity",
+      "status": "passed"
+    },
+    {
+      "rule": "input_sha256_matches_manifest",
+      "layer": "identity",
+      "status": "passed"
+    },
+    {
+      "rule": "strict_json_parse_unique_keys_and_finite_number_tokens",
+      "layer": "structure",
+      "status": "passed"
+    },
+    {
+      "rule": "structural_schema_draft_2020_12",
+      "layer": "structure",
+      "status": "passed"
+    },
+    {
+      "rule": "embedded_license_hash_and_source_references_match_archive",
+      "layer": "identity",
+      "status": "passed"
+    },
+    {
+      "rule": "license_copy_byte_for_byte",
+      "layer": "identity",
+      "status": "passed"
+    },
+    {
+      "rule": "fixed_profile_50_generators_1_bus_1_reserve_24_hours",
+      "layer": "structure",
+      "status": "passed"
+    },
+    {
+      "rule": "flat_native_fields_with_no_unmapped_generator_entries",
+      "layer": "structure",
+      "status": "passed"
+    },
+    {
+      "rule": "generator_bus_and_reserve_foreign_keys",
+      "layer": "relationships",
+      "status": "passed"
+    },
+    {
+      "rule": "hourly_array_lengths_match_horizon",
+      "layer": "time_series",
+      "status": "passed"
+    },
+    {
+      "rule": "zero_spinning_reserve_source_values",
+      "layer": "time_series",
+      "status": "passed"
+    },
+    {
+      "rule": "pwl_shapes_and_increasing_output",
+      "layer": "parameters",
+      "status": "passed"
+    },
+    {
+      "rule": "pwl_convexity_tolerance_1e_9",
+      "layer": "parameters",
+      "status": "passed"
+    },
+    {
+      "rule": "single_startup_tier_and_first_delay_equals_minimum_down",
+      "layer": "parameters",
+      "status": "passed"
+    },
+    {
+      "rule": "initial_on_off_output_consistency",
+      "layer": "parameters",
+      "status": "passed"
+    },
+    {
+      "rule": "aggregate_capacity_covers_demand_plus_reserve",
+      "layer": "necessary_condition",
+      "status": "passed"
+    },
+    {
+      "rule": "generators.csv_matches_regenerated_source_mapping",
+      "layer": "derived_view",
+      "status": "passed"
+    },
+    {
+      "rule": "cost_points.csv_matches_regenerated_source_mapping",
+      "layer": "derived_view",
+      "status": "passed"
+    },
+    {
+      "rule": "startup_tiers.csv_matches_regenerated_source_mapping",
+      "layer": "derived_view",
+      "status": "passed"
+    },
+    {
+      "rule": "hourly.csv_matches_regenerated_source_mapping",
+      "layer": "derived_view",
+      "status": "passed"
+    }
+  ],
+  "passed_count": 21,
+  "generator_count": 50,
+  "cost_point_count": 250,
+  "startup_tier_count": 50,
+  "period_count": 24,
+  "initial_online_count": 27,
+  "aggregate_capacity_mw": "8603.0",
+  "peak_demand_mw": "6575.280994",
+  "peak_hour": 12,
+  "total_load_mwh": "127262.847096",
+  "boundary": "Input audit and necessary conditions only. Solve and solution verification are separate.",
+  "release_packaging_check": "2026-11-09 local source gzip and publication layout"
+}

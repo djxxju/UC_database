@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-11-06T02:49:00.247384+00:00",
+  "input_name": "10_0_1_w.json",
+  "input_raw_sha256": "3cfa5d6f0135e732edd7cb08f887cda0c7e56b0b8e766185d05b52e0ee1f3308",
+  "decompressed_sha256": "3cfa5d6f0135e732edd7cb08f887cda0c7e56b0b8e766185d05b52e0ee1f3308",
+  "model_sha256": "a7e13f76700d5e23edcbfff52908dac69540c4c3f2571359d29a871bf8601cb8",
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "code_sha256": {
+    "check_solution.py": "4f74a3aa2d5bdf985660ed0884b15f8b7c34045ede7f3a48d9f00a62fcdd3a37",
+    "solve_compare.py": "7be20fc106829e6258d32140d79dbee27b5b5152805acbef087bd138f6d1b3bb",
+    "test_backends.py": "0c3524ff38689d1b45bbe19202660051759551ddac4b93a5546223a2a070daec",
+    "test_check_solution.py": "1130be462f198ead910cb800ff1a603666552c147fea6f596627fb24b8d0ae0e",
+    "test_uc_model.py": "438129f47611a09b591fcd8a49addfb7e4f37b43d4dc1512568e6b5a3834917b",
+    "uc_model.py": "160ed86032a831c234b2f0c7c5dc916f638494ecfd66e9b0c7d49e1b18b6f901"
+  },
+  "profile": "orlib10_audited_defaults_uc_v1",
+  "model_variables": 1944,
+  "binary_variables": 720,
+  "rows": 1696
+}

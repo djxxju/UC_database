@@ -1,0 +1,24 @@
+{
+  "status_code": 1,
+  "has_solution": true,
+  "objective": 8436950.534297295,
+  "best_bound": 8436110.212011293,
+  "relative_gap": 9.96002385679896e-05,
+  "solver_seconds": 411.8779983520508,
+  "nodes": 26558,
+  "solver_version": "8.0.7",
+  "model_sha256": "17e56488b7def907de51615624c3acc20d7f5d4733bed779e39065306f634634",
+  "parameters": {
+    "TimeLimit": 1800.0,
+    "RelGap": 0.0001,
+    "AbsGap": 1e-07,
+    "Threads": 5,
+    "RandSeed": 0,
+    "MipStartMode": 1,
+    "FeasTol": 1e-07,
+    "IntTol": 1e-07,
+    "DualTol": 1e-07,
+    "LogToConsole": 0
+  },
+  "source_curve_check_passed": true
+}

@@ -1,0 +1,25 @@
+{
+  "case_id": "ucjl_orlib_10_0_1_w_native_v1",
+  "issues": [
+    {
+      "id": "boundary_and_transition_rules",
+      "status": "DOCUMENTED_FOR_PROJECT_PROFILE",
+      "detail": "本例采用的初末边界、above-min爬坡、源缺省启停限额与削负荷规则已核对并写入scripts/orlib10/MODEL.md；未声称完整复现作者软件。"
+    },
+    {
+      "id": "reader_and_solver_compatibility",
+      "status": "PARTIALLY_VERIFIED",
+      "detail": "本项目Python适配器已实际读取该Version=0.3文件并用Gurobi13.0.0/COPT8.0.7计算，独立验解通过；UC.jl/CPLEX原生读取兼容性仍UNVERIFIED。"
+    },
+    {
+      "id": "currency_price_year",
+      "status": "UNVERIFIED",
+      "detail": "原字段标记$，价格年份与币种进一步定义未核实。"
+    },
+    {
+      "id": "nonzero_load_shedding",
+      "status": "OPEN",
+      "detail": "本项目模型最优解第10/21小时削减0.025571/0.217795 MWh，共0.243366 MWh。采用源读取器缺省1000/MWh罚价；不代表严格全需求可行，未诊断原因。"
+    }
+  ]
+}

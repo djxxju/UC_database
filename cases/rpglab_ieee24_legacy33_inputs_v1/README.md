@@ -1,0 +1,11 @@
+# IEEE24 legacy 33-record selected inputs
+
+**Input organization only**: 24 bus records, 33 generator records, 38 branch records and 1500 load rows, each with 576 source-position values. This is a distinct version from [the published 15-record case](../rpglab_ieee24_native_v1/README.md); not an additional physical system.
+
+Files: buses.csv, generators.csv, branches.csv and demand.csv.gz. CSVs use UTF-8 BOM. Numeric text, record order and source line positions are preserved. The load headers source_col_001..576 deliberately identify positions, not certified time/bus labels. Decompress demand.csv.gz before opening in Excel or read it with Python gzip + csv.
+
+Scope excludes LOAD blocks and embedded arrays in the composite source file, and excludes author commitments/dispatch/flows. Independent comparison preserved 738 static parameters + 95 record IDs and 864000 load values. It does not certify full UC semantics, units, source authenticity, solver compatibility, feasibility or optimality. No new solving was performed.
+
+[Field dictionary](../../docs/profiles/rpglab-ieee24-legacy33-inputs/field_dictionary.csv) · [Mapping](../../docs/profiles/rpglab-ieee24-legacy33-inputs/mapping.json) · [Input checks](../../reports/rpglab_ieee24_legacy33_inputs_v1/data_validation.json) · [Independent comparison](../../reports/rpglab_ieee24_legacy33_inputs_v1/independent_review.json) · [Issues](issues.json)
+
+Source attribution: Arun Venkatesh Ramesh and Xingpeng Li, *Spatio-Temporal Deep Learning-Assisted Reduced Security-Constrained Unit Commitment*, Figshare dataset V2, DOI [10.6084/m9.figshare.24116394.v2](https://doi.org/10.6084/m9.figshare.24116394.v2). Publisher metadata identifies CC BY 4.0; [license](https://creativecommons.org/licenses/by/4.0/). Changes: selected tables split into CSV; row/line metadata added; numeric tokens retained; load compressed without changing decompressed CSV bytes. Both selected local source files were independently matched by exact SHA256 to the named members of Figshare V2 archive file 42307935 on 2026-11-01; see reports source_verification.json. The whole ZIP MD5 was not recomputed. This verifies selected file identity, not full model semantics or all underlying third-party rights.
