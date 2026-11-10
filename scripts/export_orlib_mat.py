@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import zlib
 from tempfile import NamedTemporaryFile
 
 import numpy as np
@@ -94,7 +95,12 @@ def export_mat(source, output):
     if output.exists():
         raise FileExistsError(f"Output already exists: {output}")
     original = source.read_bytes()
-    payload = gzip.decompress(original) if source.suffix.lower() == ".gz" else original
+    payload = original
+    if source.suffix.lower() == ".gz":
+        try:
+            payload = gzip.decompress(original)
+        except (EOFError, gzip.BadGzipFile, zlib.error) as error:
+            raise ValueError(f"Invalid gzip file: {source.name}") from error
     data = load_orlib(payload.decode("utf-8-sig"))
     case_id = source.parent.name if source.name == "input.json" else source.name.split(".")[0]
     uc = dict(
