@@ -1,0 +1,76 @@
+{
+  "case_id": "kazarlis1996_uc80_inputs_v1",
+  "structure_checks": {
+    "status": "passed",
+    "generators": 80,
+    "periods": 24
+  },
+  "source_parameter_mapping": {
+    "status": "passed",
+    "comparisons": 880
+  },
+  "time_series_scaling": {
+    "status": "passed",
+    "factor": 8
+  },
+  "all_unit_capacity_necessary_condition": {
+    "status": "passed",
+    "total_pmax_mw": 13296,
+    "min_margin_mw": 96,
+    "tightest_hour": 12,
+    "per_period_margin_mw": [
+      7136,
+      6696,
+      5816,
+      4936,
+      4496,
+      3616,
+      3176,
+      2736,
+      1856,
+      976,
+      536,
+      96,
+      976,
+      1856,
+      2736,
+      4056,
+      4496,
+      3616,
+      2736,
+      976,
+      1856,
+      3616,
+      5376,
+      6256
+    ]
+  },
+  "open_data_gaps": 5,
+  "formal_JSON_Schema_validation": {
+    "status": "passed",
+    "schema": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+    "schema_sha256": "05a70ca3b6f7cbcd4fb07829bf5b74fac72097af305761ebcc019f4e535f6434",
+    "validator": "jsonschema/4.26.0",
+    "date": "2026-11-20",
+    "scope": "Structure only; semantic checks recorded separately"
+  },
+  "native_Excel_recalculation": "not_run",
+  "model_execution": "not_run",
+  "solve_status": "not_run",
+  "independent_solution_check": "not_run",
+  "scope": "当前模板源值/结构/复制/备用检查及容量必要界，不证明UC可行",
+  "tool_identity": {
+    "script_sha256": "07e42f5b9674968fac3bee102863843d8ee171029f222ee328a5ad09dcacc14f",
+    "config_sha256": "5eda2a60b4ee4bde3ffc87778381cdf6547a824ce0ddcfe36a34e26a56aab36c",
+    "python": "3.13.2",
+    "openpyxl": "3.1.5"
+  },
+  "source_workbook_sha256": "e48d2dc827e90d15dfc15e2ab9f545aed852ddf86c861665e2d9119518837fef",
+  "export_readback": "passed",
+  "input_sha256": "16d19922a308d743fb45096d0d2ac12abaa870af47ae4adbdf39668284a5cab0",
+  "publication_file_preparation": {
+    "input_bytes_unchanged_from_local_batch": true,
+    "classification": "system_aggregate_uc_inputs"
+  },
+  "publication_state_at_original_validation": "not_run"
+}
