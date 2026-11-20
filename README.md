@@ -19,7 +19,7 @@ UC_database/
 
 ## 算例索引
 
-当前共 6 个算例，涵盖 1 个可识别的 24 节点基础电网和 1 个 OR-LIB 单节点基准系列。IEEE24 原版、旧 33 记录版和 RTS24 分别保留自己的数据版本与模型状态。
+当前共 12 个算例，涵盖 1 个可识别的 24 节点基础电网、1 个 OR-LIB 单节点基准系列和1个Kazarlis系统级火电UC文献基准家族（六种规模）。IEEE24 原版、旧 33 记录版和 RTS24 分别保留自己的数据版本与模型状态。
 
 | 算例 | 分类与规模 | 校验与结果 | 输入入口 |
 |---|---|---|---|
@@ -29,6 +29,19 @@ UC_database/
 | OR-LIB 20 台 | 单节点 UC，24 小时 | COPT 限时获得候选解，独立验解通过 | [算例目录](cases/orlib_20_0_1_w/) · [JSON](cases/orlib_20_0_1_w/input.json) |
 | OR-LIB 50 台 | 单节点 UC，24 小时 | COPT 达到 0.01% 相对 gap 门槛，独立验解通过 | [算例目录](cases/orlib_50_0_1_w/) · [JSON](cases/orlib_50_0_1_w/input.json) |
 | openTEPES RTS24 | 网络 UC，24 节点，8,736 原始小时 | 已做全时域输入校验，模型、求解与验解待执行 | [来源与恢复说明](cases/opentepes_rts24_full_inputs_v1/) |
+
+### 系统级火电 UC 输入（system_aggregate_uc_inputs）
+
+同一文献家族，六个规模；无网络表，缺参如实披露。分类定义见[输入分类](docs/classification.md)。
+
+| 算例 | 规模关系 | 校验与状态 | 输入入口 |
+|---|---|---|---|
+| Kazarlis 10台 | 1份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc10_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc10_inputs_v1/input.json) |
+| Kazarlis 20台 | 2份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc20_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc20_inputs_v1/input.json) |
+| Kazarlis 40台 | 4份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc40_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc40_inputs_v1/input.json) |
+| Kazarlis 60台 | 6份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc60_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc60_inputs_v1/input.json) |
+| Kazarlis 80台 | 8份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc80_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc80_inputs_v1/input.json) |
+| Kazarlis 100台 | 10份基础块，24小时 | 输入检查通过；未求解；许可未核 | [说明](cases/kazarlis1996_uc100_inputs_v1/README.md) · [JSON](cases/kazarlis1996_uc100_inputs_v1/input.json) |
 
 [机器可读索引](catalog.json)为每例登记分类、版本、规模和执行状态。已发布的算例 ID 与文件路径继续保留，OR-LIB 20、50 台的发行版本见索引中的 `distribution_version`。
 
