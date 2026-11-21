@@ -48,3 +48,7 @@ python scripts/solve_ieee24.py --case-dir reproduce_ieee24/cases/rpglab_ieee24_n
 恢复工具按记录的固定版本URL和哈希取得五份源文件。重建写到独立reproduce_ieee24目录，不覆盖本次正式输入/结果；重新运行产生新记录，不改写已公布的参考结论。第三条命令只做数据检查，第四条才启动求解。
 
 本例原数据许可为CC BY 4.0（上游README），论文引用与原件SHA-256在provenance中。按原许可署名，来源未明处继续披露；不授予原作者未授予的权利。
+
+## openTEPES RTS24 数据概览
+
+24节点、33条机组记录、38条物理支路，完整8,736个原始小时。数据含节点负荷、线路拓扑、电气参数、出力与库存资料，固定源码采用DC B-θ潮流规则。机组类型、容量、并联线路和爬坡/备用/冷热启动缺口见[RTS24基础信息与约束要素](cases/opentepes_rts24_full_inputs_v1/README.md#基础信息2026-11-21更新)。当前为全量输入校验版，模型执行和求解状态为not_run。
