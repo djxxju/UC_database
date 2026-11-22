@@ -50,7 +50,7 @@
   "input_check_status": "passed_selected_input_checks_only",
   "independent_source_value_review": "passed_selected_input_independent_review",
   "solve_status": "not_run",
-  "publication_status": "prepared_for_review",
+  "publication_status": "published",
   "excluded": [
     "composite LOAD/embedded test arrays",
     "author solution files",
@@ -69,7 +69,7 @@
     "cases/rpglab_ieee24_legacy33_inputs_v1/demand.csv.gz": "937763e41f7435db3c234bf532c8e588ad1c6f90846744052373f77cd09994e7",
     "cases/rpglab_ieee24_legacy33_inputs_v1/generators.csv": "2c3c500a1ddb4f163e4e783f92365d93e9634dc85763d0e38cf571cade16d507",
     "cases/rpglab_ieee24_legacy33_inputs_v1/issues.json": "b5658894c2bd90a461b6957d8c7a47951cc3ff4c886524303b9d06d20da4fc7c",
-    "cases/rpglab_ieee24_legacy33_inputs_v1/README.md": "28b121798c748fb773bfa756ef57f8897819f0fd1fad0e9919830907f7f24bbe",
+    "cases/rpglab_ieee24_legacy33_inputs_v1/README.md": "52418c8bbe194dc61b319a9c3e00740e239aa8c116eba296d04319c97ad8f3e8",
     "docs/profiles/rpglab-ieee24-legacy33-inputs/field_dictionary.csv": "824b591c942297fc456fd3930549956fe2c5f1f73aea5873befc82386a2c3bd9",
     "docs/profiles/rpglab-ieee24-legacy33-inputs/mapping.json": "0d452b0c61075574543ed91751b85bb8c6ee31e123f04b689d4f06e4012659b0",
     "docs/profiles/rpglab-ieee24-legacy33-inputs/README.md": "704572929f12aea30aff0b8507c185fc758bd116a456935a483592f1449d5826",

@@ -1,0 +1,40 @@
+{
+  "paper_title": "A Genetic Algorithm Solution to the Unit Commitment Problem",
+  "publication_year": 1996,
+  "data_location": "PDF 第 6 页／印刷 88 页／Table II",
+  "license_note": "UNVERIFIED：尚未核实",
+  "source_workbook": "10机24时文献算例.xlsx",
+  "source_workbook_sha256": "e48d2dc827e90d15dfc15e2ab9f545aed852ddf86c861665e2d9119518837fef",
+  "source_mapping": "配置表头/说明标签逐项对应；本轮未再核论文",
+  "license_status": "UNVERIFIED",
+  "source_url_status": "VERIFIED",
+  "doi_status": "VERIFIED",
+  "solve_status": "not_run",
+  "independent_solution_check": "not_run",
+  "recorded_pdf_sha256": "af14bc4f03e97ec9e15c335f2d4659bf7973b1340f4bbc3ca5bdbc3c98ca4204",
+  "pdf_identity_check_this_run": "not_run; reused existing record",
+  "case_id": "kazarlis1996_uc100_inputs_v1",
+  "base_generator_count": 10,
+  "copy_factor": 10,
+  "classification": "expanded_from_base_by_user_specified_replication_rule",
+  "construction_rule": "完整机组块保留原值复制；仅编号改变；每小时负荷/备用乘复制倍数",
+  "expansion_evidence": "用户明确给定复制规则；不冒充本轮逐规模论文复核",
+  "tool_identity": {
+    "script_sha256": "07e42f5b9674968fac3bee102863843d8ee171029f222ee328a5ad09dcacc14f",
+    "config_sha256": "5eda2a60b4ee4bde3ffc87778381cdf6547a824ce0ddcfe36a34e26a56aab36c",
+    "python": "3.13.2",
+    "openpyxl": "3.1.5"
+  },
+  "doi": "10.1109/59.485989",
+  "source_url": "https://doi.org/10.1109/59.485989",
+  "citation": "S. A. Kazarlis, A. G. Bakirtzis, V. Petridis. IEEE Transactions on Power Systems 11(1):83–92, 1996.",
+  "bibliographic_verification": {
+    "scope": "Title/authors/year/venue/DOI registration only",
+    "date": "2026-11-20",
+    "evidence": "https://api.crossref.org/works/10.1109/59.485989"
+  },
+  "redistribution_permission": "UNVERIFIED",
+  "rights_notice": "docs/profiles/kazarlis1996-table-inputs/THIRD_PARTY_NOTICES.md",
+  "publication_preparation": "input-only branch submission; no merge or solve implied",
+  "publication_state_at_package_assembly": "branch_submission_prepared"
+}
