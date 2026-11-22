@@ -92,11 +92,8 @@ def audit(source_gzip=None, write=False):
     Draft202012Validator.check_schema(schema)
     Draft202012Validator(schema).validate(json.loads(raw))
     check("structural_schema_draft_2020_12", True, "structure")
-    license_bytes = data["LICENSE"].encode("utf-8")
     check("embedded_license_and_source_present",
           bool(data["LICENSE"]) and bool(data["SOURCE"]), "identity")
-    verify_or_create(CASE / "LICENSE.txt", license_bytes, write)
-    check("license_copy_byte_for_byte", True, "identity")
 
     generators = data["Generators"]
     buses = data["Buses"]

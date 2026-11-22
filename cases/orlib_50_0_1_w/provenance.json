@@ -8,6 +8,6 @@
   "source_unpacked_sha256": "4414fd2f23a4a4b16b0f11bf60c6f68be7c71d1c29c8df34f061b41cd0dc0bd6",
   "input_sha256": "e0d7557aedc8a2fd7d8c293d059efd5502eb633b830c894145b60f06ec7862fc",
   "transformation": "Whitespace formatting already present in main; all values, object-key order, arrays and embedded LICENSE/SOURCE match the archived JSON. Current input and original unpacked hashes are recorded separately.",
-  "license": "MIT notice in input.json LICENSE and LICENSE.txt; original citations in input.json SOURCE.",
+  "license": "MIT; full original notice in input.json LICENSE.",
   "original_acquisition_date": "2026-10-15"
 }

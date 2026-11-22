@@ -14,7 +14,7 @@ class InputFaults(unittest.TestCase):
     def check_mutation(self, mutate, expected_error):
         with tempfile.TemporaryDirectory() as temp:
             case = Path(temp)
-            for name in ("input.json", "provenance.json", "LICENSE.txt"):
+            for name in ("input.json", "provenance.json"):
                 shutil.copyfile(audit_input.CASE / name, case / name)
             source = json.loads((case / "input.json").read_bytes())
             mutate(source)

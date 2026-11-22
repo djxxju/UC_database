@@ -1,16 +1,14 @@
 {
   "case_id": "ucjl_orlib_10_0_1_w_native_v1",
   "checked_date": "2026-11-22",
-  "baseline_commit": "35a69966ecafdc9a3b08e343a32cfa74571f96cd",
+  "baseline_commit": "08acc3475a2ce2b83af5a2b2f53bdc7156ba92e8",
   "status": "passed",
   "input_unchanged_from_remote_baseline": true,
   "source_gzip_sha256": "6ef95ef5a1966914306da848f2ffa4bd835c49d520e30b1dcbcfa948eee85cbe",
   "source_unpacked_sha256": "3cfa5d6f0135e732edd7cb08f887cda0c7e56b0b8e766185d05b52e0ee1f3308",
   "input_sha256": "93ba8bbdae838d852fea89d68b1110ad854b7a682af3e0e66072a7ae1be8dfcc",
   "strict_source_values_and_order_match": true,
-  "license_copy_matches_embedded_text": true,
   "case_files": [
-    "LICENSE.txt",
     "README.md",
     "input.json",
     "issues.json",
@@ -27,5 +25,11 @@
   "solution_verification_this_round": "not_run",
   "boundary": "Package and input checks only; historical solve records retain their original run identities.",
   "source_comparison_scope": "Existing local archived gzip, not a new upstream download.",
-  "independent_review_this_round": "not_completed_subagent_usage_limit"
+  "independent_review_this_round": {
+    "status": "passed",
+    "reviewer": "orlib_cleanup_review",
+    "scope": "Original gzip/unpacked/current hashes, exact source values and order, full embedded notice, four-file package, Python syntax, 20/50 default audit and temporary CSV exports, existing input tests. No new solve or historical-result revalidation."
+  },
+  "embedded_license_matches_pre_cleanup_full_notice": true,
+  "license_distribution": "Full original copyright, permission notice and disclaimer retained verbatim in input.json LICENSE; duplicate standalone copy removed."
 }

@@ -22,7 +22,7 @@
       "profile": "ucjl-orlib-native/1.0.0",
       "family": "single_bus_uc",
       "schema_version": "1.0.0",
-      "distribution_version": "1.0.2",
+      "distribution_version": "1.0.3",
       "checksum_manifest": "reports/ucjl_orlib_10_0_1_w_native_v1/checksums.sha256",
       "execution_profile": "orlib10_audited_defaults_uc_v1",
       "total_load_shedding_MWh": 0.243366,
@@ -68,7 +68,7 @@
         "achieved_relative_gap": 0.0008693708813969019,
         "full_candidates_distributed": false
       },
-      "distribution_version": "1.0.2",
+      "distribution_version": "1.0.3",
       "profile": "orlib_flat_audited_defaults_uc_v1",
       "family": "single_bus_uc",
       "checksum_manifest": "reports/orlib_20_0_1_w/checksums.sha256",
@@ -105,7 +105,7 @@
         "achieved_relative_gap": 0.0000996002385679896,
         "full_candidates_distributed": false
       },
-      "distribution_version": "1.0.2",
+      "distribution_version": "1.0.3",
       "profile": "orlib_flat_audited_defaults_uc_v1",
       "family": "single_bus_uc",
       "checksum_manifest": "reports/orlib_50_0_1_w/checksums.sha256",

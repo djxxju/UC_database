@@ -7,7 +7,7 @@
 | 项目 | 内容 |
 | --- | --- |
 | 来源与版本 | UnitCommitment.jl 0.4 实例目录的 [OR-Library 10_0_1_w](https://axavier.org/UnitCommitment.jl/0.4/instances/or-lib/10_0_1_w.json.gz)，原 JSON 格式为 `0.3`。原 gzip 和解压 JSON 的 SHA-256 见[来源记录](provenance.json)。 |
-| 许可 | 原 JSON 内嵌的 [MIT 通知](LICENSE.txt)。 |
+| 许可 | 原 JSON 内嵌的 [MIT 许可正文](input.json)（`LICENSE` 字段）。 |
 | 网络与设备 | 1 个母线 `b1`，10 条发电机组记录，均接入该母线。无输电支路，线路潮流与网络安全约束不适用。 |
 | 机组容量 | 最大出力合计 1,771 MW，各机组最小出力合计 548 MW，均由生产费用曲线首末出力折点汇总。时域开始前已在线 6 台。 |
 | 时域与负荷 | 1 个日实例，24 个 1 小时时段。第 12 小时峰值 1,453.913382 MW，24 小时需求电量 28,140.113949 MWh。自然日日期未给出。 |
@@ -23,7 +23,7 @@
 
 ## 目录文件
 
-目录保留五份文件。input.json包含完整机组、负荷、备用、费用、原引用及通知；README.md说明数据；provenance.json保留来源与哈希；issues.json列缺口；LICENSE.txt提供原许可。
+目录保留四份文件：`input.json` 包含完整数据、原引用及完整许可；`README.md` 说明字段与用途；`provenance.json` 记录来源与哈希；`issues.json` 列出缺口。
 
 数值CSV可从JSON再生，字段说明并入本页。当前input.json的易读排版与源归档分别记录哈希。数据数值保持来源精度，原历史计算记录按各自运行身份保存。
 

@@ -1,16 +1,14 @@
 {
   "case_id": "orlib_20_0_1_w",
   "checked_date": "2026-11-22",
-  "baseline_commit": "35a69966ecafdc9a3b08e343a32cfa74571f96cd",
+  "baseline_commit": "08acc3475a2ce2b83af5a2b2f53bdc7156ba92e8",
   "status": "passed",
   "input_unchanged_from_remote_baseline": true,
   "source_gzip_sha256": "6a567e0c8ebe5b2420d940f7526f343850fd45c6400e09ef1247cb450a6551be",
   "source_unpacked_sha256": "37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327",
   "input_sha256": "eeba7378d61e20a91e1c72fb9c9cb1467cacde00de160630c5225cab01fd75bf",
   "strict_source_values_and_order_match": true,
-  "license_copy_matches_embedded_text": true,
   "case_files": [
-    "LICENSE.txt",
     "README.md",
     "input.json",
     "issues.json",
@@ -23,7 +21,7 @@
     "python_version": "3.13.2",
     "jsonschema_version": "4.26.0",
     "schema_sha256": "fcd3dd92bdbb4e1800d194b2aca4911ba67c48c958fbd97a9e7c89e4e6c19229",
-    "audit_script_sha256": "58085b8fa575b86015f404f796846dbae2b327c00f3dd9581926b0c2fa3cf319",
+    "audit_script_sha256": "9b977f0f60b6a315e69117d3addacd735108e456374cdb6205d6a81962374b69",
     "source_gzip_rechecked": true,
     "optional_csv_views_checked": [],
     "checks": [
@@ -59,11 +57,6 @@
       },
       {
         "rule": "embedded_license_and_source_present",
-        "layer": "identity",
-        "status": "passed"
-      },
-      {
-        "rule": "license_copy_byte_for_byte",
         "layer": "identity",
         "status": "passed"
       },
@@ -118,7 +111,7 @@
         "status": "passed"
       }
     ],
-    "passed_count": 18,
+    "passed_count": 17,
     "generator_count": 20,
     "cost_point_count": 100,
     "startup_tier_count": 20,
@@ -134,9 +127,15 @@
   "solution_verification_this_round": "not_run",
   "boundary": "Package and input checks only; historical solve records retain their original run identities.",
   "source_comparison_scope": "Existing local archived gzip, not a new upstream download.",
-  "independent_review_this_round": "not_completed_subagent_usage_limit",
+  "independent_review_this_round": {
+    "status": "passed",
+    "reviewer": "orlib_cleanup_review",
+    "scope": "Original gzip/unpacked/current hashes, exact source values and order, full embedded notice, four-file package, Python syntax, 20/50 default audit and temporary CSV exports, existing input tests. No new solve or historical-result revalidation."
+  },
   "regression_tests": {
     "optional_package_tests": 5,
     "status": "passed"
-  }
+  },
+  "embedded_license_matches_pre_cleanup_full_notice": true,
+  "license_distribution": "Full original copyright, permission notice and disclaimer retained verbatim in input.json LICENSE; duplicate standalone copy removed."
 }
