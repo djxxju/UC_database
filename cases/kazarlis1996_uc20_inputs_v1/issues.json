@@ -3,36 +3,23 @@
   "missing_items": [
     {
       "item": "初始出力（MW）",
-      "description": "当前数据表未提供",
       "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
     },
     {
       "item": "常规爬坡上下限、启停爬坡参数",
-      "description": "当前数据表未提供",
       "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
     },
     {
       "item": "停机费用",
-      "description": "当前数据表未提供",
       "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
     },
     {
       "item": "节点与线路参数",
-      "description": "当前数据表未提供",
       "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
     },
     {
       "item": "冷热启动具体切换规则、末端状态要求",
-      "description": "当前数据表未提供",
       "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
-    }
-  ],
-  "case_id": "kazarlis1996_uc20_inputs_v1",
-  "open_metadata": [
-    {
-      "item": "data_redistribution_permission",
-      "status": "UNVERIFIED",
-      "description": "未确认开放数据许可；不随包分发原PDF或声明第三方开放许可"
     }
   ]
 }
