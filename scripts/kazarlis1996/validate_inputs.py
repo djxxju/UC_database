@@ -37,9 +37,8 @@ def main():
         need(all(Decimal(str(r)) == Decimal(str(d)) * Decimal("0.1") for d, r in zip(data["time_series"]["demand_mw"], data["time_series"]["reserve_mw"])), "备用规则错误")
         for name in data["documentation"].values():
             need((folder / name).is_file(), "来源或缺口引用不存在")
-        provenance = read(folder / "provenance.json")
-        need(provenance["solve_status"] == provenance["independent_solution_check"] == "not_run", "未执行状态错误")
         report = read(ROOT / "reports" / case / "data_validation.json")
+        need(report["solve_status"] == report["independent_solution_check"] == "not_run", "未执行状态错误")
         cap = sum(g["pmax_mw"] for g in data["generators"])
         margin = [cap - d - r for d, r in zip(data["time_series"]["demand_mw"], data["time_series"]["reserve_mw"])]
         need(report["all_unit_capacity_necessary_condition"]["per_period_margin_mw"] == margin, "容量报告错误")
