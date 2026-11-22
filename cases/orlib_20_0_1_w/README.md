@@ -21,24 +21,42 @@
 - **备用及平衡。** 24 个时段的旋转备用需求均为源数据显式零值。项目模型固定备用为零，并按单节点逐时平衡计入削负荷。
 - **模型默认与待核。** 启停出力限额采用已核对的读取器默认值 1,000,000 MW，削负荷默认罚价为每 MWh 1,000。计算口径见[模型说明](../../docs/profiles/orlib_flat_audited_defaults_uc_v1/MODEL.md)，作者参考调度和匹配结果仍待核。
 
-| 文件 | 用途 |
+## 目录文件
+
+目录保留五份文件。input.json包含完整机组、负荷、备用、费用、原引用及通知；README.md说明数据；provenance.json保留来源与哈希；issues.json列缺口；LICENSE.txt提供原许可。
+
+数值CSV可从JSON再生，字段说明并入本页。当前input.json的易读排版与源归档分别记录哈希。数据数值保持来源精度，原历史计算记录按各自运行身份保存。
+
+## 字段说明
+
+| JSON字段 | 含义和单位 |
 | --- | --- |
-| `input.json` | 当前易读排版的完整输入，数值与原归档一致，文件与源哈希分别记录。 |
-| `LICENSE.txt` | 原 JSON `LICENSE` 文本的逐字节副本。 |
-| `provenance.json` | 原归档 URL、实例名、时间、原 gzip/解压 JSON 哈希及原引用。 |
-| `field_dictionary.csv` | 可选表格视图的列名、JSON路径和单位说明。 |
-| `issues.json` | 源数据缺省规则、待核项与不适用范围。 |
+| Parameters.Time (h) / Version | 总小时数24 / 原JSON格式0.3 |
+| Generators.*.Bus | 所属母线b1 |
+| Production cost curve (MW) / ($) | 同索引的出力与总生产费用折点，首末出力分别为Pmin/Pmax；原费用符号$，币种/基年待核 |
+| Initial status (h) | 已连续开停时长，正为开机、负为停机 |
+| Initial power (MW) | 时域前的发电功率 |
+| Minimum uptime (h) / Minimum downtime (h) | 最小连续开机/停机时长 |
+| Ramp up limit (MW) / Ramp down limit (MW) | 原上下爬坡字段，计算口径按本例模型说明 |
+| Startup costs ($) / Startup delays (h) | 同位置启动费及停机时长门槛，本例每机只有一档 |
+| Reserve eligibility | 可参与的备用产品编号 |
+| Buses.b1.Load (MW) | 按原顺序排列的24小时负荷 |
+| Reserves.r1.Amount (MW) / Type | 备用需求数组（原值全零）/ Spinning |
+| LICENSE / SOURCE | 原内嵌许可和参考引用 |
 
-机组最小与最大出力取原曲线首末点。4张数值CSV与JSON内容重复，正式目录保留完整JSON作为数值输入。需要表格时可从同一输入再生。字段字典作为解释资料保留，许可、来源与缺口记录分别保留其用途。
 
-## 校验与按需导出
+机组、母线和备用编号采用原JSON对象键，保留原顺序。按需导出CSV时，point_index、tier_index及hour从1编号，对应原数组索引加1；reserve_ids按原资格数组顺序用竖线分隔；Pmin/Pmax取生产费用曲线的首末出力。
 
-在仓库根目录使用Python和jsonschema运行。默认检查JSON、来源、许可、schema、关联、时序和数值。若同目录已有可选CSV，会逐字节核对；缺少的CSV可用--write生成，已有错误视图会报错。
+## 校验和按需表格
 
-```powershell
-python reports/orlib_20_0_1_w/audit_input.py
-python reports/orlib_20_0_1_w/audit_input.py --source-gzip C:/path/to/20_0_1_w.json.gz
-python reports/orlib_20_0_1_w/audit_input.py --write
+默认校验不要求数值CSV，已存在的CSV会逐字节核对。需要表格时可用--write导出；--source-gzip可额外比较原始归档哈希、严格解析值和顺序。
+
+```text
+python -B reports/orlib_20_0_1_w/audit_input.py
+python -B reports/orlib_20_0_1_w/audit_input.py --write
+python -B reports/orlib_20_0_1_w/audit_input.py --source-gzip path/to/20_0_1_w.json.gz
 ```
 
-原gzip解压JSON的SHA256为37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327。当前input.json已在本次整理前排版成多行，其数值与内嵌通知经严格解析与原件一致；当前文件字节哈希见provenance.json。历史data_validation.json保留原21项检查结果及当时文件身份；本次精简后的检查记录见[package_validation.json](../../reports/orlib_20_0_1_w/package_validation.json)。历史求解和验解结果按原运行身份保留。
+[历史输入检查](../../reports/orlib_20_0_1_w/data_validation.json) · [本轮精简核验](../../reports/orlib_20_0_1_w/package_validation.json) · [逐例哈希](../../reports/orlib_20_0_1_w/checksums.sha256) · [历史参考结果](../../results/orlib_20_0_1_w/README.md)
+
+历史报告中的文件哈希和项目计算结论对应当时版本。本轮检查只读取数据及已有代码，不重新求解。

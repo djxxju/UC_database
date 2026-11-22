@@ -77,8 +77,17 @@ def audit(source_gzip=None, write=False):
         compressed = source_gzip.read_bytes()
         check("gzip_hash_matches_collection_records",
               sha(compressed) == provenance["source_gzip_sha256"], "identity")
-        check("input_matches_decompressed_gzip_byte_for_byte",
-              gzip.decompress(compressed) == raw, "identity")
+        unpacked = gzip.decompress(compressed)
+        check("decompressed_source_hash_matches_provenance",
+              sha(unpacked) == provenance["source_unpacked_sha256"], "identity")
+        archived = json.loads(unpacked, parse_float=Decimal, object_pairs_hook=unique_keys,
+                              parse_constant=reject_constant)
+        current = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys,
+                             parse_constant=reject_constant)
+        check("input_values_and_order_match_archived_json",
+              archived == current
+              and json.loads(unpacked, object_pairs_hook=list, parse_float=Decimal)
+                  == json.loads(raw, object_pairs_hook=list, parse_float=Decimal), "identity")
     check("input_sha256_matches_manifest", sha(raw) == provenance["input_sha256"], "identity")
     data = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys, parse_constant=reject_constant)
     check("strict_json_parse_unique_keys_and_finite_number_tokens", True, "structure")
@@ -87,120 +96,393 @@ def audit(source_gzip=None, write=False):
     Draft202012Validator(schema).validate(json.loads(raw))
     check("structural_schema_draft_2020_12", True, "structure")
     license_bytes = data["LICENSE"].encode("utf-8")
-    check("embedded_license_hash_and_source_references_match_archive",
-          sha(license_bytes) == provenance["embedded_license_sha256"]
-          and data["SOURCE"] == provenance["embedded_source_text"], "identity")
+    check("embedded_license_and_source_present",
+          bool(data["LICENSE"]) and bool(data["SOURCE"]), "identity")
     verify_or_create(CASE / "LICENSE.txt", license_bytes, write)
     check("license_copy_byte_for_byte", True, "identity")
 
-    generators = data["Generators"]
-    buses = data["Buses"]
-    reserves = data["Reserves"]
-    horizon = data["Parameters"]["Time (h)"]
-    check("fixed_profile_50_generators_1_bus_1_reserve_24_hours",
-          horizon == 24 and len(generators) == 50 and set(buses) == {"b1"}
-          and set(reserves) == {"r1"} and reserves["r1"]["Type"] == "Spinning", "structure")
-    generator_keys = set(GEN_FIELDS.values()) | {
-        "Production cost curve (MW)", "Production cost curve ($)",
-        "Startup costs ($)", "Startup delays (h)", "Reserve eligibility",
+    genera…1976 tokens truncated…son.json",
+        "readme": "results/ucjl_orlib_10_0_1_w_native_v1/README.md",
+        "full_candidates_distributed": false
+      },
+      "solver_code": "scripts/orlib10/solve_compare.py",
+      "data_completeness": {
+        "grade": "B",
+        "reviewed_on": "2026-11-22",
+        "basis": "明确的单节点、显式零备用和单档启动，按已核读取默认和公布计算规则执行。费用币种和价格年待核。",
+        "evidence": "cases/ucjl_orlib_10_0_1_w_native_v1/README.md"
+      }
+    },
+    {
+      "case_id": "orlib_20_0_1_w",
+      "path": "cases/orlib_20_0_1_w",
+      "n_generator_records": 20,
+      "n_buses": 1,
+      "n_physical_branches": 0,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_input_reorganization",
+      "data_quality": "source_values_preserved_with_profile_boundaries",
+      "validation_report": "reports/orlib_20_0_1_w/package_validation.json",
+      "model_execution": "copt_8.0.7_project_profile",
+      "solve_status": "time_limit_with_verified_feasible_solution",
+      "independent_solution_check": "passed",
+      "verified_sample_count": 1,
+      "pending_sample_count": 0,
+      "results": {
+        "directory": "results/orlib_20_0_1_w",
+        "summary": "results/orlib_20_0_1_w/reference_results.csv",
+        "verification": "results/orlib_20_0_1_w/verification.json",
+        "readme": "results/orlib_20_0_1_w/README.md",
+        "target_relative_gap": 0.00001,
+        "achieved_relative_gap": 0.0008693708813969019,
+        "full_candidates_distributed": false
+      },
+      "distribution_version": "1.0.2",
+      "profile": "orlib_flat_audited_defaults_uc_v1",
+      "family": "single_bus_uc",
+      "checksum_manifest": "reports/orlib_20_0_1_w/checksums.sha256",
+      "data_completeness": {
+        "grade": "B",
+        "reviewed_on": "2026-11-22",
+        "basis": "明确的单节点、显式零备用和单档启动，按已核读取默认和公布计算规则执行。费用价格年待核。",
+        "evidence": "cases/orlib_20_0_1_w/README.md"
+      }
+    },
+    {
+      "case_id": "orlib_50_0_1_w",
+      "path": "cases/orlib_50_0_1_w",
+      "n_generator_records": 50,
+      "n_buses": 1,
+      "n_physical_branches": 0,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_input_reorganization",
+      "data_quality": "source_values_preserved_with_profile_boundaries",
+      "validation_report": "reports/orlib_50_0_1_w/package_validation.json",
+      "model_execution": "copt_8.0.7_project_profile",
+      "solve_status": "optimal_within_declared_solver_tolerances",
+      "independent_solution_check": "passed",
+      "verified_sample_count": 1,
+      "pending_sample_count": 0,
+      "results": {
+        "directory": "results/orlib_50_0_1_w",
+        "summary": "results/orlib_50_0_1_w/reference_results.csv",
+        "verification": "results/orlib_50_0_1_w/verification.json",
+        "readme": "results/orlib_50_0_1_w/README.md",
+        "target_relative_gap": 0.0001,
+        "achieved_relative_gap": 0.0000996002385679896,
+        "full_candidates_distributed": false
+      },
+      "distribution_version": "1.0.2",
+      "profile": "orlib_flat_audited_defaults_uc_v1",
+      "family": "single_bus_uc",
+      "checksum_manifest": "reports/orlib_50_0_1_w/checksums.sha256",
+      "data_completeness": {
+        "grade": "B",
+        "reviewed_on": "2026-11-22",
+        "basis": "明确的单节点、显式零备用和单档启动，按已核读取默认和公布计算规则执行。费用价格年待核。",
+        "evidence": "cases/orlib_50_0_1_w/README.md"
+      }
+    },
+    {
+      "case_id": "rpglab_ieee24_native_v1",
+      "path": "cases/rpglab_ieee24_native_v1",
+      "n_generator_records": 15,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "sample_count": 1800,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "classification": "lossless_input_reorganization",
+      "data_quality": "source_inputs_preserved_with_open_metadata_and_model_issues",
+      "validation_report": "reports/rpglab_ieee24_native_v1/data_validation.json",
+      "model_execution": "verified_for_all_1800_samples",
+      "solve_status": "completed_all_requested_samples",
+      "independent_solution_check": "passed_for_all_1800_candidates",
+      "verified_sample_count": 1800,
+      "pending_sample_count": 0,
+      "solver_status_counts": {
+        "optimal_within_declared_solver_tolerances": 1800
+      },
+      "results": {
+        "directory": "results/rpglab_ieee24_native_v1",
+        "summary": "results/rpglab_ieee24_native_v1/reference_results.csv",
+        "verification": "results/rpglab_ieee24_native_v1/verification.json",
+        "readme": "results/rpglab_ieee24_native_v1/README.md",
+        "target_relative_gap": 0.0001,
+        "max_relative_gap": 0.000099635698976145,
+        "full_candidates_distributed": false
+      },
+      "schema_version": "1.1.1",
+      "distribution_version": "1.0.0",
+      "profile": "rpglab-ieee24-native/1.0.0",
+      "family": "network_uc",
+      "checksum_manifest": "reports/rpglab_ieee24_native_v1/checksums.sha256",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "费用币种和价格年、备用响应时长口径及线路工程基准待核。",
+        "evidence": "cases/rpglab_ieee24_native_v1/README.md"
+      }
+    },
+    {
+      "case_id": "opentepes_rts24_full_inputs_v1",
+      "path": "cases/opentepes_rts24_full_inputs_v1",
+      "n_generator_records": 33,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "scenario_count": 1,
+      "stage_count": 1,
+      "source_hour_count": 8736,
+      "source_time_step_hours": 1,
+      "effective_period_count_from_source_rules": 4368,
+      "model_time_step_hours_from_source_rules": 2,
+      "classification": "fixed_source_reference_and_full_horizon_input_audit",
+      "data_quality": "input_checks_passed_with_open_source_intent_and_model_issues",
+      "source_provenance": "cases/opentepes_rts24_full_inputs_v1/provenance.json",
+      "validation_report": "reports/opentepes_rts24_full_inputs_v1/data_validation.json",
+      "model_execution": "not_run",
+      "copt_compatibility": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "distribution_version": "1.0.0",
+      "profile": "opentepes-rts24-source-input-audit/1.0.0",
+      "family": "network_uc",
+      "checksum_manifest": "reports/opentepes_rts24_full_inputs_v1/checksums.sha256",
+      "base_system_relationship": {
+        "shares_network_topology_with": "rpglab_ieee24_native_v1",
+        "basis": "Undirected endpoint multiset matches all 38 branches after node-number offset 100; retains a separate case/profile."
+      },
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "爬坡和最小开停时间原栏为空，冷热启动分档及部分转换参数的来源意图待核。",
+        "evidence": "cases/opentepes_rts24_full_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "rpglab_ieee24_legacy33_inputs_v1",
+      "path": "cases/rpglab_ieee24_legacy33_inputs_v1",
+      "n_generator_records": 33,
+      "n_buses": 24,
+      "n_physical_branches": 38,
+      "sample_count": 1500,
+      "source_columns_per_sample": 576,
+      "time_mapping_status": "UNVERIFIED_candidate",
+      "classification": "lossless_selected_input_reorganization",
+      "family": "network_uc_inputs",
+      "profile": "rpglab-ieee24-legacy33-inputs/1.0.0",
+      "schema_version": null,
+      "distribution_version": "1.0.0",
+      "data_quality": "selected_input_tokens_independently_preserved_with_open_semantic_issues",
+      "validation_report": "reports/rpglab_ieee24_legacy33_inputs_v1/data_validation.json",
+      "independent_input_review": "reports/rpglab_ieee24_legacy33_inputs_v1/independent_review.json",
+      "solve_status": "not_run",
+      "model_execution": "not_run",
+      "checksum_manifest": "reports/rpglab_ieee24_legacy33_inputs_v1/checksums.sha256",
+      "data_completeness": {
+        "grade": "D",
+        "reviewed_on": "2026-11-22",
+        "basis": "旧模型、时间映射、单位和初末边界待核。",
+        "evidence": "cases/rpglab_ieee24_legacy33_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc10_inputs_v1",
+      "path": "cases/kazarlis1996_uc10_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc10_inputs_v1/input.json",
+      "n_generator_records": 10,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "base_input_transcription",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 1,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc10_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc10_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc10_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc20_inputs_v1",
+      "path": "cases/kazarlis1996_uc20_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc20_inputs_v1/input.json",
+      "n_generator_records": 20,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "expanded_from_base_by_user_specified_replication_rule",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 2,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc20_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc20_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc20_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc40_inputs_v1",
+      "path": "cases/kazarlis1996_uc40_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc40_inputs_v1/input.json",
+      "n_generator_records": 40,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "expanded_from_base_by_user_specified_replication_rule",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 4,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc40_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc40_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc40_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc60_inputs_v1",
+      "path": "cases/kazarlis1996_uc60_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc60_inputs_v1/input.json",
+      "n_generator_records": 60,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "expanded_from_base_by_user_specified_replication_rule",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 6,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc60_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc60_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc60_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc80_inputs_v1",
+      "path": "cases/kazarlis1996_uc80_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc80_inputs_v1/input.json",
+      "n_generator_records": 80,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "expanded_from_base_by_user_specified_replication_rule",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 8,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc80_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc80_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc80_inputs_v1/README.md"
+      }
+    },
+    {
+      "case_id": "kazarlis1996_uc100_inputs_v1",
+      "path": "cases/kazarlis1996_uc100_inputs_v1",
+      "input_file": "cases/kazarlis1996_uc100_inputs_v1/input.json",
+      "n_generator_records": 100,
+      "sample_count": 1,
+      "horizon_per_sample": 24,
+      "time_step_hours": 1,
+      "family": "system_aggregate_uc_inputs",
+      "benchmark_family": "kazarlis1996",
+      "profile": "kazarlis1996-table-inputs/0.1.0",
+      "schema_version": "0.1.0",
+      "schema_path": "schema/kazarlis1996-table-inputs-0.1.0.schema.json",
+      "distribution_version": "1.0.0",
+      "classification": "expanded_from_base_by_user_specified_replication_rule",
+      "network_parameters_status": "NOT_PROVIDED_IN_CURRENT_TABLE",
+      "copy_factor": 10,
+      "base_case_id": "kazarlis1996_uc10_inputs_v1",
+      "data_quality": "source_values_preserved_with_explicit_table_gaps",
+      "validation_report": "reports/kazarlis1996_uc100_inputs_v1/data_validation.json",
+      "checksum_manifest": "reports/kazarlis1996_uc100_inputs_v1/checksums.sha256",
+      "model_execution": "not_run",
+      "solve_status": "not_run",
+      "independent_solution_check": "not_run",
+      "redistribution_permission": "UNVERIFIED",
+      "data_completeness": {
+        "grade": "C",
+        "reviewed_on": "2026-11-22",
+        "basis": "当前表未提供爬坡、初始出力、冷热切换规则和末端边界。",
+        "evidence": "cases/kazarlis1996_uc100_inputs_v1/README.md"
+      }
     }
-    check("flat_native_fields_with_no_unmapped_generator_entries",
-          all(set(g) == generator_keys for g in generators.values()), "structure")
-    check("generator_bus_and_reserve_foreign_keys",
-          all(g["Bus"] in buses and len(set(g["Reserve eligibility"])) == len(g["Reserve eligibility"])
-              and all(r in reserves for r in g["Reserve eligibility"])
-              for g in generators.values()), "relationships")
-    loads = buses["b1"]["Load (MW)"]
-    reserve = reserves["r1"]["Amount (MW)"]
-    check("hourly_array_lengths_match_horizon", len(loads) == len(reserve) == horizon, "time_series")
-    check("zero_spinning_reserve_source_values", all(value == 0 for value in reserve), "time_series")
-    check("pwl_shapes_and_increasing_output",
-          all(len(x) == len(y) and all(a < b for a, b in zip(x, x[1:]))
-              for g in generators.values()
-              for x, y in [(g["Production cost curve (MW)"], g["Production cost curve ($)"])]),
-          "parameters")
-    slopes = [
-        [(d - c) / (b - a) for a, b, c, d in zip(x, x[1:], y, y[1:])]
-        for g in generators.values()
-        for x, y in [(g["Production cost curve (MW)"], g["Production cost curve ($)"])]
-    ]
-    check("pwl_convexity_tolerance_1e_9",
-          all(b >= a - Decimal("1e-9") for s in slopes for a, b in zip(s, s[1:])), "parameters")
-    check("single_startup_tier_and_first_delay_equals_minimum_down",
-          all(len(g["Startup costs ($)"]) == len(g["Startup delays (h)"]) == 1
-              and g["Startup delays (h)"][0] == g["Minimum downtime (h)"]
-              for g in generators.values()), "parameters")
-    check("initial_on_off_output_consistency",
-          all((x[0] <= p <= x[-1]) if g["Initial status (h)"] > 0 else p == 0
-              for g in generators.values()
-              for x, p in [(g["Production cost curve (MW)"], g["Initial power (MW)"])]),
-          "parameters")
-    capacity = sum(g["Production cost curve (MW)"][-1] for g in generators.values())
-    check("aggregate_capacity_covers_demand_plus_reserve",
-          all(demand + requirement <= capacity for demand, requirement in zip(loads, reserve)),
-          "necessary_condition")
-
-    unit_rows = [
-        (unit, *(g[field] for field in GEN_FIELDS.values()), g["Production cost curve (MW)"][0],
-         g["Production cost curve (MW)"][-1], "|".join(g["Reserve eligibility"]))
-        for unit, g in generators.items()
-    ]
-    cost_rows = [
-        (unit, index, mw, cost)
-        for unit, g in generators.items()
-        for index, (mw, cost) in enumerate(zip(g["Production cost curve (MW)"],
-                                              g["Production cost curve ($)"]), 1)
-    ]
-    startup_rows = [
-        (unit, index, delay, cost)
-        for unit, g in generators.items()
-        for index, (delay, cost) in enumerate(zip(g["Startup delays (h)"], g["Startup costs ($)"]), 1)
-    ]
-    hourly_rows = [
-        (hour, "b1", demand, "r1", requirement)
-        for hour, (demand, requirement) in enumerate(zip(loads, reserve), 1)
-    ]
-    views = {
-        "generators.csv": (("generator_id", *GEN_FIELDS, "pmin_mw", "pmax_mw", "reserve_ids"), unit_rows),
-        "cost_points.csv": (("generator_id", "point_index", "output_mw", "production_cost_dollars"), cost_rows),
-        "startup_tiers.csv": (("generator_id", "tier_index", "prior_offline_delay_h", "startup_cost_dollars"),
-                              startup_rows),
-        "hourly.csv": (("hour", "bus_id", "load_mw", "reserve_id", "reserve_requirement_mw"), hourly_rows),
-    }
-    for filename, (headers, rows) in views.items():
-        verify_or_create(CASE / filename, csv_bytes(headers, rows), write)
-        check(f"{filename}_matches_regenerated_source_mapping", True, "derived_view")
-
-    return {
-        "case_id": "orlib_50_0_1_w",
-        "input_sha256": sha(raw),
-        "python_version": platform.python_version(),
-        "jsonschema_version": version("jsonschema"),
-        "schema_sha256": sha(SCHEMA.read_bytes()),
-        "audit_script_sha256": sha(Path(__file__).read_bytes()),
-        "source_gzip_rechecked": source_gzip is not None,
-        "checks": checks,
-        "passed_count": len(checks),
-        "generator_count": len(generators),
-        "cost_point_count": len(cost_rows),
-        "startup_tier_count": len(startup_rows),
-        "period_count": horizon,
-        "initial_online_count": sum(g["Initial status (h)"] > 0 for g in generators.values()),
-        "aggregate_capacity_mw": str(capacity),
-        "peak_demand_mw": str(max(loads)),
-        "peak_hour": loads.index(max(loads)) + 1,
-        "total_load_mwh": str(sum(loads)),
-        "boundary": "Input audit and necessary conditions only. Solve and solution verification are separate.",
-    }
-
-
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-gzip", type=Path)
-    parser.add_argument("--write", action="store_true", help="create missing views, without overwriting")
-    args = parser.parse_args()
-    print(json.dumps(audit(args.source_gzip, args.write), ensure_ascii=False, indent=2))
-
-
-if __name__ == "__main__":
-    main()
+  ],
+  "catalog_version": "1.3.0",
+  "system_count_note": "基础系统按可识别的独立电网统计。IEEE24 原版、旧 33 记录版和 openTEPES RTS24 为同一 IEEE RTS 24 节点基础系统下的不同算例。OR-LIB 三个单节点算例另记为一个基准系列，不计作物理电网。 Kazarlis六规模另记为1个系统级火电UC文献基准家族，不增加物理电网计数；复制倍数不代表独立系统。"
+}

@@ -21,12 +21,31 @@
 - **备用及平衡。** 24 个时段的旋转备用需求均为源数据显式零值。项目模型固定备用为零，并按单节点逐时平衡计入削负荷。
 - **模型默认与待核。** 启停出力限额采用已核对的读取器默认值 1,000,000 MW，削负荷默认罚价为每 MWh 1,000。计算口径见[模型说明](../../scripts/orlib10/MODEL.md)，作者参考调度和匹配结果仍待核。
 
-`input.json`为原gzip的逐字节解压副本，包含原LICENSE、SOURCE、Parameters、Generators、Buses、Reserves。原格式Version=0.3，未改成0.4。完整许可同时保存在LICENSE.txt；来源、引用和SHA256见provenance.json。
+## 目录文件
 
-保留50个生产成本折点、初始开停持续时间和出力、最小开停时间、爬坡限值及启动成本。原24个旋转备用需求均为0，按真实零值保留。
+目录保留五份文件。input.json包含完整机组、负荷、备用、费用、原引用及通知；README.md说明数据；provenance.json保留来源与哈希；issues.json列缺口；LICENSE.txt提供原许可。
 
-[字段与范围](../../docs/profiles/ucjl-orlib-native/1.0.0/README.md) · [结构Schema](../../schema/ucjl-orlib-native-1.0.0.input.schema.json) · [检查报告](../../reports/ucjl_orlib_10_0_1_w_native_v1/data_validation.json) · [未确认项](issues.json)
+数值CSV可从JSON再生，字段说明并入本页。当前input.json的易读排版与源归档分别记录哈希。数据数值保持来源精度，原历史计算记录按各自运行身份保存。
 
-2026-11-06已完成本项目模型的Gurobi/COPT双求解与独立验解，总目标均1929392.436364，开停机安排一致。**含0.243366 MWh削负荷，不是全天需求全部满足。** 结果不是作者软件完整复现。
+## 字段说明
 
-[结果与限制](../../results/ucjl_orlib_10_0_1_w_native_v1/README.md) · [运行代码](../../scripts/orlib10/README.md) · [精确模型规则](../../scripts/orlib10/MODEL.md)。原JSON未改，源缺省规则在模型说明中单独记录。
+| JSON字段 | 含义和单位 |
+| --- | --- |
+| Parameters.Time (h) / Version | 总小时数24 / 原JSON格式0.3 |
+| Generators.*.Bus | 所属母线b1 |
+| Production cost curve (MW) / ($) | 同索引的出力与总生产费用折点，首末出力分别为Pmin/Pmax；原费用符号$，币种/基年待核 |
+| Initial status (h) | 已连续开停时长，正为开机、负为停机 |
+| Initial power (MW) | 时域前的发电功率 |
+| Minimum uptime (h) / Minimum downtime (h) | 最小连续开机/停机时长 |
+| Ramp up limit (MW) / Ramp down limit (MW) | 原上下爬坡字段，计算口径按本例模型说明 |
+| Startup costs ($) / Startup delays (h) | 同位置启动费及停机时长门槛，本例每机只有一档 |
+| Reserve eligibility | 可参与的备用产品编号 |
+| Buses.b1.Load (MW) | 按原顺序排列的24小时负荷 |
+| Reserves.r1.Amount (MW) / Type | 备用需求数组（原值全零）/ Spinning |
+| LICENSE / SOURCE | 原内嵌许可和参考引用 |
+
+机组、母线和备用编号采用原 JSON 对象键，保留原顺序。
+
+[历史输入检查](../../reports/ucjl_orlib_10_0_1_w_native_v1/data_validation.json) · [本轮精简核验](../../reports/ucjl_orlib_10_0_1_w_native_v1/package_validation.json) · [逐例哈希](../../reports/ucjl_orlib_10_0_1_w_native_v1/checksums.sha256) · [历史参考结果](../../results/ucjl_orlib_10_0_1_w_native_v1/README.md)
+
+历史报告中的文件哈希和项目计算结论对应当时版本。本轮检查只读取数据及已有代码，不重新求解。

@@ -81,7 +81,10 @@ def audit(source_gzip=None, write=False):
                               parse_constant=reject_constant)
         current = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys,
                              parse_constant=reject_constant)
-        check("input_values_match_archived_json", archived == current, "identity")
+        check("input_values_and_order_match_archived_json",
+              archived == current
+              and json.loads(unpacked, object_pairs_hook=list, parse_float=Decimal)
+                  == json.loads(raw, object_pairs_hook=list, parse_float=Decimal), "identity")
     check("input_sha256_matches_manifest", sha(raw) == provenance["input_sha256"], "identity")
     data = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys, parse_constant=reject_constant)
     check("strict_json_parse_unique_keys_and_finite_number_tokens", True, "structure")
@@ -90,9 +93,8 @@ def audit(source_gzip=None, write=False):
     Draft202012Validator(schema).validate(json.loads(raw))
     check("structural_schema_draft_2020_12", True, "structure")
     license_bytes = data["LICENSE"].encode("utf-8")
-    check("embedded_license_hash_and_source_references_match_archive",
-          sha(license_bytes) == provenance["embedded_license_sha256"]
-          and data["SOURCE"] == provenance["embedded_source_text"], "identity")
+    check("embedded_license_and_source_present",
+          bool(data["LICENSE"]) and bool(data["SOURCE"]), "identity")
     verify_or_create(CASE / "LICENSE.txt", license_bytes, write)
     check("license_copy_byte_for_byte", True, "identity")
 

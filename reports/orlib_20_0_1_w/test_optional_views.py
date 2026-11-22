@@ -77,7 +77,7 @@ class OptionalViews(unittest.TestCase):
             input_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
         )
         provenance_path.write_text(json.dumps(provenance), encoding="utf-8")
-        with self.copied_case(), self.assertRaisesRegex(ValueError, "input_values_match_archived_json"):
+        with self.copied_case(), self.assertRaisesRegex(ValueError, "input_values_and_order_match_archived_json"):
             audit_input.audit(archive)
 
 

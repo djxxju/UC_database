@@ -21,16 +21,42 @@
 - **备用及平衡。** 24 个时段的旋转备用需求均为源数据显式零值。项目模型固定备用为零，并按单节点逐时平衡计入削负荷。
 - **模型默认与待核。** 启停出力限额采用已核对的读取器默认值 1,000,000 MW，削负荷默认罚价为每 MWh 1,000。计算口径见[模型说明](../../docs/profiles/orlib_flat_audited_defaults_uc_v1/MODEL.md)，作者参考调度和匹配结果仍待核。
 
-- [input.json](input.json) 是原始 gzip 解压后的原字节。原 gzip 的固定来源、SHA256、项目归档和论文引用见 [provenance.json](provenance.json)。本例随附源内嵌的 [MIT 通知](LICENSE.txt)。
-- [generators.csv](generators.csv)、[cost_points.csv](cost_points.csv)、[startup_tiers.csv](startup_tiers.csv) 和 [hourly.csv](hourly.csv) 是源值的表格视图。[字段字典](field_dictionary.csv)列出单位和原字段。
-- [计算 profile](../../docs/profiles/orlib_flat_audited_defaults_uc_v1/MODEL.md)定义爬坡、成本、边界和零备用的处理。[问题清单](issues.json)列出读取器默认项、适用范围和待核实信息。
-- [输入校验](../../reports/orlib_50_0_1_w/data_validation.json)和[逐例 SHA256](../../reports/orlib_50_0_1_w/checksums.sha256)可用于检查文件及数据一致性。[参考运行与复跑方法](../../results/orlib_50_0_1_w/README.md)记录求解及独立验解。
+## 目录文件
 
-在仓库根目录使用 Python 3.13 和 `jsonschema==4.26.0` 检查输入。首条命令检查随包 JSON、MIT 通知、Schema 和 CSV。若已从来源取得 gzip，可在首条命令附加 `--source-gzip <路径>`，再核对其 SHA256 及解压字节。第二条命令在临时副本中注入五项故障，验证对应规则能识别错误。
+目录保留五份文件。input.json包含完整机组、负荷、备用、费用、原引用及通知；README.md说明数据；provenance.json保留来源与哈希；issues.json列缺口；LICENSE.txt提供原许可。
+
+数值CSV可从JSON再生，字段说明并入本页。当前input.json的易读排版与源归档分别记录哈希。数据数值保持来源精度，原历史计算记录按各自运行身份保存。
+
+## 字段说明
+
+| JSON字段 | 含义和单位 |
+| --- | --- |
+| Parameters.Time (h) / Version | 总小时数24 / 原JSON格式0.3 |
+| Generators.*.Bus | 所属母线b1 |
+| Production cost curve (MW) / ($) | 同索引的出力与总生产费用折点，首末出力分别为Pmin/Pmax；原费用符号$，币种/基年待核 |
+| Initial status (h) | 已连续开停时长，正为开机、负为停机 |
+| Initial power (MW) | 时域前的发电功率 |
+| Minimum uptime (h) / Minimum downtime (h) | 最小连续开机/停机时长 |
+| Ramp up limit (MW) / Ramp down limit (MW) | 原上下爬坡字段，计算口径按本例模型说明 |
+| Startup costs ($) / Startup delays (h) | 同位置启动费及停机时长门槛，本例每机只有一档 |
+| Reserve eligibility | 可参与的备用产品编号 |
+| Buses.b1.Load (MW) | 按原顺序排列的24小时负荷 |
+| Reserves.r1.Amount (MW) / Type | 备用需求数组（原值全零）/ Spinning |
+| LICENSE / SOURCE | 原内嵌许可和参考引用 |
+
+
+机组、母线和备用编号采用原JSON对象键，保留原顺序。按需导出CSV时，point_index、tier_index及hour从1编号，对应原数组索引加1；reserve_ids按原资格数组顺序用竖线分隔；Pmin/Pmax取生产费用曲线的首末出力。
+
+## 校验和按需表格
+
+默认校验不要求数值CSV，已存在的CSV会逐字节核对。需要表格时可用--write导出；--source-gzip可额外比较原始归档哈希、严格解析值和顺序。
 
 ```text
 python -B scripts/orlib50/audit_orlib50_input.py
-python -B scripts/orlib50/test_audit_orlib50_input.py
+python -B scripts/orlib50/audit_orlib50_input.py --write
+python -B scripts/orlib50/audit_orlib50_input.py --source-gzip path/to/50_0_1_w.json.gz
 ```
 
-容量筛查仅覆盖逐时负荷加备用需求与总最大出力的关系。作者结果身份和费用币值基年仍待核实。
+[历史输入检查](../../reports/orlib_50_0_1_w/data_validation.json) · [本轮精简核验](../../reports/orlib_50_0_1_w/package_validation.json) · [逐例哈希](../../reports/orlib_50_0_1_w/checksums.sha256) · [历史参考结果](../../results/orlib_50_0_1_w/README.md)
+
+历史报告中的文件哈希和项目计算结论对应当时版本。本轮检查只读取数据及已有代码，不重新求解。

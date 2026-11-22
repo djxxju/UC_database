@@ -1,113 +1,142 @@
 {
   "case_id": "orlib_20_0_1_w",
+  "checked_date": "2026-11-22",
+  "baseline_commit": "35a69966ecafdc9a3b08e343a32cfa74571f96cd",
+  "status": "passed",
+  "input_unchanged_from_remote_baseline": true,
+  "source_gzip_sha256": "6a567e0c8ebe5b2420d940f7526f343850fd45c6400e09ef1247cb450a6551be",
+  "source_unpacked_sha256": "37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327",
   "input_sha256": "eeba7378d61e20a91e1c72fb9c9cb1467cacde00de160630c5225cab01fd75bf",
-  "python_version": "3.13.2",
-  "jsonschema_version": "4.26.0",
-  "schema_sha256": "fcd3dd92bdbb4e1800d194b2aca4911ba67c48c958fbd97a9e7c89e4e6c19229",
-  "audit_script_sha256": "5ca0eca64dce2be86836afb7ff65fde1e482aa68af32068dec23a42791e6667d",
-  "source_gzip_rechecked": true,
-  "optional_csv_views_checked": [],
-  "checks": [
-    {
-      "rule": "gzip_hash_matches_collection_records",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "decompressed_source_hash_matches_provenance",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "input_values_match_archived_json",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "input_sha256_matches_manifest",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "strict_json_parse_unique_keys_and_finite_number_tokens",
-      "layer": "structure",
-      "status": "passed"
-    },
-    {
-      "rule": "structural_schema_draft_2020_12",
-      "layer": "structure",
-      "status": "passed"
-    },
-    {
-      "rule": "embedded_license_hash_and_source_references_match_archive",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "license_copy_byte_for_byte",
-      "layer": "identity",
-      "status": "passed"
-    },
-    {
-      "rule": "fixed_profile_20_generators_1_bus_1_reserve_24_hours",
-      "layer": "structure",
-      "status": "passed"
-    },
-    {
-      "rule": "flat_native_fields_with_no_unmapped_generator_entries",
-      "layer": "structure",
-      "status": "passed"
-    },
-    {
-      "rule": "generator_bus_and_reserve_foreign_keys",
-      "layer": "relationships",
-      "status": "passed"
-    },
-    {
-      "rule": "hourly_array_lengths_match_horizon",
-      "layer": "time_series",
-      "status": "passed"
-    },
-    {
-      "rule": "zero_spinning_reserve_source_values",
-      "layer": "time_series",
-      "status": "passed"
-    },
-    {
-      "rule": "pwl_shapes_and_increasing_output",
-      "layer": "parameters",
-      "status": "passed"
-    },
-    {
-      "rule": "pwl_convexity_tolerance_1e_9",
-      "layer": "parameters",
-      "status": "passed"
-    },
-    {
-      "rule": "single_startup_tier_and_first_delay_equals_minimum_down",
-      "layer": "parameters",
-      "status": "passed"
-    },
-    {
-      "rule": "initial_on_off_output_consistency",
-      "layer": "parameters",
-      "status": "passed"
-    },
-    {
-      "rule": "aggregate_capacity_covers_demand_plus_reserve",
-      "layer": "necessary_condition",
-      "status": "passed"
-    }
+  "strict_source_values_and_order_match": true,
+  "license_copy_matches_embedded_text": true,
+  "case_files": [
+    "LICENSE.txt",
+    "README.md",
+    "input.json",
+    "issues.json",
+    "provenance.json"
   ],
-  "passed_count": 18,
-  "generator_count": 20,
-  "cost_point_count": 100,
-  "startup_tier_count": 20,
-  "period_count": 24,
-  "initial_online_count": 11,
-  "aggregate_capacity_mw": "3414.0",
-  "peak_demand_mw": "2389.360312",
-  "peak_hour": 12,
-  "total_load_mwh": "46245.445075",
-  "boundary": "Input audit and necessary conditions only. Solve and solution verification are separate."
+  "field_explanations": "README.md",
+  "audit": {
+    "case_id": "orlib_20_0_1_w",
+    "input_sha256": "eeba7378d61e20a91e1c72fb9c9cb1467cacde00de160630c5225cab01fd75bf",
+    "python_version": "3.13.2",
+    "jsonschema_version": "4.26.0",
+    "schema_sha256": "fcd3dd92bdbb4e1800d194b2aca4911ba67c48c958fbd97a9e7c89e4e6c19229",
+    "audit_script_sha256": "58085b8fa575b86015f404f796846dbae2b327c00f3dd9581926b0c2fa3cf319",
+    "source_gzip_rechecked": true,
+    "optional_csv_views_checked": [],
+    "checks": [
+      {
+        "rule": "gzip_hash_matches_collection_records",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "decompressed_source_hash_matches_provenance",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "input_values_and_order_match_archived_json",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "input_sha256_matches_manifest",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "strict_json_parse_unique_keys_and_finite_number_tokens",
+        "layer": "structure",
+        "status": "passed"
+      },
+      {
+        "rule": "structural_schema_draft_2020_12",
+        "layer": "structure",
+        "status": "passed"
+      },
+      {
+        "rule": "embedded_license_and_source_present",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "license_copy_byte_for_byte",
+        "layer": "identity",
+        "status": "passed"
+      },
+      {
+        "rule": "fixed_profile_20_generators_1_bus_1_reserve_24_hours",
+        "layer": "structure",
+        "status": "passed"
+      },
+      {
+        "rule": "flat_native_fields_with_no_unmapped_generator_entries",
+        "layer": "structure",
+        "status": "passed"
+      },
+      {
+        "rule": "generator_bus_and_reserve_foreign_keys",
+        "layer": "relationships",
+        "status": "passed"
+      },
+      {
+        "rule": "hourly_array_lengths_match_horizon",
+        "layer": "time_series",
+        "status": "passed"
+      },
+      {
+        "rule": "zero_spinning_reserve_source_values",
+        "layer": "time_series",
+        "status": "passed"
+      },
+      {
+        "rule": "pwl_shapes_and_increasing_output",
+        "layer": "parameters",
+        "status": "passed"
+      },
+      {
+        "rule": "pwl_convexity_tolerance_1e_9",
+        "layer": "parameters",
+        "status": "passed"
+      },
+      {
+        "rule": "single_startup_tier_and_first_delay_equals_minimum_down",
+        "layer": "parameters",
+        "status": "passed"
+      },
+      {
+        "rule": "initial_on_off_output_consistency",
+        "layer": "parameters",
+        "status": "passed"
+      },
+      {
+        "rule": "aggregate_capacity_covers_demand_plus_reserve",
+        "layer": "necessary_condition",
+        "status": "passed"
+      }
+    ],
+    "passed_count": 18,
+    "generator_count": 20,
+    "cost_point_count": 100,
+    "startup_tier_count": 20,
+    "period_count": 24,
+    "initial_online_count": 11,
+    "aggregate_capacity_mw": "3414.0",
+    "peak_demand_mw": "2389.360312",
+    "peak_hour": 12,
+    "total_load_mwh": "46245.445075",
+    "boundary": "Input audit and necessary conditions only. Solve and solution verification are separate."
+  },
+  "solve_status_this_round": "not_run",
+  "solution_verification_this_round": "not_run",
+  "boundary": "Package and input checks only; historical solve records retain their original run identities.",
+  "source_comparison_scope": "Existing local archived gzip, not a new upstream download.",
+  "independent_review_this_round": "not_completed_subagent_usage_limit",
+  "regression_tests": {
+    "optional_package_tests": 5,
+    "status": "passed"
+  }
 }
