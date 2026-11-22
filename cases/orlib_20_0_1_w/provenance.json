@@ -15,9 +15,9 @@
   "audit_date": "2026-11-08",
   "source_gzip_sha256": "6a567e0c8ebe5b2420d940f7526f343850fd45c6400e09ef1247cb450a6551be",
   "source_gzip_bytes": 3350,
-  "input_sha256": "37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327",
-  "input_bytes": 11416,
-  "input_derivation": "gzip decompression only; no JSON serialization, cropping, conversion, or repair",
+  "input_sha256": "eeba7378d61e20a91e1c72fb9c9cb1467cacde00de160630c5225cab01fd75bf",
+  "input_bytes": 21151,
+  "input_derivation": "Whitespace-formatted JSON already present in main; parsed values and embedded notices match archived source. Current and original byte hashes recorded separately.",
   "embedded_source_text": "J.E.Beasley. \"OR-Library: distributing test problems by electronic mail\", Journal of the Operational Research Society 41(11) (1990). DOI: 10.2307/2582903\nA. Frangioni, C. Gentile. \"Solving nonlinear single-unit commitment problems with ramping constraints\" Operations Research 54(4), p. 767 - 775, 2006. DOI: 10.1287/opre.1060.0309\n",
   "embedded_license": "MIT notice embedded in source, copied verbatim to LICENSE.txt",
   "embedded_license_sha256": "9281d1929b8b3ae9545151b505db99128a2d633eab18744911eccc24bec2616d",
@@ -39,5 +39,6 @@
       "sha256": "267c5da6eb48b72fa97034e64530fa47b685f7dbbb83538e8c6841aecfba4036"
     }
   ],
-  "source_identity_boundary": "The source gzip bytes match the previous local, index, license, and cloud receipt. No new remote download was needed for this input audit."
+  "source_identity_boundary": "The source gzip bytes match the previous local, index, license, and cloud receipt. No new remote download was needed for this input audit.",
+  "source_unpacked_sha256": "37bf1d943664bcb9b5b74d6ff599ece16858e40750a6bcb423827e5f128e2327"
 }

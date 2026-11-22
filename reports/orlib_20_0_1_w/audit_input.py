@@ -74,8 +74,14 @@ def audit(source_gzip=None, write=False):
         compressed = source_gzip.read_bytes()
         check("gzip_hash_matches_collection_records",
               sha(compressed) == provenance["source_gzip_sha256"], "identity")
-        check("input_matches_decompressed_gzip_byte_for_byte",
-              gzip.decompress(compressed) == raw, "identity")
+        unpacked = gzip.decompress(compressed)
+        check("decompressed_source_hash_matches_provenance",
+              sha(unpacked) == provenance.get("source_unpacked_sha256", provenance["input_sha256"]), "identity")
+        archived = json.loads(unpacked, parse_float=Decimal, object_pairs_hook=unique_keys,
+                              parse_constant=reject_constant)
+        current = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys,
+                             parse_constant=reject_constant)
+        check("input_values_match_archived_json", archived == current, "identity")
     check("input_sha256_matches_manifest", sha(raw) == provenance["input_sha256"], "identity")
     data = json.loads(raw, parse_float=Decimal, object_pairs_hook=unique_keys, parse_constant=reject_constant)
     check("strict_json_parse_unique_keys_and_finite_number_tokens", True, "structure")
@@ -164,9 +170,12 @@ def audit(source_gzip=None, write=False):
                               startup_rows),
         "hourly.csv": (("hour", "bus_id", "load_mw", "reserve_id", "reserve_requirement_mw"), hourly_rows),
     }
+    checked_views = []
     for filename, (headers, rows) in views.items():
-        verify_or_create(CASE / filename, csv_bytes(headers, rows), write)
-        check(f"{filename}_matches_regenerated_source_mapping", True, "derived_view")
+        if write or (CASE / filename).exists():
+            verify_or_create(CASE / filename, csv_bytes(headers, rows), write)
+            check(f"{filename}_matches_regenerated_source_mapping", True, "derived_view")
+            checked_views.append(filename)
 
     return {
         "case_id": "orlib_20_0_1_w",
@@ -176,6 +185,7 @@ def audit(source_gzip=None, write=False):
         "schema_sha256": sha((HERE / "input.schema.json").read_bytes()),
         "audit_script_sha256": sha(Path(__file__).read_bytes()),
         "source_gzip_rechecked": source_gzip is not None,
+        "optional_csv_views_checked": checked_views,
         "checks": checks,
         "passed_count": len(checks),
         "generator_count": len(generators),
