@@ -3,11 +3,11 @@
   "missing_items": [
     {
       "item": "初始出力（MW）",
-      "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
+      "status": "已添加"
     },
     {
       "item": "常规爬坡上下限、启停爬坡参数",
-      "status": "NOT_PROVIDED_IN_CURRENT_TABLE"
+      "status": "已添加，但是根据文献所示，8-10机组的爬坡速率太快最大只有55mw，爬坡速率135mw/h"
     },
     {
       "item": "停机费用",
