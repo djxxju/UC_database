@@ -1,0 +1,93 @@
+{
+  "profile": "deng2015-4bin-ramp-inputs/1.0.0",
+  "paper": {
+    "citation": "邓俊、韦化、黎静华、白晓清. 一种含四类0-1变量的机组组合混合整数线性规划模型. 中国电机工程学报, 2015,35(11):2770–2778.",
+    "doi": "10.13334/j.0258-8013.pcsee.2015.11.015",
+    "source_url": "https://doi.org/10.13334/j.0258-8013.pcsee.2015.11.015",
+    "pdf_sha256": "2100f17f34f42102099ab73f10749130bd15d341da10d6f6b3f06f77b914e5a3",
+    "location": "PDF第5页/印刷2774页/4.1；规则见2.1、2.3、3.2"
+  },
+  "reference14": {
+    "citation": "Ostrowski J, Anjos M F, Vannelli A. Tight Mixed Integer Linear Programming Formulations for the Unit Commitment Problem. IEEE TPWRS,2012,27(1):39–46.",
+    "source_url": "https://doi.org/10.1109/TPWRS.2011.2162008",
+    "retrieval_type": "primary_article_mirror_with_highlights",
+    "pdf_sha256": "7181912800956881d61fa77e48b08cc97d745931dfb383deea64f12344815229",
+    "location": "PDF第3页/印刷41页/Table II；单位采用PDF第1页/印刷39页/Notation",
+    "unit_note": "原表RU(RD)(MWh)、SU(SD)(h)与Notation有冲突；按Notation和邓俊4.1解释为MW/h及MW，不换算数值。仅取前7机爬坡，不导入该文其他字段。"
+  },
+  "source_checks": {
+    "status": "VERIFIED",
+    "date": "2026-11-22",
+    "scope": "邓俊4.1新增显式参数及规则、其引用[14]前7机爬坡；继承Kazarlis字段沿用已核固定基础版。停机初始出力与规模展开为明确派生，不称作者逐规模文件复现。"
+  },
+  "field_mapping": {
+    "initial_p_units_1_2": {
+      "values_mw": [
+        455,
+        245
+      ],
+      "basis": "邓俊4.1显式"
+    },
+    "initial_p_units_3_10": {
+      "values_mw": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "status": "DERIVED",
+      "basis": "沿用初始停机状态及出力上下限式(11)，停机实际出力为0；与用户输入一致"
+    },
+    "ramp_up_down_units_1_7": {
+      "values_mw_per_hour": [
+        225,
+        225,
+        50,
+        50,
+        60,
+        60,
+        60
+      ],
+      "basis": "邓俊4.1指定引用[14]，Table II对应前7机"
+    },
+    "pstart_pshut_units_1_7": {
+      "rule": "pmin_mw",
+      "basis": "邓俊4.1下划线P_i"
+    },
+    "units_8_10": {
+      "ramp_up": 135,
+      "ramp_down": 135,
+      "pstart": 45,
+      "pshut": 35,
+      "basis": "邓俊4.1显式"
+    },
+    "unchanged_fields": {
+      "basis": "对应Kazarlis基础版同名字段；含cold_start_hrs，未导入[14]不同启动数据",
+      "input_sha256": "6f826f0b5ac1fc01aa428b4d7ce1eb698f8fb8ffef0b23a8dfcce69a8154aab9",
+      "historical_case_id": "kazarlis1996_uc10_inputs_v1"
+    }
+  },
+  "construction": {
+    "status": "DERIVED",
+    "rule": "完整复制10机块N/10份；仅id和copy_index改变；单机参数、初始出力/时长不缩放，24小时负荷和备用乘N/10。",
+    "basis": "沿用用户明确的规模展开规则；邓俊4.1提及继承10–100机六系统，不声称逐规模作者原文件已核。"
+  },
+  "reference14_mirror_url": "https://11758282211287829660.googlegroups.com/attach/30332f18b2c3fe2d/Tight%20Integer%20Progamming%20Unit%20Committment%20Problem.pdf?part=0.1&vt=ANaJVrG33mZtV86hN7INufDY40sDSpHLiGBqmr5_i9dId3kbYgKguO9d90XNIJ7GlSqZCQMXt_bsI0BLNHZQR-M3Kvq05AzVp70Bc5Wel5cf1gmi0M7erYY",
+  "reference14_retrieved_utc": "2026-11-22T14:58:53.471724+00:00",
+  "checked_on": "2026-11-22",
+  "organization": "一个文献基准家族，六种规模；统一按邓俊2015命名，Kazarlis1996作为基础参数来源，不另登记重复规模。",
+  "base_parameter_source": {
+    "citation": "S. A. Kazarlis, A. G. Bakirtzis, V. Petridis. IEEE Transactions on Power Systems 11(1):83–92, 1996.",
+    "source_url": "https://doi.org/10.1109/59.485989",
+    "data_location": "PDF 第 6 页／印刷 88 页／Table II",
+    "recorded_pdf_sha256": "af14bc4f03e97ec9e15c335f2d4659bf7973b1340f4bbc3ca5bdbc3c98ca4204",
+    "copy_factor": 1,
+    "construction_rule": "基础10台表格转录",
+    "redistribution_permission": "UNVERIFIED",
+    "historical_input_url": "https://github.com/djxxju/UC_database/blob/63e29af972ec3387aecd635f635542fd63504bd7/cases/kazarlis1996_uc10_inputs_v1/input.json"
+  }
+}

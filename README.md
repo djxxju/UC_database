@@ -19,7 +19,7 @@ UC_database/
 
 ## 算例索引
 
-共 12 个算例。RPG IEEE24 两版与 RTS24 登记为同一 24 节点基础电网的不同版本。OR-LIB 有 3 个单节点算例。Kazarlis 作为一个文献家族收录 6 个规模。按节点数、机组记录数和数据完备度排序。点击算例名称可查看来源、容量、负荷、网络、约束和校验状态。[分类规则](docs/classification.md) · [机器可读索引](catalog.json)
+共 12 个算例。RPG IEEE24 两版与 RTS24 登记为同一 24 节点基础电网的不同版本。OR-LIB 有 3 个单节点算例。邓俊2015（继承Kazarlis基础参数）统一作为一个文献家族收录6个规模。按节点数、机组记录数和数据完备度排序。点击算例名称可查看来源、容量、负荷、网络、约束和校验状态。[分类规则](docs/classification.md) · [机器可读索引](catalog.json)
 
 ### 单节点
 
@@ -41,14 +41,14 @@ UC_database/
 
 | 算例 | 机组记录 | 完备度 | 校验与结果 | 输入 |
 | --- | ---: | --- | --- | --- |
-| [Kazarlis 1996 10 台](cases/kazarlis1996_uc10_inputs_v1/README.md) | 10 | C | 基础转录，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc10_inputs_v1/input.json) |
-| [Kazarlis 1996 20 台](cases/kazarlis1996_uc20_inputs_v1/README.md) | 20 | C | 派生规模，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc20_inputs_v1/input.json) |
-| [Kazarlis 1996 40 台](cases/kazarlis1996_uc40_inputs_v1/README.md) | 40 | C | 派生规模，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc40_inputs_v1/input.json) |
-| [Kazarlis 1996 60 台](cases/kazarlis1996_uc60_inputs_v1/README.md) | 60 | C | 派生规模，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc60_inputs_v1/input.json) |
-| [Kazarlis 1996 80 台](cases/kazarlis1996_uc80_inputs_v1/README.md) | 80 | C | 派生规模，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc80_inputs_v1/input.json) |
-| [Kazarlis 1996 100 台](cases/kazarlis1996_uc100_inputs_v1/README.md) | 100 | C | 派生规模，24 小时输入已校验，未求解 | [JSON](cases/kazarlis1996_uc100_inputs_v1/input.json) |
+| [邓俊2015 含爬坡10台](cases/deng2015_uc10_ramp_inputs_v1/README.md) | 10 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc10_ramp_inputs_v1/input.json) |
+| [邓俊2015 含爬坡20台](cases/deng2015_uc20_ramp_inputs_v1/README.md) | 20 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc20_ramp_inputs_v1/input.json) |
+| [邓俊2015 含爬坡40台](cases/deng2015_uc40_ramp_inputs_v1/README.md) | 40 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc40_ramp_inputs_v1/input.json) |
+| [邓俊2015 含爬坡60台](cases/deng2015_uc60_ramp_inputs_v1/README.md) | 60 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc60_ramp_inputs_v1/input.json) |
+| [邓俊2015 含爬坡80台](cases/deng2015_uc80_ramp_inputs_v1/README.md) | 80 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc80_ramp_inputs_v1/input.json) |
+| [邓俊2015 含爬坡100台](cases/deng2015_uc100_ramp_inputs_v1/README.md) | 100 | C | 文献补充及规模展开，24小时输入已校验，未求解 | [JSON](cases/deng2015_uc100_ramp_inputs_v1/input.json) |
 
-Kazarlis 六例的表格数据再分发许可仍为 `UNVERIFIED`。[第三方通知](docs/profiles/kazarlis1996-table-inputs/THIRD_PARTY_NOTICES.md)
+邓俊六规模共享[字段与规则](docs/profiles/deng2015-4bin-ramp-inputs/README.md)。第三方数据再分发许可仍为`UNVERIFIED`，见[来源与权利](docs/profiles/deng2015-4bin-ramp-inputs/THIRD_PARTY_NOTICES.md)。
 
 ## 下载原始输入或按需生成 MATLAB 文件
 
