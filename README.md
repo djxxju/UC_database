@@ -34,7 +34,7 @@ UC_database/
 | 算例 | 机组记录 | 完备度 | 校验与结果 | 输入 |
 | --- | ---: | --- | --- | --- |
 | [RPG Lab IEEE24 原模型](cases/rpglab_ieee24_native_v1/README.md) | 15 | C | 1,800 个独立 24 小时样本，已求解并独立验解 | [机组](cases/rpglab_ieee24_native_v1/generators.json) · [负荷](cases/rpglab_ieee24_native_v1/demand_wide.csv.gz) |
-| [openTEPES RTS24](cases/opentepes_rts24_full_inputs_v1/README.md) | 33 | C | 8,736 原始小时输入校验完成，模型与求解未运行 | [原件恢复](cases/opentepes_rts24_full_inputs_v1/README.md#恢复原件) |
+| [openTEPES RTS24](cases/opentepes_rts24_full_inputs_v1/README.md) | 33 | C | 8,736 原始小时输入校验完成，模型与求解未运行 | [原件恢复](cases/opentepes_rts24_full_inputs_v1/README.md#恢复原件)算例太大，先暂停 |
 | [RPG Lab IEEE24 旧 33 记录版](cases/rpglab_ieee24_legacy33_inputs_v1/README.md) | 33 | D | 1,500 行负荷已逐值核对，旧时段映射待核，未求解 | [机组](cases/rpglab_ieee24_legacy33_inputs_v1/generators.csv) · [负荷](cases/rpglab_ieee24_legacy33_inputs_v1/demand.csv.gz) |
 
 ### 节点信息未提供
