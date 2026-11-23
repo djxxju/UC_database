@@ -1,0 +1,54 @@
+{
+  "case_id": "deng2015_uc60_ramp_inputs_v1",
+  "checked_on": "2026-11-23",
+  "formal_JSON_Schema_validation": {
+    "status": "passed",
+    "schema": "schema/deng2015-4bin-ramp-inputs-1.0.0.schema.json",
+    "schema_sha256": "deda4369d652ce06ffea49ffee981574728f1fcef1bee74e936046d29d81bbdb"
+  },
+  "deterministic_checks": {
+    "parameter_comparisons": 960,
+    "total_pmax_mw": 9972,
+    "min_margin_mw": 72.0,
+    "per_period_margin_mw": [
+      5352.0,
+      5022.0,
+      4362.0,
+      3702.0,
+      3372.0,
+      2712.0,
+      2382.0,
+      2052.0,
+      1392.0,
+      732.0,
+      402.0,
+      72.0,
+      732.0,
+      1392.0,
+      2052.0,
+      3042.0,
+      3372.0,
+      2712.0,
+      2052.0,
+      732.0,
+      1392.0,
+      2712.0,
+      4032.0,
+      4692.0
+    ]
+  },
+  "source_verification": {
+    "status": "VERIFIED",
+    "date": "2026-11-22",
+    "scope": "邓俊4.1新增显式参数及规则、其引用[14]前7机爬坡；继承Kazarlis字段沿用已核固定基础版。停机初始出力与规模展开为明确派生，不称作者逐规模文件复现。"
+  },
+  "replication_status": "passed_for_declared_project_rule",
+  "scope": "限定源字段核查及结构/数值/单位/时序/复制/备用/容量必要界；不证明UC可行或作者费用复现。",
+  "input_sha256": "946decc916da7edafcce8f948ee50fd9ec978ff87d4dc85f583462618d61853b",
+  "validation_code_sha256": "7c43da7ed4ad97ba3a8d4dd0596bf643168e64d04291ce6a7276282f597c4db0",
+  "model_execution": "not_run",
+  "solve_status": "not_run",
+  "independent_solution_check": "not_run",
+  "publication_readiness": "ready_for_upload_with_disclosed_license_status",
+  "organization": "one_literature_family_six_scales"
+}

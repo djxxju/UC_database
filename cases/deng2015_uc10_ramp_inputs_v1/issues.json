@@ -1,0 +1,15 @@
+{
+  "scope": "本profile含爬坡系统总量UC输入；源字段已核，派生项另见source_mapping。",
+  "items": [
+    {
+      "item": "时域外末端状态要求",
+      "status": "UNVERIFIED",
+      "effect": "未增加末端固定状态或跨时域义务，后续建模需明确。"
+    },
+    {
+      "item": "第三方数据再分发许可",
+      "status": "UNVERIFIED",
+      "effect": "保留来源引用，不宣称获得第三方许可。"
+    }
+  ]
+}

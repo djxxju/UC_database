@@ -1,0 +1,15 @@
+{
+  "citation": "邓俊等(2015). 一种含四类0-1变量的机组组合混合整数线性规划模型",
+  "source_url": "https://doi.org/10.13334/j.0258-8013.pcsee.2015.11.015",
+  "source_mapping": "../../docs/profiles/deng2015-4bin-ramp-inputs/source_mapping.json",
+  "base_case_id": "deng2015_uc10_ramp_inputs_v1",
+  "copy_factor": 6,
+  "construction": "完整机组块复制；负荷/备用按倍数放大，单机参数不放大",
+  "source_verification": {
+    "status": "VERIFIED",
+    "date": "2026-11-22",
+    "scope": "邓俊4.1新增显式参数及规则、其引用[14]前7机爬坡；继承Kazarlis字段沿用已核固定基础版。停机初始出力与规模展开为明确派生，不称作者逐规模文件复现。"
+  },
+  "redistribution_permission": "UNVERIFIED",
+  "base_parameter_source": "Kazarlis1996 Table II；详见共享source_mapping"
+}

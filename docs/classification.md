@@ -20,6 +20,6 @@
 | `network_uc` | 提供网络信息和 UC 规则，执行状态逐例登记。 |
 | `network_uc_inputs` | 已整理的网络 UC 输入，执行和语义边界见对应 profile。 |
 | `single_bus_uc` | 明确为单母线表示，例如 OR-LIB 三例。 |
-| `system_aggregate_uc_inputs` | 机组参数与系统总负荷输入，当前资料未给出节点信息，例如 Kazarlis 六例。 |
+| `system_aggregate_uc_inputs` | 机组参数与系统总负荷输入，当前资料未给出节点信息，例如邓俊2015六规模（继承Kazarlis基础参数）。 |
 
-`case_count` 按索引实例计，`system_count` 按已识别的物理基础电网计。RPG IEEE24 两版与 openTEPES RTS24 在索引中记录为同一基础拓扑的不同数据版本。Kazarlis 六例归入一个文献家族，基础转录和五个复制派生规模分开登记。独立日样本、规模变体和基础电网各按自己的口径统计。
+`case_count` 按索引实例计，`system_count` 按已识别的物理基础电网计。RPG IEEE24 两版与 openTEPES RTS24 在索引中记录为同一基础拓扑的不同数据版本。邓俊2015六例统一为一个文献家族，保留Kazarlis基础参数与后续文献补充的溯源；10台修改版与五个规模展开分别登记，不并列重复登记前后文献。独立日样本、规模变体和基础电网各按自己的口径统计。
